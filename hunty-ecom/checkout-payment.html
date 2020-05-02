@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Payment | Hunty</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <header class="headerCheckout">
+          <div class="container">
+            <div class="headerCheckout__inner"><a class="goback hidden-md-up hidden-md-up" href="javascript:;" onclick="window.history.back()" title="Trang trước"><i class="icon-arrow-prev"></i></a>
+              <div class="header__logo hidden-sm-down"><a href="#" title="Hunty"><img src="images/logo.png" alt="Hunty"/></a>
+              </div>
+              <h1 class="main-title hidden-md-up">Cart</h1>
+            </div>
+            <div class="headerSteps">
+              <ul class="headerSteps__inner">
+                <li class="active"><span><i class="icon-cart"></i></span></li>
+                <li class="active"><span><i class="icon-shipping"></i></span></li>
+                <li class="active"><span><i class="icon-card"></i></span></li>
+                <li><span><i class="icon-delivered"></i></span></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="inner">
+          <main class="checkout">
+            <div class="container">
+              <div class="row_wrap">
+                <div class="primary">
+                  <div class="checkout__heading">
+                    <h1 class="checkout__title">Payment Method </h1>
+                  </div>
+                  <div class="checkout_payment">
+                    <ul class="checkout_payment__list">
+                      <li>
+                        <div class="radio circle">
+                          <input type="radio" name="cash_id" id="cash_id" value="Payment cash" checked="checked">
+                          <label for="cash_id">
+                            <div class="thumb"><img src="images/payment-cash.png" alt="Cash"/>
+                            </div>
+                            <div class="content">
+                               Cash  on Delivery<span>Dissount 3% until 31/03</span></div>
+                          </label><i class="icon-check"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio circle">
+                          <input type="radio" name="cash_id" id="visa_id" value="Payment Visa">
+                          <label for="visa_id">
+                            <div class="thumb"><img src="images/payment-visa.png" alt="Visa"/>
+                            </div>
+                            <div class="content">
+                               Cash  on Delivery<span>Dissount 3% until 31/03</span></div>
+                          </label><i class="icon-check"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio circle">
+                          <input type="radio" name="cash_id" id="atm_id" value="Payment ATM">
+                          <label for="atm_id">
+                            <div class="thumb"><img src="images/payment-atm.png" alt="ATM"/>
+                            </div>
+                            <div class="content">
+                               Cash  on Delivery<span>Dissount 3% until 31/03</span></div>
+                          </label><i class="icon-check"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio circle">
+                          <input type="radio" name="cash_id" id="momo_id" value="Payment MoMo">
+                          <label for="momo_id">
+                            <div class="thumb"><img src="images/payment-momo.png" alt="MoMo"/>
+                            </div>
+                            <div class="content">
+                               Cash  on Delivery<span>Dissount 3% until 31/03</span></div>
+                          </label><i class="icon-check"></i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio circle">
+                          <input type="radio" name="cash_id" id="payoo_id" value="Payment Payoo">
+                          <label for="payoo_id">
+                            <div class="thumb"><img src="images/payment-payoo.png" alt="Payoo"/>
+                            </div>
+                            <div class="content">
+                               Cash  on Delivery<span>Dissount 3% until 31/03</span></div>
+                          </label><i class="icon-check"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sidebar">
+                  <div class="checkout_summary">
+                    <h3 class="checkout_summary__title hidden-sm-down">Order Summary</h3>
+                    <table class="checkout_summary__table">
+                      <tr> 
+                        <td class="label">Fee</td>
+                        <td class="value">100.000 VND</td>
+                      </tr>
+                      <tr>
+                        <td class="label">Delivery Fee </td>
+                        <td class="value">20.000 VND</td>
+                      </tr>
+                      <tr>
+                        <td class="label">Packet Fee</td>
+                        <td class="value">100.000 VND</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="order_total">
+                    <div class="order_total__inner">
+                      <div class="total_text">Total</div>
+                      <div class="price">1.120.000 VND </div>
+                    </div>
+                    <div class="order_total__next">
+                      <button class="button" type="button">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/scripts.js"></script>
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Delivery | Hunty</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <header class="headerCheckout">
+          <div class="container">
+            <div class="headerCheckout__inner"><a class="goback hidden-md-up hidden-md-up" href="javascript:;" onclick="window.history.back()" title="Trang trước"><i class="icon-arrow-prev"></i></a>
+              <div class="header__logo hidden-sm-down"><a href="#" title="Hunty"><img src="images/logo.png" alt="Hunty"/></a>
+              </div>
+              <h1 class="main-title hidden-md-up">Cart</h1>
+            </div>
+            <div class="headerSteps">
+              <ul class="headerSteps__inner">
+                <li class="active"><span><i class="icon-cart"></i></span></li>
+                <li class="active"><span><i class="icon-shipping"></i></span></li>
+                <li><span><i class="icon-card"></i></span></li>
+                <li><span><i class="icon-delivered"></i></span></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="inner">
+          <main class="checkout">
+            <div class="container">
+              <div class="row_wrap">
+                <div class="primary">
+                  <div class="checkout__heading">
+                    <h1 class="checkout__title">Delivery Method</h1><a class="link_change" href="javascript:;" title="Change">Change</a>
+                  </div>
+                  <div class="checkout_address">
+                    <div class="checkout_address__list">
+                      <div class="checkout_address__item">
+                        <p class="checkout_address__namePhone"><span class="name">Phan Chinh </span><span class="phone">0938528813</span></p>
+                        <p class="checkout_address__detail">Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout_address__form active">
+                    <div class="checkout_address__inner"> 
+                      <form class="address_form_edit" action="#" method="post">
+                        <div class="fieldset">
+                          <label class="label" for="full_name"><span>Full Name</span></label>
+                          <div class="fieldset__column">
+                            <input type="text" name="full_name" id="full_name" required="required" placeholder="Phan Chinh" aria-required="true"><span class="error-message">This field is required.</span>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label" for="telephone"><span>Phone Number</span></label>
+                          <div class="fieldset__column">
+                            <input type="tel" name="telephone" id="telephone" required="required" placeholder="0938528813" aria-required="true"><span class="error-message">This field is required.</span>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label" for="province_id"><span>Province</span></label>
+                          <div class="fieldset__column">
+                            <div class="custom-select" data-select="">
+                              <select name="province_id" id="province_id">
+                                <option value="hcm">Hồ Chí Minh </option>
+                                <option value="hn">Hà Nội</option>
+                                <option value="th">Thanh Hoá</option>
+                              </select><i class="icon-caret-down"></i>
+                            </div><span class="error-message">This field is required.</span>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label" for="district_id"><span>District</span></label>
+                          <div class="fieldset__column">
+                            <div class="custom-select" data-select="">
+                              <select name="district_id" id="district_id">
+                                <option value="hcm">Quận 12 </option>
+                                <option value="hn">Quận 12 </option>
+                                <option value="th">Quận 12 </option>
+                              </select><i class="icon-caret-down"></i>
+                            </div><span class="error-message">This field is required.</span>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label" for="ward_id"><span>Ward</span></label>
+                          <div class="fieldset__column">
+                            <div class="custom-select" data-select="">
+                              <select name="ward_id" id="ward_id">
+                                <option value="hcm">Quận 12 </option>
+                                <option value="hn">Quận 12 </option>
+                                <option value="th">Quận 12 </option>
+                              </select><i class="icon-caret-down"></i>
+                            </div><span class="error-message">This field is required.</span>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label" for="street_id"><span>Address</span></label>
+                          <div class="fieldset__column">
+                            <textarea name="street_id" id="street_id" placeholder="QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam"></textarea><span class="error-message">This field is required.</span>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label" for="street_id"><span>Select a address  </span></label>
+                          <div class="fieldset__column">
+                            <ul class="select_address"> 
+                              <li> 
+                                <div class="radio circle">
+                                  <input type="radio" name="office" id="office" value="office" checked="checked"/>
+                                  <label for="office">Office</label><i class="icon-check"></i>
+                                </div><span class="error-message">This field is required.</span>
+                              </li>
+                              <li> 
+                                <div class="radio circle">
+                                  <input type="radio" name="office" id="Home" value="Home"/>
+                                  <label for="Home">Home</label><i class="icon-check"></i>
+                                </div><span class="error-message">This field is required.</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="fieldset">
+                          <label class="label"></label>
+                          <div class="fieldset__column form_group">
+                            <button class="button hollow" id="cancel_id" name="cancel_id" type="button">Cancel
+                            </button>
+                            <button class="button" id="submit_id" name="ubmit_id" type="button">Submit
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="sidebar">
+                  <div class="order_total">
+                    <div class="order_total__inner">
+                      <div class="total_text">Total</div>
+                      <div class="price">1.120.000 VND </div>
+                    </div>
+                    <div class="order_total__next">
+                      <button class="button" type="button">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/scripts.js"></script>
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>
