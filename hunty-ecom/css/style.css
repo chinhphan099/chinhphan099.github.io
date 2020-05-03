@@ -1878,6 +1878,9 @@
   margin-bottom: 20px;
   overflow: hidden;
 }
+.banner .slick-arrow {
+  opacity: 0;
+}
 .banner__promoMb {
   margin-bottom: 20px;
 }
@@ -1908,9 +1911,6 @@
     left: 0;
     right: 0;
     background-image: linear-gradient(to right, #ffd100, #f2ca1a);
-  }
-  .banner .slick-arrow {
-    opacity: 0;
   }
   .banner .slick-dots {
     height: 3px;
@@ -1972,6 +1972,11 @@
     height: 375px;
     z-index: 1;
     box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+  }
+}
+@media (min-width: 1280px) {
+  .banner .slick-arrow {
+    opacity: 1;
   }
 }
 .category_icons {
