@@ -1,1 +1,63 @@
-.container,.container-fluid{width:100%;margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{display:table;content:"";clear:both}.container{max-width:1230px}.row{margin-left:-15px;margin-right:-15px}.row.no-gutter{margin-right:0;margin-left:0}.row.no-gutter>[class*=" col-"],.row.no-gutter>[class^=col-]{padding-right:0;padding-left:0}
+/* Begin Grid */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1230px;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-fluid:before,
+.container-fluid:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.row.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutter > [class^="col-"],
+.row.no-gutter > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+/*
+.make-grid-columns();
+.make-grid(xs);
+@media (min-width: @sm-min) {
+  .make-grid(sm);
+}
+@media (min-width: @md-min) {
+  .make-grid(md);
+}
+@media (min-width: @lg-min) {
+  .make-grid(lg);
+}
+@media (min-width: @xl-min) {
+  .make-grid(xl);
+}*/
+/* End Grid */

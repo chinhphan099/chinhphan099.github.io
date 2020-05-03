@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Plan &amp; Pricing | Hunty</title>
+    <title>Manage Promotion | Hunty</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="index, follow">
@@ -50,7 +50,7 @@
                     <button class="nav-close"><i class="icon-close hidden-md-up"></i></button>
                     <div class="nav-navigation clearfix">
                       <ul>
-                        <li><a href="shop-management.html" title="Home"><i class="icon-home"></i>	Home</a>
+                        <li class="active"><a href="shop-management.html" title="Home"><i class="icon-home"></i>	Home</a>
                         </li>
                         <li><a href="shop-order.html" title="Order"><i class="icon-shop-order"></i>	Shop Order</a>
                         </li>
@@ -73,61 +73,51 @@
                   </div>
                 </div>
                 <div class="shop-wrap__right">
-                  <div class="pricing">
-                    <div class="pricing-head">
-                      <h2 class="heading-title">Plan & Pricing</h2>
-                      <p class="hidden-sm-down">Pick a plan to use with your business. If you have any concern, fell free to <a href="contact-us.html" title="Contact Us" style="color: #FFD100;">CONTACT US</a>
-                      </p>
+                  <div class="manage-heading">
+                    <div class="heading"><h2 class="heading__text">Promotion</h2>
                     </div>
-                    <div class="pricing-plan">
-                      <div class="slider" data-cslider="{&quot;type&quot;: &quot;pricingslide&quot;, &quot;initUnder&quot;: 767}">
-                        <div class="slick">
-                          <div class="item">
-                            <div class="pricing-below premium">
-                              <div class="thumb"><img src="images/upload/premium.png" alt=""></div>
-                              <div class="desc">
-                                <h3 class="wrap-title">29$</h3>
-                                <h4>Lorem ipsum dolor sit amet, <br class="hidden-sm-down" />consectetur adipisicing elit.</h4>
-                                <ul>
-                                  <li><i class="icon-check"></i>Highest securit</li>
-                                  <li><i class="icon-check"></i>Modify categories</li>
-                                  <li><i class="icon-check"></i>manage potential customers</li>
-                                  <li><i class="icon-check"></i>Send Email & SMS marketing</li>
-                                </ul><a class="button hollow" href="javascript:;" title="Choose Plan">Choose Plan</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="pricing-below gold">
-                              <div class="thumb"><img src="images/upload/gold.png" alt=""></div>
-                              <div class="desc">
-                                <h3 class="wrap-title">29$</h3>
-                                <h4>Lorem ipsum dolor sit amet, <br class="hidden-sm-down" />consectetur adipisicing elit.</h4>
-                                <ul>
-                                  <li><i class="icon-check"></i>Highest securit</li>
-                                  <li><i class="icon-check"></i>Send Email & SMS marketing</li>
-                                </ul><a class="button hollow" href="javascript:;" title="Choose Plan">Choose Plan</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="pricing-below gold">
-                              <div class="thumb"><img src="images/upload/gold.png" alt=""></div>
-                              <div class="desc">
-                                <h3 class="wrap-title">29$</h3>
-                                <h4>Lorem ipsum dolor sit amet, <br class="hidden-sm-down" />consectetur adipisicing elit.</h4>
-                                <ul>
-                                  <li><i class="icon-check"></i>Highest securit</li>
-                                  <li><i class="icon-check"></i>Send Email & SMS marketing</li>
-                                </ul><a class="button hollow" href="javascript:;" title="Choose Plan">Choose Plan</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="routine-select hidden-md-up">
+                      <div class="custom-select" data-select="">
+                        <select name="routine" id="routine">
+                          <option value="">Routine</option>
+                          <option value="Routine 1" selected="selected">Routine 1</option>
+                          <option value="Routine 2">Routine 2</option>
+                        </select><i class="icon-caret-down"></i>
+                      </div><i class="icon-shop"></i>
+                    </div>
+                  </div>
+                  <div class="manage-promotion">
+                    <h4 class="wrap-title">ACTIVE PROMOTION</h4>
+                    <div class="promotion-col">
+                      <div class="promotion-col__thumb"><a href="promotion.html" title="Image"><img src="https://i.picsum.photos/id/1061/500/250.jpg?grayscale"></a>
+                      </div>
+                      <div class="promotion-col__desc"><a href="promotion.html">Lorem ipsum dolor sit.</a>
+                        <p>End Date: 11/11/2020</p>
                       </div>
                     </div>
-                    <div class="pricing-contact hidden-md-up"><a href="contact-us.html" title="Contact Us">Contact Us</a>
+                    <div class="promotion-col">
+                      <div class="promotion-col__thumb"><a href="promotion.html" title="Image"><img src="https://i.picsum.photos/id/1061/500/250.jpg?grayscale"></a>
+                      </div>
+                      <div class="promotion-col__desc"><a href="promotion.html">Lorem ipsum dolor sit.</a>
+                        <p>End Date: 11/11/2020</p>
+                      </div>
                     </div>
+                    <div class="promotion-col">
+                      <div class="promotion-col__thumb"><a href="promotion.html" title="Image"><img src="https://i.picsum.photos/id/1061/500/250.jpg?grayscale"></a>
+                      </div>
+                      <div class="promotion-col__desc"><a href="promotion.html">Lorem ipsum dolor sit.</a>
+                        <p>End Date: 11/11/2020</p>
+                      </div>
+                    </div>
+                    <div class="promotion-col">
+                      <div class="promotion-col__thumb"><a href="promotion.html" title="Image"><img src="https://i.picsum.photos/id/1061/500/250.jpg?grayscale"></a>
+                      </div>
+                      <div class="promotion-col__desc"><a href="promotion.html">Lorem ipsum dolor sit.</a>
+                        <p>End Date: 11/11/2020</p>
+                      </div>
+                    </div>
+                    <button class="button hollow" id="buttonId" name="buttonId" type="button">Add New Promotion
+                    </button>
                   </div>
                 </div>
               </div>

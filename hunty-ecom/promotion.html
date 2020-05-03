@@ -49,7 +49,7 @@
                     </div>
                     <div class="header__searchResults">
                       <ul class="tabs">
-                        <li class="active" id="tab1"><a href="#" title="Promotion">Promotion</a>
+                        <li class="active" id="tab1"><a href="promotion.html" title="Promotion">Promotion</a>
                         </li>
                         <li id="tab2"><a href="#" title="Map">Map</a>
                         </li>
@@ -228,7 +228,7 @@
                     </li>
                   </ul>
                 </nav>
-                <div class="product__recently"><a class="product__recently__title uppercase" href="#" title="danh mục sản phẩm "><i class="icon-caret-down"></i><span>Sản phẩm đã xem</span></a>
+                <div class="product__recently"><a class="product__recently__title uppercase" href="product.html" title="danh mục sản phẩm "><i class="icon-caret-down"></i><span>Sản phẩm đã xem</span></a>
                   <ul class="product__recently__list">
                     <li><a href="#!" title="Product title"><img src="https://picsum.photos/100/120" alt="Product title"></a>
                     </li>
@@ -401,7 +401,7 @@
                           <div class="shop_location"><i class="icon-location"></i><span>1.3km from you</span></div>
                         </div>
                       </div>
-                      <div class="button_inner"><a class="button hollow active hidden-sm-down" href="javascript:;" title="Follow Shop"><i class="icon-heart"></i><span>Follow Shop</span></a><a class="button hollow" href="shop.html" title="View Shop"><i class="icon-shop hidden-sm-down"></i><span>View Shop</span></a>
+                      <div class="button_inner"><a class="button hollow hidden-sm-down" href="javascript:;" title="Follow Shop" id="followShop"><i class="icon-heart"></i><span>Follow Shop</span></a><a class="button hollow" href="shop.html" title="View Shop"><i class="icon-shop hidden-sm-down"></i><span>View Shop</span></a>
                       </div>
                     </div>
                   </div>
@@ -549,117 +549,9 @@
             </div>
           </footer>
           <nav class="tabbar hidden-md-up hidden-sm-down">
-            <div class="tabbar__inner"><a class="tabbar__item active" href="index.html" title="Home"><i class="icon-home-solid"></i><span class="text">Home</span></a><a class="tabbar__item hunty-feed" href="hunty-feed.html" title="Hunty feed "><i class="icon-hunty-feed"><span class="path1"></span><span class="path2"></span></i><span class="text">Hunty feed</span></a><a class="tabbar__item notification" href="notification.html" title="Notification"><span class="icon"><i class="icon-notification"></i><span class="number">2</span><span class="text">Notification</span></span></a><a class="tabbar__item profile" href="profile.html" title="Chào Chinh"><img class="user_avt" src="https://picsum.photos/24/24"><span class="text">Chinh</span></a>
+            <div class="tabbar__inner"><a class="tabbar__item" href="index.html" title="Home"><i class="icon-home-solid"></i><span class="text">Home</span></a><a class="tabbar__item hunty-feed" href="hunty-feed.html" title="Hunty feed "><i class="icon-hunty-feed"><span class="path1"></span><span class="path2"></span></i><span class="text">Hunty feed</span></a><a class="tabbar__item notification" href="notification.html" title="Notification"><span class="icon"><i class="icon-notification"></i><span class="number">2</span><span class="text">Notification</span></span></a><a class="tabbar__item profile" href="profile.html" title="Chào Chinh"><img class="user_avt" src="https://picsum.photos/id/1/24/24"><span class="text">Chinh</span></a>
             </div>
           </nav>
-        </div>
-      </div>
-    </div>
-    <div class="modal login-modal">
-      <div class="modal__dialog">
-        <div class="modal__content">
-          <button class="close" type="button"><i class="icon-close"></i></button>
-          <div class="login" data-collapse="">
-            <div class="tabs">
-              <li class="active" id="tab1" data-active=""><a href="#" title="Login" data-handle="login">Login</a>
-              </li>
-              <li id="tab2" data-active=""><a href="#" title="Create Account" data-handle="register">Create Account</a>
-              </li>
-            </div>
-            <div class="tab_content">
-              <div class="pane tab1 active" data-content="login">
-                <div class="login__form">
-                  <form action="">
-                    <div class="fieldset">
-                      <label for="name_email">Name / Email</label>
-                      <input type="text" name="name_email" id="name_email" placeholder="Please input your phone number or email"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <label for="password">Password</label>
-                      <input type="password" name="loginPassword" id="loginPassword" placeholder="Password"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset two_col">
-                      <button class="button btn-login" type="submit">Login</button>
-                      <p class="forgot-password"><a href="#" title="Forgot your password?">Forgot your password?</a>
-                      </p>
-                    </div>
-                    <div class="fieldset">
-                      <p class="or-login">Or login with</p>
-                    </div>
-                    <div class="fieldset login-socials">
-                      <button class="button btn-login-google"><i class="icon-brand-google"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></i>Google</button>
-                      <button class="button btn-login-fb"><i class="icon-fb-circle"><span class="path1"></span><span class="path2"></span></i>Facebook</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="pane tab2" data-content="register">
-                <div class="login__form register">
-                  <form action="">
-                    <div class="fieldset">
-                      <label for="first_name">First Name</label>
-                      <input type="text" name="first_name" id="first_name" placeholder="First Name"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <label for="last_name">Last Name</label>
-                      <input type="text" name="last_name" id="last_name" placeholder="Last Name"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <label for="email">Email</label>
-                      <input type="text" name="email" id="email" placeholder="Email"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <label for="password">Password</label>
-                      <input type="password" name="password" id="password" placeholder="Password"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <label for="re-type-password">Re-type Password </label>
-                      <input type="password" name="reTypePassword" id="reTypePassword" placeholder="Re-type Password "/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <label for="telephone">Telephone</label>
-                      <input type="tel" name="telephone" id="telephone" placeholder="Telephone"/>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <ul class="gender">
-                        <li><span>Gender</span></li>
-                        <li>
-                          <div class="radio circle">
-                            <input type="radio" name="Male" id="Male" value="Male" checked="checked"/>
-                            <label for="Male">Male</label><i class="icon-check"></i>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="radio circle">
-                            <input type="radio" name="Male" id="Female" value="Female"/>
-                            <label for="Female">Female</label><i class="icon-check"></i>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="fieldset">
-                      <label for="telephone">Birthday</label>
-                      <div class="custom-date" data-date=""><span>Birthday</span>
-                        <input type="date" name="date" id="date" placeholder="Birthday"/><i class="icon-calendar"></i>
-                      </div>
-                      <p class="error-message">This field is required.</p>
-                    </div>
-                    <div class="fieldset">
-                      <button class="button btn-submit" type="submit">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

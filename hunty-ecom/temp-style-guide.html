@@ -23,7 +23,6 @@
   </head>
   <body class="template">
     <div class="wrapper" data-slidemenu="{&quot;headerFixedOnFocus&quot;: true}">
-      <!--include ../modules/structure/slideMenu-->
       <div class="navigation">
         <div class="inner">
           <ul class="nav" data-collapse="">
@@ -541,7 +540,7 @@
                   <li data-handler=""><span class="color" style="background-color: transparent"></span><code data-copy="@color00">transparent</code><span>@color00</span></li>
                   <li data-handler=""><span class="color" style="background-color: #fff"></span><code data-copy="@color01">#fff</code><span>@color01</span></li>
                   <li data-handler=""><span class="color" style="background-color: #f1f1f1"></span><code data-copy="@color02">#f1f1f1</code><span>@color02</span></li>
-                  <li data-handler=""><span class="color" style="background-color: #ddd"></span><code data-copy="@color03">#ddd</code><span>@color03</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #F5F6F8"></span><code data-copy="@color03">#F5F6F8</code><span>@color03</span></li>
                   <li data-handler=""><span class="color" style="background-color: #ccc"></span><code data-copy="@color04">#ccc</code><span>@color04</span></li>
                   <li data-handler=""><span class="color" style="background-color: #c0c0c0"></span><code data-copy="@color05">#c0c0c0</code><span>@color05</span></li>
                   <li data-handler=""><span class="color" style="background-color: #bbb"></span><code data-copy="@color06">#bbb</code><span>@color06</span></li>
@@ -906,26 +905,32 @@
                         <div class="col-sm-8 col-sm-offset-2">
                           <div class="panel">
                             <div class="text-center">
-                              <button class="button btn-primary expanded" id="guide_btn" name="guide_btn" type="submit">Click Me
+                              <button class="button" id="guide_btn" name="guide_btn" type="submit">Click Me
                               </button>
                             </div>
                             <div class="fieldset">
                               <label class="label" for="guide_txt">Input Text</label>
-                              <input type="text" name="guide_txt" id="guide_txt" required="required" placeholder="Placeholder"/>
+                              <div class="fieldset__column">
+                                <input type="text" name="guide_txt" id="guide_txt" required="required" placeholder="Placeholder"/>
+                              </div>
                             </div>
                             <div class="fieldset">
                               <label class="label" for="guide_date">DOB</label>
-                              <div class="custom-date" data-date=""><span>dd/mm/yyyy</span>
-                                <input type="date" name="guide_date" id="guide_date" required="required" placeholder="dd/mm/yyyy"/><i class="icon-calendar"></i>
+                              <div class="fieldset__column">
+                                <div class="custom-date" data-date=""><span>dd/mm/yyyy</span>
+                                  <input type="date" name="guide_date" id="guide_date" required="required" placeholder="dd/mm/yyyy"/><i class="icon-calendar"></i>
+                                </div>
                               </div>
                             </div>
                             <div class="fieldset" data-number="{&quot;maxLength&quot;: 3}">
                               <label class="label" for="guide_number">Number</label>
-                              <input type="number" name="guide_number" id="guide_number" required="required" placeholder="Number" data-input="" autocomplete="off"/>
+                              <div class="fieldset__column">
+                                <input type="number" name="guide_number" id="guide_number" required="required" placeholder="Number" data-input="" autocomplete="off"/>
+                              </div>
                             </div>
                             <div class="fieldset">
                               <label class="label" for="group_txt_01">Group input</label>
-                              <div class="row valid-wrap">
+                              <div class="row valid-wrap fieldset__column">
                                 <div class="col-sm-4">
                                   <input class="valid-group" type="text" name="group_txt_01" id="group_txt_01" required="required" placeholder="First Name"/>
                                 </div>
@@ -939,7 +944,7 @@
                             </div>
                             <div class="fieldset">
                               <label class="label" for="group_txt_011">Group input Number</label>
-                              <div class="row valid-wrap">
+                              <div class="row valid-wrap fieldset__column">
                                 <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
                                   <input class="valid-group" type="number" name="group_txt_011" id="group_txt_011" required="required" placeholder="Day" data-input="" autocomplete="off"/>
                                 </div>
@@ -953,13 +958,17 @@
                             </div>
                             <div class="fieldset">
                               <label class="label" for="guide_txt_custom">Custom Input</label>
-                              <div class="custom-input"><i class="icon-account"></i><span>
-                                  <input type="text" name="guide_txt_custom" id="guide_txt_custom" required="required"/></span>
+                              <div class="fieldset__column">
+                                <div class="custom-input"><i class="icon-account"></i><span>
+                                    <input type="text" name="guide_txt_custom" id="guide_txt_custom" required="required"/></span>
+                                </div>
                               </div>
                             </div>
                             <div class="fieldset">
                               <label class="label" for="guide_tarea">Text area</label>
-                              <textarea name="guide_tarea" id="guide_tarea" placeholder="Placeholder" required="required"></textarea>
+                              <div class="fieldset__column">
+                                <textarea name="guide_tarea" id="guide_tarea" placeholder="Placeholder" required="required"></textarea>
+                              </div>
                             </div>
                             <div class="fieldset">
                               <div class="radio circle">
@@ -975,174 +984,47 @@
                             </div>
                             <div class="fieldset">
                               <label class="label" for="guide_sb_01">Radio List</label>
-                              <ul class="radio-list">
-                                <li>
-                                  <div class="radio circle">
-                                    <input type="radio" name="guide_sb_group" id="guide_sb_01" value="guide_sb_01" required="required"/>
-                                    <label for="guide_sb_01">Radio List</label><i class="icon-check"></i>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="radio circle">
-                                    <input type="radio" name="guide_sb_group" id="guide_sb_02" value="guide_sb_02" required="required"/>
-                                    <label for="guide_sb_02">Radio List</label><i class="icon-check"></i>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label" for="guide_cb_01">Checkbox List</label>
-                              <ul class="checkbox-list">
-                                <li>
-                                  <div class="checkbox">
-                                    <input type="checkbox" name="guide_cb_group" id="guide_cb_01" value="guide_cb_01"/>
-                                    <label for="guide_cb_01">Choose at least One item</label><i class="icon-check"></i>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="checkbox">
-                                    <input type="checkbox" name="guide_cb_group" id="guide_cb_02" value="guide_cb_02"/>
-                                    <label for="guide_cb_02">Choose at least One item</label><i class="icon-check"></i>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label" for="guide_select">Custom Select Box</label>
-                              <div class="custom-select" data-select="">
-                                <select name="guide_select" id="guide_select" required="required">
-                                  <option value="">Please select an option</option>
-                                  <option value="Option 1">Option 1</option>
-                                  <option value="Option 2">Option 2</option>
-                                </select><i class="icon-caret-down"></i>
-                              </div>
-                            </div><br>
-                            <div class="divider"><span>Horizontal Form</span></div><br>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_txt"><span>Input Text</span></label>
-                              <div class="col-sm-8">
-                                <input type="text" name="horizontal_guide_txt" id="horizontal_guide_txt" required="required" placeholder="Placeholder"/>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_date"><span>DOB</span></label>
-                              <div class="col-sm-8">
-                                <div class="custom-date" data-date=""><span>Click to Choose Date</span>
-                                  <input type="date" name="horizontal_guide_date" id="horizontal_guide_date" required="required" placeholder="Click to Choose Date"/><i class="icon-calendar"></i>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="fieldset" data-number="{&quot;maxLength&quot;: 2}">
-                              <label class="label01 col-sm-4" for="horizontal_guide_number"><span>Number</span></label>
-                              <div class="col-sm-8">
-                                <input type="number" name="horizontal_guide_number" id="horizontal_guide_number" required="required" placeholder="Number" data-input="" autocomplete="off"/>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="group_txt_01"><span>Group input</span></label>
-                              <div class="col-sm-8">
-                                <div class="row valid-wrap">
-                                  <div class="col-sm-4">
-                                    <input class="valid-group" type="text" name="horizontal_group_txt_01" id="horizontal_group_txt_01" required="required" placeholder="First Name"/>
-                                  </div>
-                                  <div class="col-sm-4">
-                                    <input class="valid-group" type="text" name="horizontal_group_txt_02" id="horizontal_group_txt_02" required="required" placeholder="Middle Name"/>
-                                  </div>
-                                  <div class="col-sm-4">
-                                    <input class="valid-group" type="text" name="horizontal_group_txt_03" id="horizontal_group_txt_03" required="required" placeholder="Last Name"/>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="group_txt_011"><span>Group input Number</span></label>
-                              <div class="col-sm-8">
-                                <div class="row valid-wrap">
-                                  <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
-                                    <input class="valid-group" type="number" name="horizontal_group_txt_011" id="horizontal_group_txt_011" required="required" placeholder="Day" data-input="" autocomplete="off"/>
-                                  </div>
-                                  <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
-                                    <input class="valid-group" type="number" name="horizontal_group_txt_012" id="horizontal_group_txt_012" required="required" placeholder="Month" data-input="" autocomplete="off"/>
-                                  </div>
-                                  <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 4}">
-                                    <input class="valid-group" type="number" name="horizontal_group_txt_013" id="horizontal_group_txt_013" required="required" placeholder="Year" data-input="" autocomplete="off"/>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_txt_custom"><span>Custom Input</span></label>
-                              <div class="col-sm-8">
-                                <div class="custom-input"><i class="icon-account"></i><span>
-                                    <input type="text" name="horizontal_guide_txt_custom" id="horizontal_guide_txt_custom" required="required"/></span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_tarea"><span>Text area</span></label>
-                              <div class="col-sm-8">
-                                <textarea name="horizontal_guide_tarea" id="horizontal_guide_tarea" placeholder="Placeholder" required="required"></textarea>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <div class="col-sm-8 col-sm-offset-4">
-                                <div class="radio circle">
-                                  <input type="radio" name="horizontal_guide_sb" id="horizontal_guide_sb" value="horizontal_guide_sb" required="required"/>
-                                  <label for="horizontal_guide_sb">Radio Single</label><i class="icon-check"></i>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <div class="col-sm-8 col-sm-offset-4">
-                                <div class="checkbox">
-                                  <input type="checkbox" name="horizontal_guide_cb" id="horizontal_guide_cb" value="horizontal_guide_cb" required="required"/>
-                                  <label for="horizontal_guide_cb">Checkbox</label><i class="icon-check"></i>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_sb_01"><span>Radio List</span></label>
-                              <div class="col-sm-8">
+                              <div class="fieldset__column">
                                 <ul class="radio-list">
                                   <li>
                                     <div class="radio circle">
-                                      <input type="radio" name="horizontal_guide_sb_group" id="horizontal_guide_sb_01" value="horizontal_guide_sb_01" required="required"/>
-                                      <label for="horizontal_guide_sb_01">Radio List</label><i class="icon-check"></i>
+                                      <input type="radio" name="guide_sb_group" id="guide_sb_01" value="guide_sb_01" required="required"/>
+                                      <label for="guide_sb_01">Radio List</label><i class="icon-check"></i>
                                     </div>
                                   </li>
                                   <li>
                                     <div class="radio circle">
-                                      <input type="radio" name="horizontal_guide_sb_group" id="horizontal_guide_sb_02" value="horizontal_guide_sb_02" required="required"/>
-                                      <label for="horizontal_guide_sb_02">Radio List</label><i class="icon-check"></i>
+                                      <input type="radio" name="guide_sb_group" id="guide_sb_02" value="guide_sb_02" required="required"/>
+                                      <label for="guide_sb_02">Radio List</label><i class="icon-check"></i>
                                     </div>
                                   </li>
                                 </ul>
                               </div>
                             </div>
                             <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_cb_01"><span>Checkbox List</span></label>
-                              <div class="col-sm-8">
+                              <label class="label" for="guide_cb_01">Checkbox List</label>
+                              <div class="fieldset__column">
                                 <ul class="checkbox-list">
                                   <li>
                                     <div class="checkbox">
-                                      <input type="checkbox" name="horizontal_guide_cb_group" id="horizontal_guide_cb_01" value="horizontal_guide_cb_01"/>
-                                      <label for="horizontal_guide_cb_01">Choose at least One item</label><i class="icon-check"></i>
+                                      <input type="checkbox" name="guide_cb_group" id="guide_cb_01" value="guide_cb_01"/>
+                                      <label for="guide_cb_01">Choose at least One item</label><i class="icon-check"></i>
                                     </div>
                                   </li>
                                   <li>
                                     <div class="checkbox">
-                                      <input type="checkbox" name="horizontal_guide_cb_group" id="horizontal_guide_cb_02" value="horizontal_guide_cb_02"/>
-                                      <label for="horizontal_guide_cb_02">Choose at least One item</label><i class="icon-check"></i>
+                                      <input type="checkbox" name="guide_cb_group" id="guide_cb_02" value="guide_cb_02"/>
+                                      <label for="guide_cb_02">Choose at least One item</label><i class="icon-check"></i>
                                     </div>
                                   </li>
                                 </ul>
                               </div>
                             </div>
                             <div class="fieldset">
-                              <label class="label01 col-sm-4" for="horizontal_guide_select"><span>Custom Select Box</span></label>
-                              <div class="col-sm-8">
+                              <label class="label" for="guide_select">Custom Select Box</label>
+                              <div class="fieldset__column">
                                 <div class="custom-select" data-select="">
-                                  <select name="horizontal_guide_select" id="horizontal_guide_select" required="required">
+                                  <select name="guide_select" id="guide_select" required="required">
                                     <option value="">Please select an option</option>
                                     <option value="Option 1">Option 1</option>
                                     <option value="Option 2">Option 2</option>
@@ -1150,8 +1032,8 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="fieldset text-center">
-                              <button class="button btn-primary" id="guide_btn_01" name="guide_btn_01" type="submit">Click Me
+                            <div class="text-center">
+                              <button class="button hollow" id="guide_btn_01" name="guide_btn_01" type="submit">Click Me
                               </button>
                             </div>
                           </div>
