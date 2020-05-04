@@ -4006,8 +4006,6 @@
 }
 /* End Cart */
 /* Product Details */
-/* Product Section */
-/* End Product Section */
 /* Product Main Info */
 .product-wrapper {
   padding-bottom: 20px;
@@ -4074,6 +4072,11 @@
   }
   .product-slide .nav-slider .item {
     padding: 0 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .product-slide .nav-slider .slick-arrow {
+    opacity: 1;
   }
 }
 .product-details .heading {
