@@ -296,6 +296,9 @@
 .heading .see-all {
   color: #8B929F;
 }
+.heading .see-all:hover {
+  color: #2C2E32;
+}
 .heading__text {
   font-size: 1.6rem;
   line-height: 1.25;
@@ -414,7 +417,7 @@
   padding: 0 2px;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #FFD100;
+  background-image: radial-gradient(circle at top right, rgba(255, 209, 0, 0.071), #ffd100 80%);
 }
 .product__deal:before {
   position: absolute;
@@ -1055,7 +1058,7 @@
 @media (min-width: 768px) {
   .header {
     position: relative;
-    z-index: 5;
+    z-index: 7;
   }
   .header .container {
     display: flex;
@@ -1155,6 +1158,9 @@
   .header__searchForm button i {
     display: none;
   }
+  .header__searchForm button:hover {
+    background-color: #FFDC40;
+  }
   .header__search-auto-complete {
     display: none;
     position: absolute;
@@ -1253,6 +1259,7 @@
   }
   .header__mini_cart .cart-link:hover {
     background-color: #FFDC40;
+    color: #2C2E32;
   }
   .header__mini_cart:hover .header__mini_cart_notice {
     opacity: 1;
@@ -1328,6 +1335,16 @@
 @media (min-width: 1200px) {
   .header a {
     font-size: 14px;
+  }
+  .header a:hover {
+    color: #fff;
+  }
+  .header__left a {
+    color: inherit;
+    transition: all 150ms ease;
+  }
+  .header__left a:hover {
+    color: inherit;
   }
 }
 @media (max-width: 991px) {
@@ -1764,8 +1781,8 @@
 .newsletter h3 {
   margin-bottom: 10px;
   font-size: 16px;
+  font-weight: normal;
   line-height: 1.4;
-  color: #333;
 }
 .newsletter__inner {
   max-width: 590px;
@@ -1785,13 +1802,18 @@
 }
 .newsletter .custom-input button {
   padding: 0 10px;
-  background: #FFD100;
-  border-radius: 0 3px 3px 0;
   font-size: 16px;
+  color: #fff;
+  background-color: #FFD100;
+  border-radius: 0 3px 3px 0;
   border: none;
+}
+.newsletter .custom-input button:hover {
+  background-color: #FFDC40;
 }
 @media (min-width: 768px) {
   .newsletter {
+    margin-top: 30px;
     margin-bottom: 25px;
   }
   .newsletter__inner {
@@ -1982,18 +2004,29 @@
 .category_icons {
   margin-bottom: 20px;
 }
-.category_icons__list {
+.category_icons__list .item {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 0 5px;
   text-align: center;
 }
-.category_icons__list li {
-  width: calc(100% / 5 - 8px);
-  margin-bottom: 5px;
+.category_icons__list .slick-list {
+  margin: 0 -5px;
+}
+.category_icons__list .slick-track {
+  align-items: flex-start;
+}
+.category_icons__list .slick-arrow {
+  width: 26px;
+  height: 26px;
+}
+.category_icons__list .slick-arrow:before {
+  font-size: 16px;
 }
 .category_icons__list a {
   display: block;
+  width: 100%;
+  height: 100%;
   color: #2C2E32;
   font-size: 11px;
   line-height: 1.4;
@@ -2022,31 +2055,23 @@
   max-width: 80%;
   max-height: 50%;
 }
-@media (min-width: 576px) {
-  .category_icons__list li {
-    width: calc(100% / 10 - 5px);
-  }
-}
 @media (min-width: 768px) {
   .category_icons {
     margin-bottom: 25px;
   }
-  .category_icons__list li {
-    width: calc(100% / 10 - 12px);
+  .category_icons__list .slick-list {
+    margin: 0 -10px;
   }
 }
 @media (min-width: 992px) {
-  .category_icons__list li {
-    width: calc(100% / 10 - 15px);
+  .category_icons__list .item {
+    padding: 0 10px;
   }
   .category_icons__list .icon {
     margin-bottom: 10px;
   }
 }
 @media (min-width: 1200px) {
-  .category_icons__list li {
-    width: 94px;
-  }
   .category_icons__list a {
     font-size: 16px;
   }
@@ -2216,8 +2241,14 @@
     background-color: #F4F7FC;
   }
   .categories_block__list a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     padding: 15px 15px 15px 50px;
-    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: left;
+    background-color: transparent;
   }
   .categories_block__list a:before {
     left: 15px;
@@ -4786,7 +4817,7 @@
   width: calc(100% / 2 - 10px);
 }
 .btn_seeMore {
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   width: 100%;
 }
 /* End Hunty Feed */
@@ -5000,7 +5031,7 @@
 }
 .store-item a img {
   display: block;
-  height: 42px;
+  height: 50px;
   margin: 0 auto 5px;
 }
 @media (min-width: 768px) {
@@ -5011,9 +5042,6 @@
     max-width: 250px;
     height: 250px;
     padding: 35px;
-  }
-  .store-item a img {
-    height: 50px;
   }
 }
 /* add-product-1 */

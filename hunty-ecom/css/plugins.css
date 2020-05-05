@@ -230,9 +230,6 @@
 }
 @media (min-width: 1200px) {
   .slick-prev {
-    left: -100px;
-  }
-  .slider:hover .slick-prev {
     left: 10px;
   }
 }
@@ -241,9 +238,6 @@
 }
 .slick-next:before {
   content: "\f105";
-}
-.slider:hover .slick-next {
-  right: 0;
 }
 .vertical-slider .slick-next {
   top: auto !important;
@@ -256,9 +250,6 @@
 }
 @media (min-width: 1200px) {
   .slick-next {
-    right: -100px;
-  }
-  .slider:hover .slick-next {
     right: 10px;
   }
 }

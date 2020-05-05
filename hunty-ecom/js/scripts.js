@@ -266,6 +266,77 @@ if (window.Element && !Element.prototype.closest) {
 })(jQuery, window);
 "use strict";
 
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+(function () {
+  function countdown(elm) {
+    var timer = setInterval(function () {
+      var currentDate = new Date(),
+          endDate = new Date(elm.dataset.enddate),
+          beginDate = new Date(elm.dataset.begindate);
+      endDate.setDate(endDate.getDate() + 1);
+      beginDate.setHours(0, 0, 0, 0);
+      currentDate.setHours(0, 0, 0, 0);
+      endDate.setHours(0, 0, 0, 0);
+
+      if (beginDate <= currentDate && currentDate < endDate) {
+        if (elm.style.display === 'none') {
+          elm.style.display = 'block';
+        }
+      } else if (elm.style.display === 'block') {
+        elm.style.display = 'none';
+
+        if (!!timer) {
+          clearInterval(timer);
+        }
+      }
+
+      var date = new Date(),
+          hour = date.getHours(),
+          minutes = date.getMinutes(),
+          seconds = date.getSeconds(),
+          currentTimeMs = hour * 60 * 60 * 1000 + minutes * 60 * 1000 + seconds * 1000,
+          countdown = 24 * 60 * 60 * 1000 - currentTimeMs;
+      var hours = Math.floor(countdown / (60 * 60 * 1000)),
+          min = Math.floor((countdown - hours * 60 * 60 * 1000) / (60 * 1000)),
+          sec = Math.floor((countdown - min * 60 * 1000 - hours * 60 * 60 * 1000) / 1000);
+
+      if (!!elm.querySelector('.countdown--hour')) {
+        elm.querySelector('.countdown--hour').innerText = hours < 10 ? '0' + hours : hours;
+        elm.querySelector('.countdown--minute').innerText = min < 10 ? '0' + min : min;
+        elm.querySelector('.countdown--second').innerText = sec < 10 ? '0' + sec : sec;
+      }
+    }, 1000);
+  }
+
+  function init() {
+    var flashSaleElms = document.querySelectorAll('[data-flashsale]');
+
+    var _iterator = _createForOfIteratorHelper(flashSaleElms),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var flashSaleElm = _step.value;
+        countdown(flashSaleElm);
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    init(document.querySelector('[data-flashsale]'));
+  });
+})();
+"use strict";
+
 /**
  *  @name number
  *  @description description
@@ -747,7 +818,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       resize = 'onorientationchange' in window ? 'orientationchange.resize' + pluginName : 'resize.resize' + pluginName,
       TypeSliders = {
     SINGLE: 'single',
-    CAROUSEL: 'carousel',
+    CATEGORYICONS: 'categoryicons',
     CENTERMODE: 'centerMode',
     VIDEOSLIDE: 'videoSlide',
     VARIABLEWIDTH: 'variableWidth',
@@ -857,8 +928,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           option = this.options.singleSlider;
           break;
 
-        case TypeSliders.CAROUSEL:
-          option = this.options.carousel;
+        case TypeSliders.CATEGORYICONS:
+          option = this.options.categoryicons;
           break;
 
         case TypeSliders.CENTERMODE:
@@ -1049,7 +1120,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       if (this.options.setPositionArrows) {
         $(imgVisible).each(function () {
-          maxHeight = Math.max($(this).height(), maxHeight);
+          maxHeight = Math.max($(this).innerHeight(), maxHeight);
         });
         posTop = maxHeight / 2;
         arrowControl.animate({
@@ -1100,29 +1171,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       // Disable Slide go to top on after change
       rtl: $('html').attr('dir') === 'rtl' ? true : false
     },
-    carousel: {
-      infinite: true,
+    categoryicons: {
+      infinite: false,
       speed: 600,
-      slidesToShow: 6,
+      slidesToShow: 10,
       slidesToScroll: 2,
       // autoplay: true,
       // autoplaySpeed: 3000,
       zIndex: 5,
       rtl: $('html').attr('dir') === 'rtl' ? true : false,
       responsive: [{
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4
-        }
-      }, {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 544,
-        settings: {
-          slidesToShow: 2
+          slidesToShow: 5
         }
       }]
     },
@@ -1283,7 +1344,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           slidesToShow: 4
         }
       }, {
-        breakpoint: 544,
+        breakpoint: 576,
         settings: {
           slidesToShow: 2
         }

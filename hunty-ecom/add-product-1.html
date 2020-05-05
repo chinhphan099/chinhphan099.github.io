@@ -18,24 +18,250 @@
   <body>
     <div class="wrapper">
       <div class="main-container">
-        <header class="headershop">
-          <div class="container">
-            <div class="headershop__inner">
-              <div class="create-left">
-                <p><a href="shop-management.html">Shop Management</a></p>
+        <header class="header hidden-sm-down">
+          <div class="header__inner">
+            <div class="container">
+              <div class="header__wrap">
+                <div class="header__logo hidden-sm-down"><a href="index.html" title="Hunty"><img src="images/logo.png" alt="Hunty"/></a>
+                </div>
+                <div class="header__location"><i class="icon-location hidden-md-up"></i>
+                  <div class="custom-select" data-select="">
+                    <select name="select_id" id="select_id">
+                      <option value="hcm">Hồ Chí Minh </option>
+                      <option value="hn">Hà Nội</option>
+                      <option value="th">Thanh Hoá</option>
+                    </select><i class="icon-caret-down"></i>
+                  </div>
+                  <button class="header__search-btn hidden-md-up"><i class="icon-search"></i></button>
+                </div>
+                <div class="header__searchForm">
+                  <div class="header__searchForm-inner">
+                    <button class="header__btn-back hidden-md-up"><i class="icon-arrow-left"></i></button>
+                    <div class="custom-input">
+                      <button type="button" name="search_btn" id="search_btn"><span>Tìm kiếm</span><i class="icon-search"></i>
+                      </button><i class="icon-search"></i><span>
+                        <input type="text" name="txt_search" id="txt_search" placeholder="Search for Brand, Promotion... "/></span>
+                    </div>
+                    <button class="header__gro-up hidden-md-up"><i class="icon-gro-up"></i></button>
+                  </div>
+                  <div class="header__search-auto-complete">
+                    <div class="header__searchAutocomplete__list"><a class="result-item" href="#!" title="Search Content">Search Content</a><a class="result-item" href="#!" title="Search Content">Search Content</a><a class="result-item" href="#!" title="Search Content">Search Content</a>
+                    </div>
+                    <div class="header__searchResults">
+                      <ul class="tabs">
+                        <li class="active" id="tab1"><a href="promotion.html" title="Promotion">Promotion</a>
+                        </li>
+                        <li id="tab2"><a href="#" title="Map">Map</a>
+                        </li>
+                      </ul>
+                      <div class="tab_content">
+                        <div class="pane tab1 active">
+                          <div class="heading"><h3 class="heading__text">Lastest Search</h3>
+                          </div>
+                          <div class="searchResults_list">
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="heading"><h3 class="heading__text">Hot Trends</h3>
+                          </div>
+                          <div class="searchResults_list">
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                            <div class="searchResults__item">
+                              <div class="thumb"><a href="product.html"><img src="https://picsum.photos/140/170" alt="Hunty Product Name"/></a></div>
+                              <div class="content">
+                                <h3 class="name"><a href="search.html">T-Shirt</a></h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pane tab2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="create-right">
-                <p><a href="notification.html"><i class="icon-notification"></i><span>NOTIFICATION</span></a></p>
-                <p><a href="profile.html"><img src="https://i.picsum.photos/id/111/25/25.jpg" title=""><span>CHRIS HEMSWORTH</span></a></p>
+              <div class="header__links hidden-sm-down">
+                <div class="header__tracking"><a class="uppercase" href="my-order.html" title="Tracking order"><i class="icon-tracking"></i><span class="text">Tracking order</span></a>
+                </div>
+                <div class="header__notification"><a class="uppercase" href="notification.html" title="Notification"><span class="icon"><i class="icon-notification"></i><span class="number">2</span></span><span class="text">Notification</span></a>
+                </div>
+                <div class="header__loged"><a class="uppercase" href="profile.html" title="Chào Chinh"><img class="user_avt" src="https://picsum.photos/24/24"><span class="text">Chinh</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__main hidden-sm-down">
+            <div class="container">
+              <div class="header__left">
+                <nav class="nav"><a class="nav__category__toggle uppercase" href="#" title="danh mục sản phẩm "><i class="icon-hamburger"></i><span>Danh mục sản phẩm</span></a>
+                  <ul class="nav__navbar">
+                    <li class="has-sub"><a href="#" title="Introduce">Introduce</a>
+                      <div class="sub_menu">
+                        <ul>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Recruitment">Recruitment</a>
+                          </li>
+                          <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                            <div class="sub_menu">
+                              <ul>
+                                <li><a href="#" title="Recruitment">Recruitment</a>
+                                </li>
+                                <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                                </li>
+                                <li><a href="#" title="Recruitment">Recruitment</a>
+                                </li>
+                                <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                                </li>
+                                <li><a href="#" title="Recruitment">Recruitment</a>
+                                </li>
+                                <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                                </li>
+                                <li><a href="#" title="Recruitment">Recruitment</a>
+                                </li>
+                                <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                                </li>
+                                <li><a href="#" title="Recruitment">Recruitment</a>
+                                </li>
+                                <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                                </li>
+                                <li><a href="#" title="Recruitment">Recruitment</a>
+                                </li>
+                                <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="#" title="Recruitment">Recruitment</a>
+                    </li>
+                    <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                    </li>
+                    <li><a href="#" title="Contact">Contact</a>
+                    </li>
+                    <li><a href="#" title="Recruitment">Recruitment</a>
+                    </li>
+                    <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                    </li>
+                    <li><a href="#" title="Contact">Contact</a>
+                    </li>
+                    <li><a href="#" title="Recruitment">Recruitment</a>
+                    </li>
+                    <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                    </li>
+                    <li><a href="#" title="Contact">Contact</a>
+                    </li>
+                    <li><a href="#" title="Recruitment">Recruitment</a>
+                    </li>
+                    <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                    </li>
+                    <li><a href="#" title="Contact">Contact</a>
+                    </li>
+                    <li><a href="#" title="Recruitment">Recruitment</a>
+                    </li>
+                    <li><a href="#" title="Term & Conditions">Term & Conditions</a>
+                    </li>
+                    <li><a href="#" title="Contact">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="product__recently"><a class="product__recently__title uppercase" href="product.html" title="danh mục sản phẩm "><i class="icon-caret-down"></i><span>Sản phẩm đã xem</span></a>
+                  <ul class="product__recently__list">
+                    <li><a href="#!" title="Product title"><img src="https://picsum.photos/100/120" alt="Product title"></a>
+                    </li>
+                    <li><a href="#!" title="Product title"><img src="https://picsum.photos/100/120" alt="Product title"></a>
+                    </li>
+                    <li><a href="#!" title="Product title"><img src="https://picsum.photos/100/120" alt="Product title"></a>
+                    </li>
+                    <li><a href="#!" title="Product title"><img src="https://picsum.photos/100/120" alt="Product title"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__right">
+                <div class="header__shop_management"><a class="uppercase" href="shop-management.html" title="Shop Management "><span class="icon"><i class="icon-view-shop"></i></span><span>Shop Management</span></a>
+                </div>
+                <div class="header__hunty_feed"><a class="uppercase" href="hunty-feed.html" title="Hunty feed "><i class="icon-hunty-feed"><span class="path1"></span><span class="path2"></span></i><span>Hunty feed</span></a>
+                </div>
+                <div class="header__mini_cart">
+                  <div class="header__mini_cart_title"><a class="cart-link uppercase" href="cart.html" title="Cart "><span class="header__mini_cart_count"><i class="icon-cart"></i><span>2</span></span><span>Cart</span></a>
+                  </div>
+                  <div class="header__mini_cart_notice">
+                    <p>Thêm vào giỏ hàng thành công!</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </header>
         <div class="inner">
           <main><a class="goback hidden-md-up" href="javascript:;" onclick="window.history.back()" title="Trang trước"><i class="icon-arrow-prev"></i></a>
-            <div class="bannershop" style="background-image: url(https://i.picsum.photos/id/1068/3000/1000.jpg);">
+            <div class="bannershop" style="background-image: url(https://picsum.photos/3000/1000);">
               <div class="bannershop__inner">
-                <div class="create-banner"><img src="images/logo.png" title="logo"></div>
+                <div class="create-banner"><img src="images/logo-white.png" title="logo"></div>
                 <h2 class="heading-title">Become Hunty Seller</h2>
               </div>
             </div>
@@ -49,11 +275,11 @@
                 <div class="loginshop-store">
                   <div class="store-item"><a href="add-product-2.html" title="Add Product"><span>add Single Product</span></a>
                   </div>
-                  <div class="store-item"><a href="add-product-2.html" title="Product"><img src="images/upload/shoppe.png" alt="alt"/><span>Link Product from Shoppe</span></a>
+                  <div class="store-item"><a href="add-product-2.html" title="Product"><img src="images/shoppe.png" alt="alt"/><span>Link Product from Shoppe</span></a>
                   </div>
-                  <div class="store-item"><a href="add-product-2.html" title="Product"><img src="images/upload/shoppe.png" alt="alt"/><span>Link Product from Shoppe</span></a>
+                  <div class="store-item"><a href="add-product-2.html" title="Product"><img src="images/shoppe.png" alt="alt"/><span>Link Product from Shoppe</span></a>
                   </div>
-                  <div class="store-item"><a href="add-product-2.html" title="Product"><img src="images/upload/shoppe.png" alt="alt"/><span>Link Product from Shoppe</span></a>
+                  <div class="store-item"><a href="add-product-2.html" title="Product"><img src="images/shoppe.png" alt="alt"/><span>Link Product from Shoppe</span></a>
                   </div>
                 </div>
               </div>
