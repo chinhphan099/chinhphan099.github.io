@@ -1185,9 +1185,6 @@ label.label {
   color: #333;
   border-color: #D2DAEA;
 }
-.selected.custom-select i {
-  color: #333;
-}
 .custom-select select {
   color: #8B929F;
   border: 1px solid #D2DAEA;
