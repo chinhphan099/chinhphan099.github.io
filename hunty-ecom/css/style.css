@@ -2801,6 +2801,11 @@
     font-size: 1.8rem;
   }
 }
+@media (min-width: 1200px) {
+  .shop-wrap__right {
+    padding-bottom: 25px;
+  }
+}
 @media (max-width: 767px) {
   .shop-wrap .product-navs {
     justify-content: space-between;
@@ -2855,6 +2860,9 @@
 .nav-menu i {
   font-size: 3.2rem;
   color: #8B929F;
+}
+.nav-menu--white.nav-menu i {
+  color: #fff;
 }
 .nav-close {
   display: none;
@@ -3311,7 +3319,7 @@
   margin-bottom: 10px;
 }
 .pricing-below .wrap-title {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-size: 2.8rem;
   line-height: 32px;
 }
@@ -3346,6 +3354,20 @@
 @media (min-width: 350px) {
   .pricing-below ul {
     padding-left: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .pricing-below .wrap-title {
+    margin-bottom: 45px;
+  }
+  .pricing-below h4 {
+    margin-bottom: 15px;
+  }
+  .pricing-below ul {
+    margin-bottom: 40px;
+  }
+  .pricing-below li {
+    margin-bottom: 15px;
   }
 }
 /* End plan-pricing */
