@@ -1058,7 +1058,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         slideShow: true,
         fullScreen: true,
         animationEffect: 'zoom',
-        transitionEffect: 'circular',
+        transitionEffect: 'fade',
         thumbs: true
       });
     },
