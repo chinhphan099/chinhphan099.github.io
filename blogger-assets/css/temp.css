@@ -1,0 +1,46 @@
+//! Secure Process
+.secure-process {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    .w_main_title {
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        font-family: sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.25;
+        margin-bottom: 0;
+        .text {
+            position: relative;
+            padding-left: 25px;
+            &:before {
+                content: "";
+                .position(50% null null 0);
+                .size(20px, 21px);
+                margin-top: -10px;
+                background: url("//d16hdrba6dusey.cloudfront.net/sitecommon/images/secure/secure-icon.png") no-repeat 0 0 ~"/ contain";
+            }
+        }
+    }
+    .w_thumb {
+        padding: 15px 10px;
+        background-color: #eee;
+        text-align: center;
+    }
+    @media (min-width: 375px) {
+        .w_main_title {
+            padding: 12px 10px;
+            font-size: 15px;
+            .text {
+                padding-left: 38px;
+                &:before {
+                    .size(31px, 32px);
+                    margin-top: -16px;
+                }
+            }
+        }
+    }
+}
