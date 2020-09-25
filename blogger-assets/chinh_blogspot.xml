@@ -21,7 +21,6 @@
       <link rel='canonical' href='data:link.href' />
     </b:if>
     <meta content='width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no' name='viewport'/>
-
     <title><data:blog.pageTitle/></title>
     &lt;style&gt;&lt;!--/*<b:skin><![CDATA[*/]]></b:skin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&amp;display=swap&amp;subset=vietnamese" rel="stylesheet" />
@@ -89,6 +88,15 @@
       }
       //]]>
     </script>
+    <script type="text/javascript">
+      //<![CDATA[
+        var locations = [
+        {name: "Chi nhánh Tân Bình", lat: 10.8305335, lng: 106.6353312, mess: '<div class="noscrollbar"><h2>Chi nhánh Tân Bình</h2>124/85 Phan Huy Ích, Phường 15, Quận Tân Bình</div>'},
+        {name: "Chi nhánh Quận 1", lat: 10.7903090, lng: 106.6991340, mess: '<div class="noscrollbar"><h2>Chi nhánh Quận 1</h2>60 Nguyễn Văn Thủ, Đa Kao, Quận 1</div>'},
+        {name: "Chi nhánh Phú Nhuận", lat: 10.798205, lng: 106.6899, mess: '<div class="noscrollbar"><h2>Chi nhánh Phú Nhuận</h2>62 Hoa Cúc, P.7, Q.Phú Nhuận<br/><a href="https://www.facebook.com/KemLamTrangRangAP24/" target="_blank">Facebook</a></div>'}
+      ];
+      //]]>
+  </script>
   </head>
   <body>
     <div id='fb-root'/>
@@ -1026,7 +1034,7 @@
     <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAIlQFC86Q2W1wp1cnjdXQDH9WnU7wH1e8&amp;libraries=places'></script>
     <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/collapse.min.js'></script>
     <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/slider.min.js'></script>
-    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/gmap.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/gmapc.js'></script>
     <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/scrollto.min.js'></script>
     <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/sameheight.min.js'></script>
     <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/slidemenu.min.js'></script>
