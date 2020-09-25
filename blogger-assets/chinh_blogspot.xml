@@ -1,0 +1,1047 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:fb='http://www.facebook.com/2008/fbml'>
+  <head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+    <b:include data='blog' name='all-head-content'/>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+      <title><data:blog.pageTitle/></title>
+    <b:else/>
+      <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+        <title><data:blog.pageName/> - <data:blog.title/></title>
+      </b:if>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+      <title>Page Not Found - <data:blog.title/></title>
+      <meta content='3;/' http-equiv='refresh'/>
+    </b:if>
+
+    <b:if cond='data:blog.isMobile'>
+      <link rel='alternate' href='data:link.href' />
+    <b:else/>
+      <link rel='canonical' href='data:link.href' />
+    </b:if>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no' name='viewport'/>
+
+    <title><data:blog.pageTitle/></title>
+    &lt;style&gt;&lt;!--/*<b:skin><![CDATA[*/]]></b:skin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=vietnamese" rel="stylesheet" />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/libs.css' />
+    <link rel='stylesheet' href='//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/plugins.css' />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/style.css' />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/mobile.css' />
+    <b:include data='blog' name='google-analytics'/>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/modernizr.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/libs.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.autocomplete.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.mockjax.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky-kit.js'></script>
+    <meta expr:content='data:blog.pageTitle' property='og:title'/>
+    <meta expr:content='data:blog.url' property='og:url'/>
+    <meta content='Kem Trắng Răng USA' property='og:site_name'/>
+    <meta content='//3.bp.blogspot.com/-luy3nJ7EJ_I/WATgn55hLgI/AAAAAAAADOI/Jrx1SRKoC6IEyCDHJFxgDE83sx_y7ZLHgCK4B/s1600/Stamp.jpg' property='og:image'/>
+    <meta content='1812285465652183 ' property='fb:app_id'/>
+    <meta content='http://www.facebook.com/chinhphan099' property='fb:admins'/>
+    <meta content='article' property='og:type'/>
+    <link rel="apple-touch-icon" sizes="57x57" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="//rawgit.com/chinhphan099/blogspot/master/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="//rawgit.com/chinhphan099/blogspot/master/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="//rawgit.com/chinhphan099/blogspot/master/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="//rawgit.com/chinhphan099/blogspot/master/favicon-16x16.png" />
+    <link rel="manifest" href="//rawgit.com/chinhphan099/blogspot/master/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="//rawgit.com/chinhphan099/blogspot/master/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <script type='text/javascript'>
+      var summary_noimg = 500;
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+      function renderDescription(strx,chop){
+        if(strx.indexOf("<")!=-1)
+        {
+          var s = strx.split("<");
+          for(var i=0;i<s.length;i++){
+            if(s[i].indexOf(">")!=-1){
+              s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length);
+            } }
+          strx = s.join("");
+        }
+        chop = (chop < strx.length-1) ? chop : strx.length-2;
+        while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++;
+        strx = strx.substring(0,chop-1);
+        return strx+'...';
+      }
+      function createSummaryAndThumb(pID){
+        var div = document.getElementById(pID);
+        var img = div.getElementsByTagName("img");
+        var summ = summary_noimg;
+        var summary = renderDescription(div.innerHTML,summ);
+        div.innerHTML = summary;
+      }
+      //]]>
+    </script>
+  </head>
+  <body>
+    <div id='fb-root'/>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId : &#39;1812285465652183&#39;,
+          status : true, // check login status
+          cookie : true, // enable cookies to allow the server to access the session
+          xfbml : true // parse XFBML
+          });
+      };
+      (function() {
+        var e = document.createElement(&#39;script&#39;);
+        e.src = document.location.protocol + &#39;//connect.facebook.net/en_US/all.js&#39;;
+        e.async = true;
+        document.getElementById(&#39;fb-root&#39;).appendChild(e);
+      }());
+    </script>
+    <div class='wrapper' data-slidemenu='{&quot;headerFixedOnFocus&quot;: true}'>
+      <div class='topbar hidden-sm-down'>
+        <div class='container'>
+          <ul class='socials row'>
+            <li class='text-left col-sm-6'>
+              <ul>
+                <li>
+                  <a href='tel:+84977968386'>
+                    <i class='ion-ios-telephone'></i>
+                    <i class='ion-ios-telephone-outline'></i>
+                    <span class='text'>0938.528.813</span>
+                  </a>
+                </li>
+                <li>
+                  <a href='tel:+84977968386'>
+                    <i class='ion-ios-telephone'></i>
+                    <i class='ion-ios-telephone-outline'></i>
+                    <span class='text'>097.796.8386</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class='text-right col-sm-6'>
+              <ul>
+                <li><a href='#!'><i class='ion-social-facebook'></i><i class='ion-social-facebook-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-googleplus'></i><i class='ion-social-googleplus-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-twitter'></i><i class='ion-social-twitter-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-instagram'></i><i class='ion-social-instagram-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-pinterest'></i><i class='ion-social-pinterest-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-tumblr'></i><i class='ion-social-tumblr-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-skype'></i><i class='ion-social-skype-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-vimeo'></i><i class='ion-social-vimeo-outline'></i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='navigation' id='navigation'>
+        <div class='outer'>
+          <div class='container'>
+            <div class='row'>
+              <div class='nav-wrapper'>
+                <b:section id='navigation1' showaddelement='yes'>
+                  <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='1' visible='true'>
+                    <b:includable id='main'>
+                      <ul class='nav' data-collapse=''>
+                        <b:loop values='data:links' var='link'>
+                          <b:if cond='data:link.isCurrentPage'>
+                            <li class='active'><a expr:href='data:link.href'><data:link.title/></a></li>
+                          <b:else/>
+                            <li><a expr:href='data:link.href' expr:title='data:link.title'><data:link.title/></a></li>
+                          </b:if>
+                        </b:loop>
+                        <b:loop values='data:labels' var='label'>
+                          <li><a expr:href='data:label.url' expr:title='data:label.name'><data:label.name/></a></li>
+                        </b:loop>
+                      </ul>
+                    </b:includable>
+                  </b:widget>
+                </b:section>
+                <b:section id='rightNavigation1' class='hidden-md-up' showaddelement='yes'>
+                  <b:widget id='Label3' locked='false' title='Right Navigation' type='Label' version='1' visible='true'>
+                    <b:includable id='main'>
+                      <ul class='nav'>
+                        <b:loop values='data:labels' var='label'>
+                          <li>
+                            <b:if cond='data:blog.url == data:label.url'>
+                              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+                            <b:else/>
+                              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+                            </b:if>
+                            <b:if cond='data:showFreqNumbers'>
+                              <span dir='ltr'>(<data:label.count/>)</span>
+                            </b:if>
+                          </li>
+                        </b:loop>
+                      </ul>
+                    </b:includable>
+                  </b:widget>
+                </b:section>
+                <form action='/search' id='frmSearch' class='frmSearch hidden-sm-down'>
+                  <div class='custom-input'>
+                    <button class='button' id='btnSearch' type='submit'><i class='ion-ios-search'/></button>
+                    <span><input id='txtSearch' name='q' placeholder='Tìm kiếm...' type='text'/></span>
+                  </div>
+                  <div class='overlay hidden-sm-down'></div>
+                </form>
+                <script type='text/javascript'>
+                  (function ($) {
+                    var focusSearch = function() {
+                      if(!$('html').hasClass('showOverlay')) {
+                        $('html').addClass('showOverlay');
+                      }
+                    };
+                    var blurSearch = function() {
+                      $('html').removeClass('showOverlay');
+                    };
+                    $('input', '#frmSearch').off('focus.focusSearch', focusSearch).on('focus.focusSearch', focusSearch);
+                    $('.overlay').off('click.blurSearch', blurSearch).on('click.focusSearch', blurSearch);
+                  })(jQuery);
+                </script>
+              </div>
+            </div>
+            <!-- <b:include name='quickedit'/> -->
+          </div>
+        </div>
+      </div>
+      <!-- End Left Navigation -->
+      <div class="right-navigation hidden-md-up" id="rightNavigation">
+        <div class='container'>
+          <div class='row'>
+            <div class='head-nav'>
+              <form action='/search' id='frmSearchMobile'>
+                <div class='custom-input'>
+                  <button class='button' id='btnSearchMobile' type='submit'><i class='ion-ios-search'/></button>
+                  <span><input id='txtSearchMobile' name='q' placeholder='Tìm kiếm' type='text'/></span>
+                </div>
+              </form>
+            </div>
+            <div class='inner'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type='text/javascript'>
+        var getTitles = function(e) {
+          var n = e.feed.entry.length;
+          var title = [];
+          for (var i = 0; i &lt; n; i++) {
+            //console.log(e.feed.entry[i].link[4].href);
+            title[i] = {
+              data: e.feed.entry[i].title.$t,
+              value: e.feed.entry[i].title.$t,
+              href: e.feed.entry[i].link[4].href
+            };
+          }
+          $('#txtSearch').autocomplete({
+            lookup: title,
+            onSelect: function(suggestion) {
+              //console.log(suggestion);
+              window.location.href = suggestion.href;
+            }
+          });
+          $('#txtSearchMobile').autocomplete({
+            lookup: title,
+            appendTo: $('.inner', '.right-navigation'),
+            onSelect: function(suggestion) {
+              //console.log(suggestion);
+              window.location.href = suggestion.href;
+            }
+          });
+        };
+      </script>
+      <script type='text/javascript' src='//kemtrangrangusa.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
+      <!-- End Right Navigation -->
+      <div class='main-container'>
+        <div class='dummy-layer'/>
+        <b:section class='cHeader' id='header' showaddelement='yes'>
+          <b:widget id='Header1' locked='true' title='Demo (Header)' type='Header' version='1' visible='true'>
+            <b:includable id='main'>
+              <div class='container'>
+                <span class='hidden-md-up' data-nav='open-left-nav'><i class='ion-navicon'></i> <i class='ion-ios-close-empty'></i></span>
+                <b:if cond='data:blog.url == data:blog.homepageUrl'>
+                  <h1 class='logo'>
+                    <a expr:href='data:blog.homepageUrl' expr:title='data:title'>
+                      <img expr:alt='data:title' expr:src='data:sourceUrl'/>
+                    </a>
+                  </h1>
+                <b:else/>
+                  <div class='logo'>
+                    <a expr:href='data:blog.homepageUrl' expr:title='data:title'>
+                      <img expr:alt='data:title' expr:src='data:sourceUrl'/>
+                    </a>
+                  </div>
+                </b:if>
+                <span class='hidden-md-up' data-nav='open-right-nav'><i class='ion-ios-search'></i> <i class='ion-ios-close-empty'></i></span>
+                <!-- <b:include name='quickedit'/> -->
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+        <div class='inner'>
+          <!-- Main Slider -->
+          <div class='container main-slider'>
+            <div class='row'>
+              <b:if cond='data:blog.pageType == "index"'>
+                <div class="banner"><img src="//chinhphan099.github.io/blogger-assets/images/home/blog-banner.jpg" /></div>
+                <!--
+                <b:section class='main-banner' id='main-slider' preferred='yes' showaddelement='yes'>
+                  <b:widget id='HTML4' locked='true' title='Main Slider' type='HTML' visible='true'>
+                    <b:includable id='main'>
+                      <div class='slider single-slider' data-cslider='{"type": "single", "dots": true}'>
+                        <data:content/>
+                      </div>
+                      < ! - - <b:include name='quickedit'/> - - >
+                    </b:includable>
+                  </b:widget>
+                </b:section>
+                -->
+              <b:else/>
+                <b:section class='main-banner' id='main-banner' preferred='yes' showaddelement='yes'>
+                  <b:widget id='Image1' locked='false' title='banner' type='Image' visible='true'>
+                    <b:includable id='main'>
+                      <div class='content'>
+                        <b:if cond='data:link'>
+                          <a expr:href='data:link'>
+                            <img class='img-banner' expr:alt='data:title' expr:src='data:sourceUrl' />
+                          </a>
+                        <b:else/>
+                          <img class='img-banner' expr:alt='data:title' expr:src='data:sourceUrl' />
+                        </b:if>
+                        <b:if cond='data:caption'>
+                          <span class='caption'><data:caption/></span>
+                        </b:if>
+                      </div>
+                      <!-- <b:include name='quickedit'/> -->
+                    </b:includable>
+                  </b:widget>
+                </b:section>
+              </b:if>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class='container main-content'>
+            <div class='row'>
+              <!-- Main -->
+              <b:section class='main col-md-8 col-lg-9 ' id='main' preferred='yes' showaddelement='no'>
+                <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                  <b:includable id='main' var='top'>
+                    <!-- posts -->
+                    <div class='blog-posts hfeed'>
+                      <b:include data='top' name='status-message'/>
+                      <data:defaultAdStart/>
+                      <b:loop values='data:posts' var='post'>
+                        <div class='post-outer'>
+                          <b:include data='post' name='post'/>
+                          <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                            <!-- <b:if cond='data:post.showThreadedComments'> -->
+                              <b:include data='post' name='threaded_comments'/>
+                            <!-- </b:if> -->
+                          </b:if>
+                          <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                            <!-- <b:if cond='data:post.showThreadedComments'> -->
+                              <b:include data='post' name='threaded_comments'/>
+                            <!-- </b:if> -->
+                          </b:if>
+                        </div>
+
+                        <b:if cond='data:post.includeAd'>
+                          <b:if cond='data:post.isFirstPost'>
+                            <data:defaultAdEnd/>
+                          <b:else/>
+                            <data:adEnd/>
+                          </b:if>
+                          <div class='inline-ad'>
+                            <data:adCode/>
+                          </div>
+                          <data:adStart/>
+                        </b:if>
+                      </b:loop>
+                      <data:adEnd/>
+                    </div>
+                    <!-- End Post -->
+                    <!-- navigation -->
+                    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:include name='nextprev'/>
+                      </b:if>
+                    </b:if>
+                    <!-- End navigation -->
+                    <!-- feed links -->
+                    <b:include name='feedLinks'/>
+
+                    <!-- Đây là đoạn mã khi chúng ta xem trước bài viết trong khi viết bài, cái ngăn cản chúng ta không thể click chọn vào bài viết là đây -->
+                    <b:if cond='data:top.showDummy'><data:top.dummyBootstrap/></b:if>
+                    <!-- posts -->
+                    <!-- <b:include name='quickedit'/> -->
+                  </b:includable>
+                  <b:includable id='backlinkDeleteIcon' var='backlink'>
+                    <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
+                      <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
+                        <img src='//www.blogger.com/img/icon_delete13.gif'/>
+                      </a>
+                    </span>
+                  </b:includable>
+                  <b:includable id='comment-form' var='post'>
+                    <p><data:blogCommentMessage/></p>
+                    <p><data:blogTeamBlogMessage/></p>
+                    <iframe allowtransparency='true' expr:src='data:post.commentFormIframeSrc' frameborder='0' height='275' id='comment-editor' scrolling='auto' width='100%'/>
+                  </b:includable>
+                  <b:includable id='commentDeleteIcon' var='comment'>
+                    <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+                      <a expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+                        <img src='//www.blogger.com/img/icon_delete13.gif'/>
+                      </a>
+                    </span>
+                  </b:includable>
+                  <b:includable id='comment_count_picker' var='post'>
+                    <b:if cond='data:post.commentSource == 1'>
+                      <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+                      </span>
+                      <b:else/>
+                      <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                        <data:post.commentLabelFull/>:
+                      </a>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='feedLinksBody' var='links'></b:includable>
+                  <b:includable id='nextprev'>
+                    <div id="main-pagination"></div>
+                  </b:includable>
+                  <b:includable id='post' var='post'>
+                    <article class='main-post' expr:id='data:post.id' id='post-60' itemscope='' itemtype='//schema.org/BlogPosting'>
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                          <b:if cond='data:post.firstImageUrl'>
+                            <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'><img expr:src='data:post.firstImageUrl' expr:alt='data:post.title'/></a>
+                          <b:else/>
+                            <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'>
+                              <img alt='no image' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
+                            </a>
+                          </b:if>
+                        </b:if>
+                      </b:if>
+
+                      <!-- ! List pages -->
+                      <b:if cond='data:blog.pageType != "item"'>
+                        <b:if cond='data:post.title'>
+                          <b:if cond='data:blog.pageType == "static_page"'>
+                            <!-- Static page -->
+                            <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
+                            <ul class='entry-meta postPage'>
+                              <li>
+                                <i class="ion-android-contact"></i>
+                                <span class='text'><data:post.author/></span>
+                              </li>
+                              <li>
+                                <i class="ion-clock"></i>
+                                <span class='text'><data:post.timestamp/></span>
+                              </li>
+                            </ul>
+                          <b:else/>
+                            <h2 class='post-title' itemprop='name headline'>
+                              <b:if cond='data:post.link'>
+                                <a expr:href='data:post.link' itemprop='url'>
+                                  <data:post.title/>
+                                </a>
+                                <b:else/>
+                                <b:if cond='data:post.url'>
+                                  <a expr:href='data:post.url' itemprop='url'>
+                                    <data:post.title/>
+                                  </a>
+                                  <b:else/>
+                                  <data:post.title/>
+                                </b:if>
+                              </b:if>
+                            </h2>
+                          </b:if>
+                        </b:if>
+                      <b:else/>
+                        <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
+                        <ul class='entry-meta postPage'>
+                          <li>
+                            <i class="ion-android-contact"></i>
+                            <span class='text'><data:post.author/></span>
+                          </li>
+                          <li>
+                            <i class="ion-clock"></i>
+                            <span class='text'><data:post.timestamp/></span>
+                          </li>
+                        </ul>
+                      </b:if>
+
+                      <b:if cond='data:blog.pageType == "item"'>
+                      <b:else/>
+                        <b:if cond='data:blog.pageType == "static_page"'>
+                        <b:else/>
+                          <ul class='entry-meta'>
+                            <li>
+                              <i class="ion-android-contact"></i>
+                              <span class='text'><data:post.author/></span>
+                            </li>
+                            <li>
+                              <i class="ion-clock"></i>
+                              <span class='text'><data:post.timestamp/></span>
+                            </li>
+                            <b:if cond='data:post.numComments &gt; 0'>
+                              <li>
+                                <b:if cond='data:post.allowComments'>
+                                  <i class="ion-chatbubbles"></i>
+                                  <span class='text'><data:post.numComments/></span>
+                                </b:if>
+                              </li>
+                            </b:if>
+                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                              <b:if cond='data:post.labels'>
+                                <li>
+                                  <i class="ion-ios-pricetags"></i>
+                                  <b:loop values='data:post.labels' var='label'>
+                                    <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>, </b:if>
+                                  </b:loop>
+                                </li>
+                              </b:if>
+                            </b:if>
+                          </ul>
+                          <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                            <div class='thread-desc' expr:id='&quot;summary&quot; + data:post.id'>
+                              <data:post.body/>
+                            </div>
+                            <script type='text/javascript'>createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);</script>
+                          </b:if>
+                        </b:if>
+                        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                        <b:else/>
+                          <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                            <div class='post-header hidden'>
+                              <a class='readmore' expr:href='data:post.url'><data:post.jumpText/></a>
+                            </div>
+                          </b:if>
+                        </b:if>
+                      </b:if>
+                      <!-- <div class='post-header'>
+                        <div class='post-header-line-1'/>
+                      </div> -->
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                        <b:else/>
+                          <div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+                            <data:post.body/>
+                          </div>
+                        </b:if>
+                      <b:else/>
+                        <div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+                          <data:post.body/>
+                          <script type='text/javascript'>
+                            (function ($) {
+                              var mainImgWrap = $('.separator'),
+                                mainImg = $(mainImgWrap.find('img')[0]);
+                              if(mainImg.length) {
+                                mainImg.closest(mainImgWrap).addClass('hidden').next('br').remove();
+                                $('.img-banner').attr('src', mainImg.attr('src'));
+                              }
+                            })(jQuery);
+                          </script>
+                        </div>
+                      </b:if>
+                      <!-- clear for photos floats -->
+                      <b:if cond='data:post.labels'>
+                        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                          <p class='tags'>
+                            <b:loop values='data:post.labels' var='label'>
+                              <a expr:href='data:label.url' rel='tag'>
+                                <i class="ion-ios-pricetags"></i>
+                                <data:label.name/>
+                              </a>
+                            </b:loop>
+                          </p>
+                        </b:if>
+                      </b:if>
+                      <b:if cond='data:post.hasJumpLink'>
+                        <div class='jump-link' style='display:none'>
+                          <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'>
+                            <data:post.jumpText/>
+                          </a>
+                        </div>
+                      </b:if>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <div class='blog-pager clearfix' id='blog-pager'>
+                          <b:if cond='data:newerPageUrl'>
+                            <a class='newer-post' expr:href='data:newerPageUrl' id='newerPost'>
+                              <i class='ion-ios-undo-outline'></i>
+                              <span class='text'></span>
+                            </a>
+                            <script type='text/javascript'>
+                              (function ($) {
+                                var newerPost = $('#newerPost').attr('href');
+                                newerPost = newerPost.split('/');
+                                newerPost = newerPost[newerPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
+                                $('.text', '#newerPost')
+                                  .attr('title', newerPost)
+                                  .html(newerPost);
+                              })(jQuery);
+                            </script>
+                          </b:if>
+                          <b:if cond='data:olderPageUrl'>
+                            <a class='older-post' expr:href='data:olderPageUrl' id='olderPost'>
+                              <span class='text'></span>
+                              <i class='ion-ios-redo-outline'></i>
+                            </a>
+                            <script type='text/javascript'>
+                              (function ($) {
+                                var olderPost = $('#olderPost').attr('href');
+                                olderPost = olderPost.split('/');
+                                olderPost = olderPost[olderPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
+                                $('.text', '#olderPost')
+                                  .attr('title', olderPost)
+                                  .html(olderPost);
+                              })(jQuery);
+                            </script>
+                          </b:if>
+                        </div>
+                      </b:if>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <div id='related-post'>
+                          <script type='text/javascript'>
+                            //<![CDATA[
+                            var ry = '<h3 class="sub-title"><span>Related Posts</span></h3>',
+                              rcomment = 'comments',
+                              rdisable = 'disable comments',
+                              commentYN = 'yes',
+                              dw = '',
+                              titles = [],
+                              titlesNum = 0,
+                              urls = [],
+                              timeR = [],
+                              thumb = [],
+                              commentsNum = [],
+                              comments = [];
+
+                            function related_results_labels(c) {
+                              for (var b = 0; b < c.feed.entry.length; b++) {
+                                var d = c.feed.entry[b];
+                                titles[titlesNum] = d.title.$t;
+                                for (var a = 0; a < d.link.length; a++) {
+                                  if ('thr$total' in d) { commentsNum[titlesNum] = d.thr$total.$t + ' ' + rcomment } else { commentsNum[titlesNum] = rdisable };
+                                  if (d.link[a].rel == "alternate") {
+                                    urls[titlesNum] = d.link[a].href;
+                                    timeR[titlesNum] = d.published.$t;
+                                    if ('media$thumbnail' in d) {
+                                      thumb[titlesNum] = d.media$thumbnail.url;
+                                    }
+                                    else {
+                                      thumb[titlesNum] = '//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'
+                                    }
+                                    titlesNum++;
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+
+                            function removeRelatedDuplicates() {
+                              var b = new Array(0);
+                              c = new Array(0);
+                              e = new Array(0);
+                              f = new Array(0);
+                              g = new Array(0);
+                              for (var a = 0; a < urls.length; a++) {
+                                if (!contains(b, urls[a])) {
+                                  b.length += 1;
+                                  b[b.length - 1] = urls[a];
+                                  c.length += 1;
+                                  c[c.length - 1] = titles[a];
+                                  e.length += 1;
+                                  e[e.length - 1] = timeR[a];
+                                  f.length += 1;
+                                  f[f.length - 1] = thumb[a];
+                                  g.length += 1;
+                                  g[g.length - 1] = commentsNum[a];
+                                }
+                              }
+                              urls = b;
+                              titles = c;
+                              timeR = e;
+                              thumb = f;
+                              commentsNum = g;
+                            }
+
+                            function contains(b, d) {
+                              for (var c = 0; c < b.length; c++) {
+                                if (b[c] == d) {
+                                  return true;
+                                }
+                               }
+                              return false;
+                            }
+
+                            function printRelatedLabels(a) {
+                              var y = a.indexOf('?m=0');
+                              if (y != -1) {
+                                a = a.replace(/\?m=0/g, '');
+                              }
+                              for (var b = 0; b < urls.length; b++) {
+                                if (urls[b] == a) { urls.splice(b, 1);
+                                  titles.splice(b, 1);
+                                  timeR.splice(b, 1);
+                                  thumb.splice(b, 1);
+                                  commentsNum.splice(b, 1);
+                                }
+                              }
+                              var c = Math.floor((titles.length - 1) * Math.random());
+                              var b = 0;
+                              if (titles.length > 0) {
+                                dw += ry;
+                                dw += '<div class="row"><div class="outer" data-cslider="{&quot;type&quot;: &quot;carousel&quot;}"><div class="slick">';
+                                while (b < titles.length && b < 20 && b < maxresults) {
+                                  if (y != -1) {
+                                    urls[c] = urls[c] + '?m=0';
+                                  }
+                                  if (commentYN == 'yes') {
+                                    comments[c] = ' - ' + commentsNum[c];
+                                  }
+                                  else {
+                                    comments[c] = '';
+                                  }
+                                  dw += '<div class="container-fluid item">' +
+                                          '<div class="post">' +
+                                            '<div class="inner">' +
+                                              '<div class="thumbnail">' +
+                                                '<a href="' + urls[c] + '" rel="nofollow">' +
+                                                  '<img class="img-view" alt="' + titles[c] + '" src="' + thumb[c].replace("/s72-c/", "/s300/") + '"/>' +
+                                                '</a>' +
+                                              '</div>' +
+                                              '<div class="content"><h3 class="title"><a class="text-truncate" href="' + urls[c] + '" rel="nofollow">' + titles[c] + '</a></h3></div>' +
+                                            '</div>' +
+                                          '</div>' +
+                                        '</div>';
+                                  if (c < titles.length - 1) {
+                                    c++;
+                                  }
+                                  else {
+                                    c = 0;
+                                  }
+                                  b++;
+                                }
+                                dw += '</div><span class="load"></span></div></div>'
+                              }
+                              urls.splice(0, urls.length);
+                              titles.splice(0, titles.length);
+                              document.getElementById('related-post').innerHTML = dw;
+                            }
+                            //]]></script>
+                          <b:loop values='data:post.labels' var='label'>
+                            <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&quot;' type='text/javascript'/>
+                          </b:loop>
+                          <script type='text/javascript'>
+                            var maxresults=15;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);
+                          </script>
+                        </div>
+                      </b:if>
+                    </article>
+                  </b:includable>
+                  <b:includable id='postQuickEdit' var='post'>
+                    <b:if cond='data:post.editUrl'>
+                      <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
+                        <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
+                          <img alt='' class='icon-action' height='18' src='//img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+                        </a>
+                      </span>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='shareButtons' var='post'>
+                    <b:if cond='data:top.showEmailButton'>
+                      <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.emailThisMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showBlogThisButton'>
+                      <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.blogThisMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showTwitterButton'>
+                      <a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.shareToTwitterMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showFacebookButton'>
+                      <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.shareToFacebookMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showOrkutButton'>
+                      <a class='goog-inline-block share-button sb-orkut' expr:href='data:post.sharePostUrl + &quot;&amp;target=orkut&quot;' expr:title='data:top.shareToOrkutMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.shareToOrkutMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showDummy'>
+                      <div class='goog-inline-block dummy-container'>
+                        <data:post.dummyTag/>
+                      </div>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='status-message'></b:includable>
+                  <b:includable id='threaded_comments' var='post'>
+                    <!-- Comment Facebook -->
+                    <div class='comment-facebook'>
+                      <script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/>
+                      <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='100%'/>
+                    </div>
+                    <!-- End Comment Facebook -->
+                  </b:includable>
+                </b:widget>
+              </b:section>
+              <!-- End Main -->
+
+              <!-- Sidebar -->
+              <div data-sticky='' class='sidebar col-md-4 col-lg-3'>
+                <b:section id='sidebar' preferred='yes' showaddelement='yes'>
+                  <!-- Bài viết mới -->
+                  <b:widget id='PopularPosts1' locked='false' title='Bài viết mới' type='PopularPosts' version='1' visible='true'>
+                    <b:includable id='main'>
+                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
+                      <div class='outer clearfix'>
+                        <b:loop values='data:posts' var='post'>
+                          <b:include data='post' name='post'/>
+                        </b:loop>
+                      </div>
+                      <!-- <b:include name='quickedit'/> -->
+                    </b:includable>
+                    <b:includable id='post' var='post'>
+                      <div class='post'>
+                        <div class='inner'>
+                          <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+                            <div class='thumbnail'>
+                              <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 300) : data:post.thumbnail' var='image'>
+                                <a expr:href='data:post.href' expr:title='data:post.title'>
+                                  <img expr:alt='data:post.title' expr:src='data:image' />
+                                </a>
+                              </b:with>
+                            </div>
+                          <b:else/>
+                            <div class='thumbnail'>
+                              <a expr:href='data:post.href' expr:title='data:post.title'>
+                                <img expr:alt='data:post.title' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg' />
+                              </a>
+                            </div>
+                          </b:if>
+                          <div class='content'>
+                            <h3 class='title'><a expr:href='data:post.href' expr:title='data:post.title' class='text-truncate'><data:post.title/></a></h3>
+                            <p class='desc hidden'><data:post.snippet/></p>
+                          </div>
+                        </div>
+                      </div>
+                    </b:includable>
+                  </b:widget>
+
+                  <!-- Danh Muc -->
+                  <b:widget id='Label2' locked='false' title='Danh mục' type='Label' version='1' visible='true'>
+                    <b:includable id='main'>
+                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
+                      <div expr:class='&quot;outer &quot; + data:display + &quot;-label-outer&quot;'>
+                        <b:if cond='data:display == &quot;list&quot;'>
+                          <ul class='links'>
+                            <b:loop values='data:labels' var='label'>
+                              <li>
+                                <b:if cond='data:blog.url == data:label.url'>
+                                  <a expr:dir='data:blog.languageDirection' expr:href='data:label.url' expr:data-hover='data:label.name' class='active'><data:label.name/></a>
+                                <b:else/>
+                                  <a expr:dir='data:blog.languageDirection' expr:href='data:label.url' expr:data-hover='data:label.name'><data:label.name/></a>
+                                </b:if>
+                                <b:if cond='data:showFreqNumbers'>
+                                  <span dir='ltr'>(<data:label.count/>)</span>
+                                </b:if>
+                              </li>
+                            </b:loop>
+                          </ul>
+                        <b:else/>
+                          <b:loop values='data:labels' var='label'>
+                            <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+                              <b:if cond='data:blog.url == data:label.url'>
+                                <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+                              <b:else/>
+                                <a expr:dir='data:blog.languageDirection' expr:href='data:label.url' expr:data-hover='data:label.name'><data:label.name/></a>
+                              </b:if>
+                              <b:if cond='data:showFreqNumbers'>
+                                <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+                              </b:if>
+                            </span>
+                          </b:loop>
+                        </b:if>
+                        <!-- <b:include name='quickedit'/> -->
+                      </div>
+                    </b:includable>
+                  </b:widget>
+
+                  <!-- Chi nhanh -->
+                  <b:widget id='HTML3' locked='false' title='Bản đồ' type='HTML' visible='true'>
+                    <b:includable id='main'>
+                      <b:if cond='data:blog.url != "https://kemtrangrangusa.blogspot.com/p/map.html"'>
+                        <fieldset><div data-select='' class='custom-select'><span class='sub-title'>Tất cả chi nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Tất cả chi nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
+                        <div class='outer clearfix'>
+                          <data:content/>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      <b:else/>
+                      </b:if>
+                    </b:includable>
+                  </b:widget>
+                </b:section>
+              </div>
+            </div>
+          </div>
+          <div class='footer'>
+            <b:section class='fnav-wrap relative' id='helpLink' preferred='yes' showaddelement='yes'>
+              <b:widget id='PageList2' locked='false' title='Pages' type='PageList' version='1' visible='true'>
+                <b:includable id='main'>
+                  <div class='outer'>
+                    <div class='container'>
+                      <ul class='fNav'>
+                        <b:loop values='data:links' var='link'>
+                          <b:if cond='data:link.isCurrentPage'>
+                            <li class='active'>
+                              <a expr:href='data:link.href'>
+                                <data:link.title/>
+                              </a>
+                            </li>
+                            <b:else/>
+                            <li>
+                              <a expr:href='data:link.href'>
+                                <data:link.title/>
+                              </a>
+                            </li>
+                          </b:if>
+                        </b:loop>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- <b:include name='quickedit'/> -->
+                </b:includable>
+              </b:widget>
+            </b:section>
+            <div class='container inner'>
+              <div class="row top-footer">
+                <!-- Subcribe -->
+                <div class="col-md-6 col-md-offset-3">
+                  <b:section id='subscribe' preferred='yes' showaddelement='yes'>
+                    <b:widget id='FollowByEmail1' locked='false' title='Nhận Mail Khuyến Mãi' type='FollowByEmail' visible='true'>
+                      <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle text-center'><data:title/></h2></b:if>
+                        <div class='outer'>
+                          <div class='follow-by-email'>
+                            <form action='//feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;//feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+                              <div class='custom-input'>
+                                <button class='button' id='btnSearch' type='submit'>Đăng Ký</button>
+                                <span><input name='email' placeholder='Nhập Email...' type='text' autocomplete='off'/></span>
+                              </div>
+                              <input expr:value='data:feedPath' name='uri' type='hidden'/>
+                              <input name='loc' type='hidden' value='en_US'/>
+                            </form>
+                          </div>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+              </div>
+              <div class='row bottom-footer'>
+                <div class='col-md-3'>
+                  <!-- fLogo -->
+                  <b:section class='fLogoWrap' id='fLogoWrap' preferred='yes' showaddelement='yes'>
+                    <b:widget id='Image2' locked='false' title='Kem Trang Rang USA' type='Image' visible='true'>
+                      <b:includable id='main'>
+                        <div class='img-wrap'>
+                          <a expr:href='data:blog.homepageUrl' expr:alt='data:title'>
+                            <img expr:alt='data:title' expr:src='data:sourceUrl' />
+                          </a>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+                <div class="col-md-6">
+                  <!-- Chi nhanh -->
+                  <b:section id='branch1' preferred='yes' showaddelement='yes'>
+                    <b:widget id='HTML6' locked='false' title='Chi nhánh:' type='HTML' visible='true'>
+                      <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><span><data:title/></span></h2></b:if>
+                        <div class='outer'>
+                          <data:content/>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+                <div class='col-md-3'>
+                  <b:section id='helpfulLink' preferred='yes' showaddelement='yes'>
+                    <b:widget id='HTML7' locked='false' title='Thông tin' type='HTML' visible='true'>
+                      <b:includable id='main'>
+                        <h2 class='fTitle'><span><data:title/></span></h2>
+                        <div class='outer'>
+                          <data:content/>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+              </div>
+              <!-- End Bottom Footer -->
+            </div>
+            <div class="container">
+              <p class='copyright'>&#169; 2016 Kem Trang Rang USA. Designed and developed by <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Main Container -->
+    </div>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+      <script type="text/javascript">
+        (function ($) {
+          var cloneItem = $('.blog-posts').find('.thumbnail').clone();
+          cloneItem.addClass('item').find('img').addClass('img-view');
+          $('.single-slider').find('.slick').html(cloneItem);
+        })(jQuery);
+      </script>
+    </b:if>
+    <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAIlQFC86Q2W1wp1cnjdXQDH9WnU7wH1e8&amp;libraries=places'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slider.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/gmap.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/scrollto.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sameheight.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/select.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/pagination.min.js'></script>
+    <script type="text/javascript">
+    (function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/b/7/b783b69359613f2e5be68c65a8a1a967/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
+    </script>
+  </body>
+</html>

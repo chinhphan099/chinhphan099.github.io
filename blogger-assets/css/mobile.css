@@ -1,0 +1,331 @@
+/* Begin Slide Menu */
+@media (max-width: 767px) {
+  .wrapper {
+    position: relative;
+  }
+  .navigation .container {
+    background-color: transparent;
+  }
+  /* Header */
+  .logo {
+    width: 80px;
+    margin: 0 auto;
+  }
+  .head-nav {
+    position: relative;
+    z-index: 1;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  .head-nav .custom-input input {
+    border-color: transparent;
+    border-right-color: #f1f1f1;
+  }
+  .head-nav .custom-input button {
+    border-color: transparent;
+  }
+  .head-nav .custom-input button i {
+    color: #333;
+    font-size: 1.429rem;
+  }
+  .autocomplete-suggestions {
+    width: 100% !important;
+    position: static !important;
+    max-height: inherit !important;
+  }
+  .autocomplete-suggestions .autocomplete-suggestion,
+  .search-results a {
+    display: block;
+    padding: .7em;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
+  }
+  .search-results a:hover {
+    color: #333;
+  }
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    right: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: #666;
+    z-index: 1;
+  }
+  .navigation:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 30px;
+    background-image: -webkit-linear-gradient(left, transparent 60%, rgba(0, 0, 0, 0.2) 100%);
+    background-image: -o-linear-gradient(left, transparent 60%, rgba(0, 0, 0, 0.2) 100%);
+    background-image: linear-gradient(to right, transparent 60%, rgba(0, 0, 0, 0.2) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#33000000', GradientType=1);
+  }
+  .navigation .inner {
+    position: absolute;
+    top: 40px;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .right-navigation {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    right: -100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
+    background-color: white;
+  }
+  .right-navigation:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    width: 30px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 0, transparent 60%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.2) 0, transparent 60%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0, transparent 60%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=1);
+  }
+  .right-navigation .inner {
+    position: absolute;
+    top: 40px;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .main-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  .main-container .dummy-layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .main-container .cHeader {
+    position: relative;
+    z-index: 8;
+    width: 100%;
+    height: 40px;
+  }
+  .main-container .cHeader .Header {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    background-color: white;
+    border-bottom: 1px solid #333;
+  }
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon,
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon {
+    font-size: 2.308rem;
+  }
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty,
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
+    font-size: 3rem;
+  }
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search {
+    font-size: 2.308rem;
+  }
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search,
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .main-container .cHeader .ion-ios-close-empty {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .25s ease, visibility .25s ease;
+    -moz-transition: opacity .25s ease, visibility .25s ease;
+    -ms-transition: opacity .25s ease, visibility .25s ease;
+    -o-transition: opacity .25s ease, visibility .25s ease;
+    transition: opacity .25s ease, visibility .25s ease;
+  }
+  .main-container > .inner {
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .main-container .main {
+    padding-bottom: 15px;
+  }
+  .open-left-nav,
+  .open-right-nav {
+    height: 100%;
+  }
+  .open-left-nav body,
+  .open-right-nav body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .open-left-nav .wrapper,
+  .open-right-nav .wrapper {
+    height: 100%;
+    overflow: hidden;
+  }
+  .open-left-nav .zoomContainer,
+  .open-right-nav .zoomContainer {
+    width: 1px !important;
+    height: 1px !important;
+    top: 0 !important;
+  }
+  .open-left-nav .tmp-main-nav-wrap,
+  .open-right-nav .tmp-main-nav-wrap {
+    display: none;
+  }
+  .open-left-nav .navigation {
+    position: absolute;
+  }
+  .open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty {
+    opacity: 1;
+    visibility: visible;
+  }
+  .open-left-nav .main-container .cHeader .Header {
+    position: relative;
+  }
+  .open-left-nav .main-container > .inner {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  .open-right-nav .right-navigation {
+    position: absolute;
+  }
+  .open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
+    opacity: 1;
+    visibility: visible;
+  }
+  .open-right-nav .main-container .cHeader .Header {
+    position: relative;
+  }
+  .open-right-nav .main-container > .inner {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  .nav {
+    position: relative;
+  }
+  .nav a {
+    display: block;
+    position: relative;
+    padding: .7em;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.071rem;
+    color: #fff;
+    border-bottom: 1px solid #999;
+    text-transform: uppercase;
+  }
+  .nav a:hover {
+    color: #fff;
+  }
+  .nav a i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .nav a .icon-minus {
+    display: none;
+  }
+  .nav a.active .icon-plus {
+    display: none;
+  }
+  .nav a.active .icon-minus {
+    display: block;
+  }
+  .sub-nav {
+    background-color: #999;
+  }
+  .sub-nav li a {
+    padding-left: 20px;
+    border-bottom-color: #aaa;
+  }
+  .sub-nav li li a {
+    padding-left: 30px;
+  }
+  .sub-nav li li li a {
+    padding-left: 40px;
+  }
+  .post-outer {
+    padding-top: 0;
+  }
+  .post-outer:last-child {
+    margin-bottom: 0;
+  }
+  .bottom-footer .img-wrap {
+    margin-top: 0;
+  }
+  .fTitle span {
+    display: block;
+  }
+  .branches {
+    padding-bottom: 15px;
+  }
+}
