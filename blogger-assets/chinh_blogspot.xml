@@ -1033,7 +1033,7 @@
     <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAIlQFC86Q2W1wp1cnjdXQDH9WnU7wH1e8&amp;libraries=places'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.min.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slider.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/gmap.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/gmap.min.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/scrollto.min.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sameheight.min.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.min.js'></script>

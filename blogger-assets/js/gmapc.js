@@ -418,7 +418,7 @@
 
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]({
-      icon: 'images/pink-marker.png'
+      icon: '//chinhphan099.github.io/blogger-assets/images/common/pink-marker.png'
     });
   });
 
