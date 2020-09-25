@@ -24,18 +24,18 @@
 
     <title><data:blog.pageTitle/></title>
     &lt;style&gt;&lt;!--/*<b:skin><![CDATA[*/]]></b:skin>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=vietnamese" rel="stylesheet" />
-    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/libs.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&amp;display=swap&amp;subset=vietnamese" rel="stylesheet" />
     <link rel='stylesheet' href='//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' />
-    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/plugins.css' />
-    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/style.css' />
-    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/mobile.css' />
+    <link rel='stylesheet' href='//chinhphan099.github.io/blogger-assets/css/libs.css' />
+    <link rel='stylesheet' href='//chinhphan099.github.io/blogger-assets/css/plugins.css' />
+    <link rel='stylesheet' href='//chinhphan099.github.io/blogger-assets/css/style.css' />
+    <link rel='stylesheet' href='//chinhphan099.github.io/blogger-assets/css/mobile.css' />
     <b:include data='blog' name='google-analytics'/>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/modernizr.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/libs.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.autocomplete.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.mockjax.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky-kit.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/modernizr.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/libs.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/jquery.autocomplete.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/jquery.mockjax.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/sticky-kit.js'></script>
     <meta expr:content='data:blog.pageTitle' property='og:title'/>
     <meta expr:content='data:blog.url' property='og:url'/>
     <meta content='Kem Trắng Răng USA' property='og:site_name'/>
@@ -43,22 +43,22 @@
     <meta content='1812285465652183 ' property='fb:app_id'/>
     <meta content='http://www.facebook.com/chinhphan099' property='fb:admins'/>
     <meta content='article' property='og:type'/>
-    <link rel="apple-touch-icon" sizes="57x57" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="//rawgit.com/chinhphan099/blogspot/master/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="//rawgit.com/chinhphan099/blogspot/master/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="//rawgit.com/chinhphan099/blogspot/master/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="//rawgit.com/chinhphan099/blogspot/master/favicon-16x16.png" />
-    <link rel="manifest" href="//rawgit.com/chinhphan099/blogspot/master/manifest.json" />
+    <link rel="apple-touch-icon" sizes="57x57" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="//chinhphan099.github.io/blogger-assets/images/common/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="//chinhphan099.github.io/blogger-assets/images/common/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="//chinhphan099.github.io/blogger-assets/images/common/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="//chinhphan099.github.io/blogger-assets/images/common/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="//chinhphan099.github.io/blogger-assets/images/common/favicon-16x16.png" />
+    <link rel="manifest" href="//chinhphan099.github.io/blogger-assets/images/common/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="//rawgit.com/chinhphan099/blogspot/master/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="//chinhphan099.github.io/blogger-assets/images/common/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <script type='text/javascript'>
       var summary_noimg = 500;
@@ -99,7 +99,7 @@
           status : true, // check login status
           cookie : true, // enable cookies to allow the server to access the session
           xfbml : true // parse XFBML
-          });
+        });
       };
       (function() {
         var e = document.createElement(&#39;script&#39;);
@@ -114,13 +114,6 @@
           <ul class='socials row'>
             <li class='text-left col-sm-6'>
               <ul>
-                <li>
-                  <a href='tel:+84977968386'>
-                    <i class='ion-ios-telephone'></i>
-                    <i class='ion-ios-telephone-outline'></i>
-                    <span class='text'>0938.528.813</span>
-                  </a>
-                </li>
                 <li>
                   <a href='tel:+84977968386'>
                     <i class='ion-ios-telephone'></i>
@@ -261,7 +254,7 @@
           });
         };
       </script>
-      <script type='text/javascript' src='//kemtrangrangusa.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
+      <script type='text/javascript' src='//chinhfan.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
       <!-- End Right Navigation -->
       <div class='main-container'>
         <div class='dummy-layer'/>
@@ -898,7 +891,7 @@
                   <!-- Chi nhanh -->
                   <b:widget id='HTML3' locked='false' title='Bản đồ' type='HTML' visible='true'>
                     <b:includable id='main'>
-                      <b:if cond='data:blog.url != "https://kemtrangrangusa.blogspot.com/p/map.html"'>
+                      <b:if cond='data:blog.url != "https://chinhfan.blogspot.com/p/map.html"'>
                         <fieldset><div data-select='' class='custom-select'><span class='sub-title'>Tất cả chi nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Tất cả chi nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
                         <div class='outer clearfix'>
                           <data:content/>
@@ -1031,15 +1024,15 @@
       </script>
     </b:if>
     <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAIlQFC86Q2W1wp1cnjdXQDH9WnU7wH1e8&amp;libraries=places'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slider.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/collapse.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/slider.min.js'></script>
     <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/gmap.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/scrollto.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sameheight.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/select.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/pagination.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/scrollto.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/sameheight.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/slidemenu.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/select.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/sticky.min.js'></script>
+    <script type='text/javascript' src='//chinhphan099.github.io/blogger-assets/js/pagination.min.js'></script>
     <script type="text/javascript">
     (function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/b/7/b783b69359613f2e5be68c65a8a1a967/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
     </script>

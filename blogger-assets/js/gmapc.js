@@ -413,13 +413,11 @@
     });
   };
 
-  $.fn[pluginName].defaults = {
-  };
+  $.fn[pluginName].defaults = {};
 
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]({
       icon: '//chinhphan099.github.io/blogger-assets/images/common/pink-marker.png'
     });
   });
-
 }(jQuery, window));
