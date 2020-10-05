@@ -279,16 +279,6 @@
     }
   };
 
-  var getQueryParameter = function(param) {
-    let href = '';
-    if (location.href.indexOf('?')) {
-      href = location.href.substr(location.href.indexOf('?'));
-    }
-
-    const value = href.match(new RegExp('[\?\&]' + param + '=([^\&]*)(\&?)', 'i'));
-    return value ? value[1] : null;
-  };
-
   function Plugin(element, options) {
     this.element = $(element);
     this.options = $.extend({}, $.fn[pluginName].defaults, this.element.data(), options, this.element.data(pluginName));
@@ -305,18 +295,15 @@
         zoom: this.options.zoom[0],
         styles: styles,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: true,
-        streetViewControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
         zoomControl: true,
         zoomControlOptions: {
           style: google.maps.ZoomControlStyle.DEFAULT,
           position: google.maps.ControlPosition.RIGHT_CENTER
         },
-        mapTypeControlOptions: {
-          mapTypeIds: ['roadmap', 'satellite']
-        },
-        panControl: true,
-        scrollwheel: true,
+        panControl: false,
+        scrollwheel: false,
         //draggable: Modernizr.mobile || Modernizr.tablet ? false : true,
         gestureHandling: 'cooperative'
       };
@@ -329,18 +316,10 @@
       this.setMarkers();
       this.listener();
     },
-    triggerDefault: function() {
-      var ad = getQueryParameter('ad');
-      for (var i = 0, n = this.vars.locations.length; i < n; ++i) {
-        if(ad === this.vars.locations[i].value) {
-          google.maps.event.trigger(this.vars.marker[i], 'click');
-        }
-      }
-    },
     listener: function() {
       checkScrollMap.call(this);
       initAutocomplete.call(this);
-      this.changeLocation(this.vars.locations);
+      this.changeLocation(this.vars.locations, this.options.initValue);
     },
     setMarkers: function() {
       var that = this,
@@ -384,31 +363,29 @@
         opt = '';
       for (var i = 0, n = locations.length; i < n; ++i) {
         if(initValue === locations[i].name) {
-          opt = '<option value="' + locations[i].value + '" selected="selected">' + locations[i].name + '</option>';
+          opt = '<option value="' + locations[i].name + '" selected="selected">' + locations[i].name + '</option>';
         }
         else {
-          opt = '<option value="' + locations[i].value + '">' + locations[i].name + '</option>';
+          opt = '<option value="' + locations[i].name + '">' + locations[i].name + '</option>';
         }
         $('#' + this.options.dropdown).append(opt);
       }
 
       $('#' + this.options.dropdown).on('change.' + pluginName, function() {
-        var val = $(this).val();
+        var name = $(this).val();
         for (var i = 0, n = that.vars.locations.length; i < n; ++i) {
-          if(val === that.vars.locations[i].value) {
+          if(name === that.vars.locations[i].name) {
             google.maps.event.trigger(that.vars.marker[i], 'click');
           }
         }
-        if(!val) {
+        if(!name) {
           that.boundAllPosition();
           that.vars.infowindow.close();
           that.vars.zoomchanged = undefined;
         }
-      });
-
+      });//.change();
       google.maps.event.addListenerOnce(this.vars.map, 'idle', function() {
         $('#' + that.options.dropdown).change();
-        that.triggerDefault();
       });
     },
     setCenter: function(marker) {
