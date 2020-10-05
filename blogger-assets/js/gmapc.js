@@ -383,7 +383,8 @@
           that.vars.infowindow.close();
           that.vars.zoomchanged = undefined;
         }
-      });//.change();
+      });
+
       google.maps.event.addListenerOnce(this.vars.map, 'idle', function() {
         $('#' + that.options.dropdown).change();
       });
