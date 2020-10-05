@@ -363,10 +363,10 @@
         opt = '';
       for (var i = 0, n = locations.length; i < n; ++i) {
         if(initValue === locations[i].name) {
-          opt = '<option value="' + locations[i].name + '" selected="selected">' + locations[i].name + '</option>';
+          opt = '<option value="' + locations[i].value + '" selected="selected">' + locations[i].name + '</option>';
         }
         else {
-          opt = '<option value="' + locations[i].name + '">' + locations[i].name + '</option>';
+          opt = '<option value="' + locations[i].value + '">' + locations[i].name + '</option>';
         }
         $('#' + this.options.dropdown).append(opt);
       }
