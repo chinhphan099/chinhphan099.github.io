@@ -340,8 +340,7 @@
     listener: function() {
       checkScrollMap.call(this);
       initAutocomplete.call(this);
-      this.changeLocation(this.vars.locations, this.options.initValue);
-      // this.triggerDefault();
+      this.changeLocation(this.vars.locations);
     },
     setMarkers: function() {
       var that = this,
