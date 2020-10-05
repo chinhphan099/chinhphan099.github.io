@@ -305,8 +305,8 @@
         zoom: this.options.zoom[0],
         styles: styles,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false,
-        streetViewControl: false,
+        mapTypeControl: true,
+        streetViewControl: true,
         zoomControl: true,
         zoomControlOptions: {
           style: google.maps.ZoomControlStyle.DEFAULT,
@@ -316,8 +316,8 @@
           mapTypeIds: ['coordinate', 'roadmap', 'satellite'],
           style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
         },
-        panControl: false,
-        scrollwheel: false,
+        panControl: true,
+        scrollwheel: true,
         //draggable: Modernizr.mobile || Modernizr.tablet ? false : true,
         gestureHandling: 'cooperative'
       };
