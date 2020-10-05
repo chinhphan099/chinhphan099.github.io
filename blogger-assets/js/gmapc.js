@@ -394,13 +394,13 @@
       }
 
       $('#' + this.options.dropdown).on('change.' + pluginName, function() {
-        var name = $(this).val();
+        var val = $(this).val();
         for (var i = 0, n = that.vars.locations.length; i < n; ++i) {
-          if(name === that.vars.locations[i].name) {
+          if(val === that.vars.locations[i].value) {
             google.maps.event.trigger(that.vars.marker[i], 'click');
           }
         }
-        if(!name) {
+        if(!val) {
           that.boundAllPosition();
           that.vars.infowindow.close();
           that.vars.zoomchanged = undefined;
