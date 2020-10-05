@@ -282,7 +282,7 @@
   var getQueryParameter = function(param) {
     let href = '';
     if (location.href.indexOf('?')) {
-        href = location.href.substr(location.href.indexOf('?'));
+      href = location.href.substr(location.href.indexOf('?'));
     }
 
     const value = href.match(new RegExp('[\?\&]' + param + '=([^\&]*)(\&?)', 'i'));
@@ -329,8 +329,8 @@
     triggerDefault: function() {
       var ad = getQueryParameter('ad');
       for (var i = 0, n = this.vars.locations.length; i < n; ++i) {
-        if(ad === that.vars.locations[i].name) {
-          google.maps.event.trigger(that.vars.marker[i], 'click');
+        if(ad === this.vars.locations[i].name) {
+          google.maps.event.trigger(this.vars.marker[i], 'click');
         }
       }
     },
