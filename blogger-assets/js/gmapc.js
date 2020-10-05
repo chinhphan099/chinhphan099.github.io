@@ -313,8 +313,7 @@
           position: google.maps.ControlPosition.RIGHT_CENTER
         },
         mapTypeControlOptions: {
-          mapTypeIds: ['coordinate', 'roadmap', 'satellite'],
-          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+          mapTypeIds: ['roadmap', 'satellite']
         },
         panControl: true,
         scrollwheel: true,
