@@ -408,7 +408,7 @@
       });
 
       google.maps.event.addListenerOnce(this.vars.map, 'idle', function() {
-        // $('#' + that.options.dropdown).change();
+        $('#' + that.options.dropdown).change();
         that.triggerDefault();
       });
     },
