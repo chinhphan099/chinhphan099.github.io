@@ -91,9 +91,9 @@
     <script type="text/javascript">
       //<![CDATA[
         var locations = [
-        {name: "Chi nhánh Tân Bình", lat: 10.8305335, lng: 106.6353312, mess: '<div class="noscrollbar"><h2>Chi nhánh Tân Bình</h2>124/85 Phan Huy Ích, Phường 15, Quận Tân Bình</div>'},
-        {name: "Chi nhánh Quận 1", lat: 10.7903090, lng: 106.6991340, mess: '<div class="noscrollbar"><h2>Chi nhánh Quận 1</h2>60 Nguyễn Văn Thủ, Đa Kao, Quận 1</div>'},
-        {name: "Chi nhánh Phú Nhuận", lat: 10.798205, lng: 106.6899, mess: '<div class="noscrollbar"><h2>Chi nhánh Phú Nhuận</h2>62 Hoa Cúc, P.7, Q.Phú Nhuận<br/><a href="https://www.facebook.com/KemLamTrangRangAP24/" target="_blank">Facebook</a></div>'}
+        {name: "Tân Bình", lat: 10.8305335, lng: 106.6353312, mess: '<div class="noscrollbar"><h2>Tân Bình</h2>Phan Huy Ích, Phường 15, Quận Tân Bình</div>'},
+        {name: "Quận 12", lat: 10.853653, lng: 106.626612, mess: '<div class="noscrollbar"><h2>Công Viên Phần Mềm Quang Trung, Quận 12</div>'},
+        {name: "Phú Quốc", lat: 10.247298, lng: 103.977883, mess: '<div class="noscrollbar"><h2>Phú Quốc, Tỉnh Kiên Giang</div>'}
       ];
       //]]>
   </script>
@@ -309,25 +309,27 @@
                 </b:section>
                 -->
               <b:else/>
-                <b:section class='main-banner' id='main-banner' preferred='yes' showaddelement='yes'>
-                  <b:widget id='Image1' locked='false' title='banner' type='Image' visible='true'>
-                    <b:includable id='main'>
-                      <div class='content'>
-                        <b:if cond='data:link'>
-                          <a expr:href='data:link'>
+                <b:if cond='data:blog.url != "https://chinhfan.blogspot.com/p/map.html"'>
+                  <b:section class='main-banner' id='main-banner' preferred='yes' showaddelement='yes'>
+                    <b:widget id='Image1' locked='false' title='banner' type='Image' visible='true'>
+                      <b:includable id='main'>
+                        <div class='content'>
+                          <b:if cond='data:link'>
+                            <a expr:href='data:link'>
+                              <img class='img-banner' expr:alt='data:title' expr:src='data:sourceUrl' />
+                            </a>
+                          <b:else/>
                             <img class='img-banner' expr:alt='data:title' expr:src='data:sourceUrl' />
-                          </a>
-                        <b:else/>
-                          <img class='img-banner' expr:alt='data:title' expr:src='data:sourceUrl' />
-                        </b:if>
-                        <b:if cond='data:caption'>
-                          <span class='caption'><data:caption/></span>
-                        </b:if>
-                      </div>
-                      <!-- <b:include name='quickedit'/> -->
-                    </b:includable>
-                  </b:widget>
-                </b:section>
+                          </b:if>
+                          <b:if cond='data:caption'>
+                            <span class='caption'><data:caption/></span>
+                          </b:if>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </b:if>
               </b:if>
             </div>
           </div>
@@ -336,7 +338,7 @@
           <div class='container main-content'>
             <div class='row'>
               <!-- Main -->
-              <b:section class='main col-md-8 col-lg-9 ' id='main' preferred='yes' showaddelement='no'>
+              <b:section class='main col-md-8 col-lg-9' id='main' preferred='yes' showaddelement='no'>
                 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
                   <b:includable id='main' var='top'>
                     <!-- posts -->
@@ -900,7 +902,7 @@
                   <b:widget id='HTML3' locked='false' title='Bản đồ' type='HTML' visible='true'>
                     <b:includable id='main'>
                       <b:if cond='data:blog.url != "https://chinhfan.blogspot.com/p/map.html"'>
-                        <fieldset><div data-select='' class='custom-select'><span class='sub-title'>Tất cả chi nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Tất cả chi nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
+                        <fieldset><div data-select='' class='custom-select'><span class='sub-title'>Chi Nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Chi Nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
                         <div class='outer clearfix'>
                           <data:content/>
                         </div>
