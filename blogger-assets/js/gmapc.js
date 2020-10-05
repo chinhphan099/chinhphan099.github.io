@@ -312,6 +312,10 @@
           style: google.maps.ZoomControlStyle.DEFAULT,
           position: google.maps.ControlPosition.RIGHT_CENTER
         },
+        mapTypeControlOptions: {
+          mapTypeIds: ['coordinate', 'roadmap', 'satellite'],
+          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+        },
         panControl: false,
         scrollwheel: false,
         //draggable: Modernizr.mobile || Modernizr.tablet ? false : true,
