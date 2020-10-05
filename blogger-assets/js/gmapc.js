@@ -279,6 +279,16 @@
     }
   };
 
+  var getQueryParameter = function(param) {
+    let href = '';
+    if (location.href.indexOf('?')) {
+        href = location.href.substr(location.href.indexOf('?'));
+    }
+
+    const value = href.match(new RegExp('[\?\&]' + param + '=([^\&]*)(\&?)', 'i'));
+    return value ? value[1] : null;
+  };
+
   function Plugin(element, options) {
     this.element = $(element);
     this.options = $.extend({}, $.fn[pluginName].defaults, this.element.data(), options, this.element.data(pluginName));
@@ -316,10 +326,19 @@
       this.setMarkers();
       this.listener();
     },
+    triggerDefault: function() {
+      var ad = getQueryParameter('ad');
+      for (var i = 0, n = this.vars.locations.length; i < n; ++i) {
+        if(ad === that.vars.locations[i].name) {
+          google.maps.event.trigger(that.vars.marker[i], 'click');
+        }
+      }
+    },
     listener: function() {
       checkScrollMap.call(this);
       initAutocomplete.call(this);
       this.changeLocation(this.vars.locations, this.options.initValue);
+      this.triggerDefault();
     },
     setMarkers: function() {
       var that = this,
