@@ -329,7 +329,7 @@
     triggerDefault: function() {
       var ad = getQueryParameter('ad');
       for (var i = 0, n = this.vars.locations.length; i < n; ++i) {
-        if(ad === this.vars.locations[i].name) {
+        if(ad === this.vars.locations[i].value) {
           google.maps.event.trigger(this.vars.marker[i], 'click');
         }
       }
