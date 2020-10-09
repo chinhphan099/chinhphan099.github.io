@@ -633,6 +633,8 @@
         //$('img[data-lazy]', thisSlider).not('[src]').addClass('slick-loading');
         // ---------------------
 
+        _.$slides = _.$slideTrack.children;
+
         _.setupInfinite();
 
         _.buildArrows();
