@@ -1,1 +1,1 @@
-new Slick(document.querySelector('.slider .w_inner'), {infinite: false});
+// new Slick(document.querySelector('.slider .w_inner'), {infinite: false});
