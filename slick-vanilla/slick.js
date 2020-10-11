@@ -574,7 +574,8 @@
         var _ = this;
         //const thisSlider = $(_.$slider);
 
-        _.$slides = _.$slider.children;
+        //_.$slides = _.$slider.children;
+        _.$slides = [..._.$slider.children];
         let index = 0;
         for (let item of _.$slides) {
             item.classList.add('slick-slide');
@@ -620,7 +621,7 @@
         //const lister = _.wrapAll([_.$slideTrack], slickListDiv);
         //_.$list = $(lister);
         _.$list = _.wrapAll([_.$slideTrack], slickList);
-        _.$slides = _.$slideTrack.children;
+        // _.$slides = _.$slideTrack.children;
 
         //_.$slideTrack.css('opacity', 0);
         _.$slideTrack.style.opacity = 0;
@@ -1044,6 +1045,9 @@
             }
         }
 
+        _.$slider.removeEventListener('focus', _.focus);
+        _.$slider.removeEventListener('blur', _.blur);
+
         //leaving this out for now
         //$(window).off('orientationchange.slick.slick-' + _.instanceUid, _.orientationChange);
 
@@ -1093,6 +1097,11 @@
             _.emptyDOM(_.$slider);
             //why do this..?
             //_.$slider.appendChild(originalSlides);
+
+            // Recovery original Slide item
+            _.$slides.forEach(slide => {
+                _.$slider.innerHTML += slide.children[0].innerHTML;
+            });
         }
     };
 
@@ -1188,7 +1197,10 @@
 
             //thisSlider.append(thisSlides);
             //why do this..?
-            //_.$slider.appendChild(_.$slides);
+            _.$slides.forEach(slide => {
+                // _.$slider.appendChild(slide.children[0].children[0]);
+                _.$slider.innerHTML += slide.children[0].innerHTML;
+            });
         }
 
         _.cleanUpRows();
@@ -1295,29 +1307,50 @@
     /*
     NEEDS WORK
     */
+    Slick.prototype.focus = function (event) {
+        var $sf = this;
+
+        setTimeout(function () {
+            if (_.options.pauseOnFocus) {
+                if (_.isMatches($sf, ':focus')) {
+                    _.focussed = true;
+                    _.autoPlay();
+                }
+            }
+        }, 0);
+    };
+
+    Slick.prototype.blur = function (event) {
+        // When a blur occurs on any elements within the slider we become unfocused
+        if (_.options.pauseOnFocus) {
+            _.focussed = false;
+            _.autoPlay();
+        }
+    };
+
     Slick.prototype.focusHandler = function () {
         var _ = this;
 
-        const focus = function (event) {
-            var $sf = this;
+        // _.focus = function (event) {
+        //     var $sf = this;
 
-            setTimeout(function () {
-                if (_.options.pauseOnFocus) {
-                    if (_.isMatches($sf, ':focus')) {
-                        _.focussed = true;
-                        _.autoPlay();
-                    }
-                }
-            }, 0);
-        };
+        //     setTimeout(function () {
+        //         if (_.options.pauseOnFocus) {
+        //             if (_.isMatches($sf, ':focus')) {
+        //                 _.focussed = true;
+        //                 _.autoPlay();
+        //             }
+        //         }
+        //     }, 0);
+        // };
 
-        const blur = function (event) {
-            // When a blur occurs on any elements within the slider we become unfocused
-            if (_.options.pauseOnFocus) {
-                _.focussed = false;
-                _.autoPlay();
-            }
-        };
+        // _.blur = function (event) {
+        //     // When a blur occurs on any elements within the slider we become unfocused
+        //     if (_.options.pauseOnFocus) {
+        //         _.focussed = false;
+        //         _.autoPlay();
+        //     }
+        // };
 
         // If any child element receives focus within the slider we need to pause the autoplay
         /*$(_.$slider)
@@ -1344,11 +1377,13 @@
                 }
             });*/
 
-        _.$slider.removeEventListener('focus', focus);
-        _.$slider.removeEventListener('blur', blur);
+        // _.$slider.removeEventListener('focus', focus);
+        // _.$slider.removeEventListener('blur', blur);
 
-        _.$slider.addEventListener('focus', focus);
-        _.$slider.addEventListener('blur', blur);
+        // _.$slider.addEventListener('focus', focus);
+        // _.$slider.addEventListener('blur', blur);
+        _.$slider.addEventListener('focus', _.focus);
+        _.$slider.addEventListener('blur', _.blur);
     };
 
     // --------------------------
