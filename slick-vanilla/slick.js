@@ -329,7 +329,7 @@
     Slick.prototype.animateHeight = function () {
         var _ = this;
         if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
-            var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
+            var targetHeight = _.$slides[_.currentSlide].clientHeight + 'px';
             _.$list.animate(
                 {
                     height: targetHeight
@@ -2777,9 +2777,9 @@
         var _ = this;
 
         if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
-            var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
+            var targetHeight = _.$slides[_.currentSlide].clientHeight;
             //_.$list.css('height', targetHeight);
-            _.$list.style.height = targetHeight;
+            _.$list.style.height = targetHeight + 'px';
         }
     };
 
