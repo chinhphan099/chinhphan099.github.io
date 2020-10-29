@@ -263,7 +263,7 @@
           infos = '<strong style="display: block; text-align: center;">' + place.name + '</strong>' + place.formatted_address;
 
           google.maps.event.addListener(markers[i], 'click', function() {
-            that.setCenter(markers[i]);
+            // that.setCenter(markers[i]);
             that.showInfoWindow(markers[i], '<div class="noscrollbar">' + infos + '</>');
           });
 
