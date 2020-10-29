@@ -365,8 +365,8 @@
 
         google.maps.event.addListener(that.vars.marker[i], 'click', (function(marker, mess) {
           return function() {
-            changeZoom.call(that);
-            that.setCenter(marker);
+            // changeZoom.call(that);
+            // that.setCenter(marker);
             that.showInfoWindow(marker, mess);
             $('#' + that.options.dropdown).val(marker.title);
             $('#' + that.options.dropdown).closest('[data-select]').addClass('selected').find('span').html(marker.title);
