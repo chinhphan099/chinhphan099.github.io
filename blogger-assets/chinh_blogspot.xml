@@ -91,9 +91,9 @@
     <script type="text/javascript">
       //<![CDATA[
         var locations = [
-        {value: "tanbinh", name: "Tân Bình", lat: 10.8305335, lng: 106.6353312, mess: '<div class="noscrollbar"><h2>Tân Bình</h2>Phan Huy Ích, Phường 15, Quận Tân Bình</div>'},
-        {value: "quan12", name: "Quận 12", lat: 10.853653, lng: 106.626612, mess: '<div class="noscrollbar"><h2>Công Viên Phần Mềm Quang Trung, Quận 12</div>'},
-        {value: "phuquoc", name: "Phú Quốc", lat: 10.247298, lng: 103.977883, mess: '<div class="noscrollbar"><h2>Phú Quốc, Tỉnh Kiên Giang</div>'}
+        {offsetX: 0, offsetY: 0, value: "tanbinh", name: "Tân Bình", lat: 10.8305335, lng: 106.6353312, mess: '<div class="noscrollbar"><h2>Tân Bình</h2>Phan Huy Ích, Phường 15, Quận Tân Bình</div>'},
+        {offsetX: 0, offsetY: 0, value: "quan12", name: "Quận 12", lat: 10.853653, lng: 106.626612, mess: '<div class="noscrollbar"><h2>Công Viên Phần Mềm Quang Trung, Quận 12</div>'},
+        {offsetX: 0, offsetY: 0, value: "phuquoc", name: "Phú Quốc", lat: 10.247298, lng: 103.977883, mess: '<div class="noscrollbar"><h2>Phú Quốc, Tỉnh Kiên Giang</div>'}
       ];
       //]]>
   </script>
