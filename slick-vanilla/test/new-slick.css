@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .js-slider {
     position: relative;
     width: 1px;

@@ -7,7 +7,7 @@
                    |__/
 
  Version:          0.1.0
- Original Author:  Ken Wheeler
+ Original Author:  Ken Wheeler v1.8.1
  Vanilla Slick By: UberGeoff
  Website:          http://kenwheeler.github.io
     Docs:          http://kenwheeler.github.io/slick
