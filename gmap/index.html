@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lấy link google map từ toạ độ trong sổ đất</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="text-center">Lấy vị trí bản đồ từ toạ độ trong sổ đỏ</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="payload-form">
+              <h2>Nhập toạ độ X, Y từ trong Sổ Đỏ</h2>
+              <div class="fieldset">
+                <select name="province" id="province">
+                  <option value="hcm">Ho Chi Minh</option>
+                </select>
+              </div>
+              <div class="fieldset">
+                <input type="text" id="formX" placeholder="Toạ độ X" value="1214925.86">
+              </div>
+              <div class="fieldset">
+                <input type="text" id="formY" placeholder="Toạ độ Y" value="593889.46">
+              </div>
+              <div class="fieldset">
+                <button type="button" class="button btn-primary">Chuyển đổi</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="response-form">
+              <a href="" class="button btn-secondary hidden">Google Map Link</a>
+              <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.2/proj4.js" integrity="sha512-xDJcBRHFtyIAwCxC+w+BUE8S20UdKmyHA/ZoHKZ9zgwSfQQxdgCH/5Q0i9qrsBJFZQRjy1tSmqw8VGlrEy85MQ==" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
