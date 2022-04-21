@@ -1,0 +1,10 @@
+main {
+  background-color: #f1f1f1;
+  padding: 50px 0;
+}
+.response-form {
+  padding-top: 100px;
+}
+#map {
+  height: 100%;
+}
