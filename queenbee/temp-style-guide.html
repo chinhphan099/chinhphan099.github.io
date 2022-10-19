@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+    <title>Style Guide</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-guide.css">
+    <!--script(src="js/modernizr.js")-->
+  </head>
+  <body class="template">
+    <div class="wrapper" data-slidemenu="{&quot;headerFixedOnFocus&quot;: true}">
+      <!--include ../modules/global/slideMenu-->
+      <div class="navigation">
+        <div class="inner">
+          <ul class="nav" data-collapse="">
+            <li><a href="#!" title="Breakpoint">Breakpoint</a>
+            </li>
+            <li><a href="#!" title="Grid">Grid</a>
+            </li>
+            <li><a href="#!" title="Basic Colors">Basic Colors</a>
+            </li>
+            <li><a href="#!" title="Color Variables">Color Variables</a>
+            </li>
+            <li><a href="#!" title="Background Classes">Background Classes</a>
+            </li>
+            <li><a href="#!" title="Fonts">Fonts</a>
+            </li>
+            <li><a href="#!" title="Icons">Icons</a>
+            </li>
+            <li><a href="#!" title="Utilities Class">Utilities Class</a>
+            </li>
+            <li><a href="#!" title="Media Queries" data-active="" data-handle="Media Queries">Media Queries<i class="icon-plus"></i><i class="icon-minus"></i></a>
+              <div class="sub-nav" data-content="Media Queries">
+                <ul data-collapse="">
+                  <li><a href="#!" title="Mobile First">Mobile First</a>
+                  </li>
+                  <li><a href="#!" title="Dekstop First">Dekstop First</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#!" title="Utilities Block" data-active="" data-handle="Utilities Block">Utilities Block<i class="icon-plus"></i><i class="icon-minus"></i></a>
+              <div class="sub-nav" data-content="Utilities Block">
+                <ul data-collapse="">
+                  <li><a href="#!" title="Heading">Heading</a>
+                  </li>
+                  <li><a href="#!" title="Link & Text">Link & Text</a>
+                  </li>
+                  <li><a href="#!" title="Breadcrumbs">Breadcrumbs</a>
+                  </li>
+                  <li><a href="#!" title="Price">Price</a>
+                  </li>
+                  <li><a href="#!" title="Image">Image</a>
+                  </li>
+                  <li><a href="#!" title="Pagination">Pagination</a>
+                  </li>
+                  <li><a href="#!" title="Divider">Divider</a>
+                  </li>
+                  <li><a href="#!" title="Blockquote">Blockquote</a>
+                  </li>
+                  <li><a href="#!" title="Useful Tag">Useful Tag</a>
+                  </li>
+                  <li><a href="#!" title="Menu">Menu</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#!" title="Form Element" data-active="" data-handle="Form Element">Form Element<i class="icon-plus"></i><i class="icon-minus"></i></a>
+              <div class="sub-nav" data-content="Form Element">
+                <ul data-collapse="">
+                  <li><a href="#!" title="Form">Form</a>
+                  </li>
+                  <li><a href="#!" title="Label">Label</a>
+                  </li>
+                  <li><a href="#!" title="Textarea">Textarea</a>
+                  </li>
+                  <li><a href="#!" title="Input">Input</a>
+                  </li>
+                  <li><a href="#!" title="Custom Input">Custom Input</a>
+                  </li>
+                  <li><a href="#!" title="Custom Select">Custom Select</a>
+                  </li>
+                  <li><a href="#!" title="Custom Link Checkbox">Custom Link Checkbox</a>
+                  </li>
+                  <li><a href="#!" title="Custom Checkbox">Custom Checkbox</a>
+                  </li>
+                  <li><a href="#!" title="Custom Checkbox List">Custom Checkbox List</a>
+                  </li>
+                  <li><a href="#!" title="Custom Radio">Custom Radio</a>
+                  </li>
+                  <li><a href="#!" title="Custom Radio List">Custom Radio List</a>
+                  </li>
+                  <li><a href="#!" title="Button">Button</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#!" title="CSS Mixin" data-active="" data-handle="CSS Mixin">CSS Mixin<i class="icon-plus"></i><i class="icon-minus"></i></a>
+              <div class="sub-nav" data-content="CSS Mixin">
+                <ul data-collapse="">
+                  <li><a href="#!" title="Position">Position</a>
+                  </li>
+                  <li><a href="#!" title="Triangle">Triangle</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#!" title="JS" data-active="" data-handle="JS">JS<i class="icon-plus"></i><i class="icon-minus"></i></a>
+              <div class="sub-nav" data-content="JS">
+                <ul data-collapse="">
+                  <li><a href="#!" title="Collapse">Collapse</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-navigation">
+        <div class="head-nav">
+          <form action="#" method="post" name="search_form" id="search_form" data-validates="search_form">
+            <div class="custom-input">
+              <button type="submit" name="search_btn_22" id="search_btn_22"><i class="icon-search"></i>
+              </button><span>
+                <input type="text" name="txt_search_22" id="txt_search_22" placeholder="Search for ..."/></span>
+            </div>
+          </form>
+        </div>
+        <div class="inner">
+          <ul class="search-results">
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+            <li><a href="/style-guide.html" title="Suggest Result">Suggest Result</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="dummy-layer"></div>
+        <div class="header">
+          <div class="header-inner">Style Guide<span data-nav="open-left-nav"><i class="icon-hamburger"></i> <i class="icon-close"></i></span><span data-nav="open-right-nav"><i class="icon-search"></i> <i class="icon-close"></i></span>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="main">
+            <div class="container-fluid" data-copies="">
+              <div class="block">
+                <h2 class="temp-h2 divider" id="breakpoint"><span>1. Breakpoint</span></h2>
+                <table class="tb-temp">
+                  <thead>
+                    <tr>
+                      <th><strong>Small Mobile</strong></th>
+                      <th><strong>Large Mobile (Landscape)</strong></th>
+                      <th><strong>Tablet</strong></th>
+                      <th><strong>Small Desktop (Tablet Landscape)</strong></th>
+                      <th><strong>Large Desktop</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-handler=""><code><span data-copy="">@xs-min</span>: 0</code></td>
+                      <td data-handler=""><code><span data-copy="">@sm-min</span>: 544px</code></td>
+                      <td data-handler=""><code><span data-copy="">@md-min</span>: 768px</code></td>
+                      <td data-handler=""><code><span data-copy="">@lg-min</span>: 992px</code></td>
+                      <td data-handler=""><code><span data-copy="">@xl-min</span>: 1200px</code></td>
+                    </tr>
+                    <tr>
+                      <td data-handler=""><code><span data-copy="">@xs-max</span>: 543px</code></td>
+                      <td data-handler=""><code><span data-copy="">@sm-max</span>: 767px</code></td>
+                      <td data-handler=""><code><span data-copy="">@md-max</span>: 991px</code></td>
+                      <td data-handler=""><code><span data-copy="">@lg-max</span>: 1199px</code></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="grid"><span>2. Grid</span></h2>
+                <table class="tb-temp">
+                  <thead>
+                    <tr>
+                      <th style="width: 120px;"></th>
+                      <th><strong>Small Mobile</strong></th>
+                      <th><strong>Large Mobile (Landscape)</strong></th>
+                      <th><strong>Tablet</strong></th>
+                      <th><strong>Small Desktop (Tablet Landscape)</strong></th>
+                      <th><strong>Large Desktop</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Class prefix</strong></td>
+                      <td data-handler=""><code data-copy="">.col-xs-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-sm-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-md-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-lg-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-xl-*</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Offsets</strong></td>
+                      <td data-handler=""><code data-copy="">.col-xs-offset-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-sm-offset-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-md-offset-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-lg-offset-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-xl-offset-*</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Push Columns</strong></td>
+                      <td data-handler=""><code><span data-copy="">.col-xs-push-*</span> <span class="red-text">&#91;</span>Position left<span class="red-text">&#93;</span></code></td>
+                      <td data-handler=""><code data-copy="">.col-sm-push-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-md-push-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-lg-push-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-xl-push-*</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Pull Columns</strong></td>
+                      <td data-handler=""><code><span data-copy="">.col-xs-pull-*</span> <span class="red-text">&#91;</span>Position right<span class="red-text">&#93;</span></code></td>
+                      <td data-handler=""><code data-copy="">.col-sm-pull-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-md-pull-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-lg-pull-*</code></td>
+                      <td data-handler=""><code data-copy="">.col-xl-pull-*</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="media"><span>3. Media Queries</span></h2>
+                <div class="content">
+                  <h3 class="temp-h3 divider" id="mobile-first"><span>Mobile First</span></h3>
+                  <div class="tmp-tb-wrap">
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong><span class="red-text">Mobile First:</span> Style for <span class="red-text">Large Mobile</span> First.</strong></th>
+                          <th><strong>Screens</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-handler="">
+                          <td><code class="highlight"><span data-copy="/* Max Tablet */ @media (max-width: @md-max) {}">@media (max-width: @md-max) {}</span></code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight"><span data-copy="/* Max Large Mobile */ @media (max-width: @sm-max) {}">@media (max-width: @sm-max) {}</span></code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Max Small Mobile */ @media (max-width: @xs-max) {}">@media (max-width: @xs-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Min Large Mobile */ @media (min-width: @sm-min) {}">@media (min-width: @sm-min) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td class="is-visible">Desktop</td>
+                                <td class="is-visible">Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Large Mobile Only */ @media (min-width: @sm-min) and (max-width: @sm-max) {}">@media (min-width: @sm-min) and (max-width: @sm-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Large Mobile Landscape */ @media (min-width: @sm-min) and (max-width: @sm-max) and (orientation:landscape) {}">@media (min-width: @sm-min) and (max-width: @sm-max) and (orientation:landscape) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td class="is-visible">Large Mobile Landscape</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Min Tablet */ @media (min-width: @md-min) {}">@media (min-width: @md-min) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td class="is-visible">Desktop</td>
+                                <td class="is-visible">Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Tablet Only */ @media (min-width: @md-min) and (max-width: @md-max) {}">@media (min-width: @md-min) and (max-width: @md-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Tablet Landscape */ @media (min-width: @md-min) and (max-width: @md-max) and (orientation: landscape) {}">@media (min-width: @md-min) and (max-width: @md-max) and (orientation: landscape) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td class="is-visible">Tablet landscape</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Min Small Desktop */ @media (min-width: @lg-min) {}">@media (min-width: @lg-min) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td>Tablet</td>
+                                <td class="is-visible">Desktop</td>
+                                <td class="is-visible">Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Min Large Desktop */ @media (min-width: @xl-min) {}">@media (min-width: @xl-min) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td class="is-visible">Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h3 class="temp-h3 divider" id="desktop-first"><span>Desktop First</span></h3>
+                  <div class="tmp-tb-wrap">
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong><span class="red-text">Desktop First:</span> Style for <span class="red-text">Desktop</span> First.</strong></th>
+                          <th><strong>Screens</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-handler="">
+                          <td><code class="highlight"><span data-copy="/* Min Small Desktop */ @media (min-width: @lg-min) {}">@media (min-width: @lg-min) {}</span></code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td>Tablet</td>
+                                <td class="is-visible">Desktop</td>
+                                <td class="is-visible">Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Min Large Desktop */ @media (min-width: @xl-min) {}">@media (min-width: @xl-min) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td class="is-visible">Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Max Small Desktop */ @media (max-width: @lg-max) {}">@media (max-width: @lg-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td class="is-visible">Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Max Tablet */ @media (max-width: @md-max) {}">@media (max-width: @md-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Tablet Only */ @media (min-width: @md-min) and (max-width: @md-max) {}">@media (min-width: @md-min) and (max-width: @md-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td class="is-visible">Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Tablet Landscape */ @media (min-width: @md-min) and (max-width: @md-max) and (orientation: landscape) {}">@media (min-width: @md-min) and (max-width: @md-max) and (orientation: landscape) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td class="is-visible">Tablet Lanscape</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Max Large Mobile */ @media (max-width: @sm-max) {}">@media (max-width: @sm-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Large Mobile Only */ @media (min-width: @sm-min) and (max-width: @sm-max) {}">@media (min-width: @sm-min) and (max-width: @sm-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td class="is-visible">Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Large Mobile Landscape */ @media (min-width: @sm-min) and (max-width: @sm-max) and (orientation:landscape) {}">@media (min-width: @sm-min) and (max-width: @sm-max) and (orientation:landscape) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td>Small Mobile</td>
+                                <td class="is-visible">Large Mobile Landscape</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight" data-copy="/* Max Small Mobile */ @media (max-width: @xs-max) {}">@media (max-width: @xs-max) {}</code></td>
+                          <td class="temp-table-utilities-wrap">
+                            <table class="temp-table-utilities">
+                              <tr>
+                                <td class="is-visible">Small Mobile</td>
+                                <td>Large Mobile</td>
+                                <td>Tablet</td>
+                                <td>Desktop</td>
+                                <td>Large Desktop</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="colors"><span>4. Color Variables</span></h2>
+                <ul class="list-color-temp clearfix">
+                  <li data-handler=""><span class="color" style="background-color: transparent"></span><code data-copy="@color00">transparent</code><span>@color00</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #fff"></span><code data-copy="@color01">#fff</code><span>@color01</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #f5f5f5"></span><code data-copy="@color02">#f5f5f5</code><span>@color02</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #999"></span><code data-copy="@color03">#999</code><span>@color03</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #666"></span><code data-copy="@color04">#666</code><span>@color04</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #292526"></span><code data-copy="@color05">#292526</code><span>@color05</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #19b486"></span><code data-copy="@color06">#19b486</code><span>@color06</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #159972"></span><code data-copy="@color07">#159972</code><span>@color07</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #30bc92"></span><code data-copy="@color08">#30bc92</code><span>@color08</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #d85486"></span><code data-copy="@color09">#d85486</code><span>@color09</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #b84772"></span><code data-copy="@color10">#b84772</code><span>@color10</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #dc6592"></span><code data-copy="@color11">#dc6592</code><span>@color11</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #e9dddf"></span><code data-copy="@color12">#e9dddf</code><span>@color12</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #c6bcbe"></span><code data-copy="@color13">#c6bcbe</code><span>@color13</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #ebe0e2"></span><code data-copy="@color14">#ebe0e2</code><span>@color14</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #333"></span><code data-copy="@color15">#333</code><span>@color15</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #ddd"></span><code data-copy="@color16">#ddd</code><span>@color16</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #ccc"></span><code data-copy="@color17">#ccc</code><span>@color17</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #231f20"></span><code data-copy="@color18">#231f20</code><span>@color18</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #de8aaa"></span><code data-copy="@color19">#de8aaa</code><span>@color19</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #eee"></span><code data-copy="@color20">#eee</code><span>@color20</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #636363"></span><code data-copy="@color21">#636363</code><span>@color21</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #2f2a2b"></span><code data-copy="@color22">#2f2a2b</code><span>@color22</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #9d9d9d"></span><code data-copy="@color23">#9d9d9d</code><span>@color23</span></li>
+                </ul>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="backgrounds"><span>5. Background Class</span></h2>
+                <ul class="list-color-temp clearfix">
+                  <li data-handler=""><span class="color" style="background-color: #f1f1f1"></span><code data-copy=".bgd-light-grey">#f1f1f1</code><span>.bgd-light-grey</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #c0c0c0"></span><code data-copy=".bgd-silver">#c0c0c0</code><span>.bgd-silver</span></li>
+                  <li data-handler=""><span class="color" style="background-color: #666"></span><code data-copy=".bgd-dark-grey">#666</code><span>.bgd-dark-grey</span></li>
+                </ul>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="fonts"><span>6. Fonts</span></h2>
+                <table class="tb-temp">
+                  <thead>
+                    <tr>
+                      <th><strong>Font Family</strong></th>
+                      <th><strong>View</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-handler="">
+                      <td><code><span data-copy="">.lato();</span> - Font Default</code></td>
+                      <td>
+                        <p class="lato">Lorem ipsum dolor sit amet.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code data-copy="">.javacom();</code></td>
+                      <td>
+                        <p class="javacom">Lorem ipsum dolor sit amet.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code data-copy="">.fonticon();</code></td>
+                      <td>
+                        <p><i class="icon-shipping"></i></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="icons"><span>7. Icons</span></h2>
+                <ul class="icons-list-temp">
+                  <li data-handler=""><i class="icon-cart-plus" data-copy="i.icon-cart-plus"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-shipping" data-copy="i.icon-shipping"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-return" data-copy="i.icon-return"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-lock" data-copy="i.icon-lock"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-next" data-copy="i.icon-next"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-youtube" data-copy="i.icon-youtube"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-wishlist" data-copy="i.icon-wishlist"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-twitter" data-copy="i.icon-twitter"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-arrow-down" data-copy="i.icon-arrow-down"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-search" data-copy="i.icon-search"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-pin" data-copy="i.icon-pin"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-menu" data-copy="i.icon-menu"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-email" data-copy="i.icon-email"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-mail-box" data-copy="i.icon-mail-box"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-instagram" data-copy="i.icon-instagram"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-google" data-copy="i.icon-google"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-fb" data-copy="i.icon-fb"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-warning" data-copy="i.icon-warning"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-close" data-copy="i.icon-close"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-chart" data-copy="i.icon-chart"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-cart" data-copy="i.icon-cart"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-account" data-copy="i.icon-account"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-arrow-solid-down" data-copy="i.icon-arrow-solid-down"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-star" data-copy="i.icon-star"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-home" data-copy="i.icon-home"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-check" data-copy="i.icon-check"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-phone" data-copy="i.icon-phone"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-cancel-circle" data-copy="i.icon-cancel-circle"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-star-empty" data-copy="i.icon-star-empty"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-cancel" data-copy="i.icon-cancel"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-mail-empty" data-copy="i.icon-mail-empty"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-ok-circle" data-copy="i.icon-ok-circle"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-pregnancy" data-copy="i.icon-pregnancy"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-pregnancy-2" data-copy="i.icon-pregnancy-2"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-pregnancy-1" data-copy="i.icon-pregnancy-1"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-plus-circle" data-copy="i.icon-plus-circle"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-pencil" data-copy="i.icon-pencil"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-filter" data-copy="i.icon-filter"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-caret-down" data-copy="i.icon-caret-down"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-caret-up" data-copy="i.icon-caret-up"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-caret-left" data-copy="i.icon-caret-left"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-caret-right" data-copy="i.icon-caret-right"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-mail-alt" data-copy="i.icon-mail-alt"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-level-up" data-copy="i.icon-level-up"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-ok-square" data-copy="i.icon-ok-square"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-plus" data-copy="i.icon-plus"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-minus" data-copy="i.icon-minus"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-angle-left" data-copy="i.icon-angle-left"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-angle-right" data-copy="i.icon-angle-right"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-angle-up" data-copy="i.icon-angle-up"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                  <li data-handler=""><i class="icon-angle-down" data-copy="i.icon-angle-down"></i>
+                    <!--span.name!=classname-->
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <h2 class="temp-h2 divider" id="utilities-class"><span>8. Utilities Class</span></h2>
+                <table class="tb-temp">
+                  <thead>
+                    <tr>
+                      <td><strong>Class Name</strong></td>
+                      <td><strong>View/Note</strong></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.antialiased</code></td>
+                      <td>
+                        <p><span class="note">Has mixin</span> Fix font smooth on iOS.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.clearfix</code></td>
+                      <td>
+                        <p><span class="note">Has mixin</span> Clears floats</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.center-block</code></td>
+                      <td>
+                        <div class="center-block bgd-light-grey" style="max-width: 200px; padding: 5px;"><span class="note">Has mixin</span> Center block</div>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-hide</code></td>
+                      <td>
+                        <p><span class="note">Has mixin</span> Hide the text.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-truncate</code></td>
+                      <td>
+                        <p><span class="note">Has mixin</span> Truncate text one line.</p>
+                        <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, temporibus.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-left</code></td>
+                      <td>
+                        <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, temporibus.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-center</code></td>
+                      <td>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, dolores.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-right</code></td>
+                      <td>
+                        <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, dolores.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-justify</code></td>
+                      <td>
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, pariatur id nam veniam aliquam itaque, nobis reiciendis natus ipsum eius voluptates. Voluptatem recusandae omnis illo quia rem earum sapiente qui facere est minus! Ipsum quasi necessitatibus, in, facere, qui fugit adipisci quas temporibus inventore, velit quos dolores itaque commodi hic!</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.pull-left</code></td>
+                      <td>
+                        <div class="pull-left">Floats an element to the left</div>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.pull-right</code></td>
+                      <td>
+                        <div class="pull-right"><span>Floats an element to the right</span></div>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-lowercase</code></td>
+                      <td>
+                        <p class="text-lowercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, est.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-uppercase</code></td>
+                      <td>
+                        <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, est.</p>
+                      </td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.text-capitalize</code></td>
+                      <td>
+                        <p class="text-capitalize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, est.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="tb-temp temp-table-utilities">
+                  <thead>
+                    <tr>
+                      <th>Class Name</th>
+                      <th>Small Mobile <small>≤ @xs-max - 543px</small></th>
+                      <th>Large Mobile <small>≥ 544px and ≤ 767px</small></th>
+                      <th>Tablet <small>≥ 768px and ≤ 991px</small></th>
+                      <th>Small Desktop <small>≥ 992px and ≤ 1199px</small></th>
+                      <th>Large Desktop <small>≥ 1200px</small></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden</code></td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-xs</code></td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-sm</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-md</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-lg</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-sm-up</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-md-up</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-lg-up</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-xl</code></td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td>Hidden</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-sm-down</code></td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-md-down</code></td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                    <tr data-handler="">
+                      <td><code class="highlight" data-copy="">.hidden-lg-down</code></td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td>Hidden</td>
+                      <td class="is-visible">Visible</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="block" data-collapse="">
+                <h2 class="temp-h2 divider" id="form-element"><span>9. Form Elements</span></h2>
+                <div class="form-wrap" data-validates="guide">
+                  <form action="#" method="post" name="guide" id="guide">
+                    <div class="container bgd-light-grey">
+                      <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                          <div class="panel">
+                            <div class="text-center">
+                              <button class="button btn-primary expanded" id="guide_btn" name="guide_btn" type="submit"><span><span>Click Me</span></span></button>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_txt">Input Text</label>
+                              <input type="text" name="guide_txt" id="guide_txt" required="required" placeholder="Placeholder"/>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_date">DOB</label>
+                              <div class="custom-date" data-date=""><span>dd/mm/yyyy</span>
+                                <input type="date" name="guide_date" id="guide_date" required="required" placeholder="dd/mm/yyyy"/><i class="icon-caret-down"></i>
+                              </div>
+                            </div>
+                            <div class="fieldset" data-number="{&quot;maxLength&quot;: 3}">
+                              <label class="label" for="guide_number">Number</label>
+                              <input type="number" name="guide_number" id="guide_number" required="required" placeholder="Number" data-input="" autocomplete="off"/>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="group_txt_01">Group input</label>
+                              <div class="row valid-wrap">
+                                <div class="col-sm-4">
+                                  <input class="valid-group" type="text" name="group_txt_01" id="group_txt_01" required="required" placeholder="First Name"/>
+                                </div>
+                                <div class="col-sm-4">
+                                  <input class="valid-group" type="text" name="group_txt_02" id="group_txt_02" required="required" placeholder="Middle Name"/>
+                                </div>
+                                <div class="col-sm-4">
+                                  <input class="valid-group" type="text" name="group_txt_03" id="group_txt_03" required="required" placeholder="Last Name"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="group_txt_011">Group input Number</label>
+                              <div class="row valid-wrap">
+                                <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
+                                  <input class="valid-group" type="number" name="group_txt_011" id="group_txt_011" required="required" placeholder="Day" data-input="" autocomplete="off"/>
+                                </div>
+                                <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
+                                  <input class="valid-group" type="number" name="group_txt_012" id="group_txt_012" required="required" placeholder="Month" data-input="" autocomplete="off"/>
+                                </div>
+                                <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 4}">
+                                  <input class="valid-group" type="number" name="group_txt_013" id="group_txt_013" required="required" placeholder="Year" data-input="" autocomplete="off"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_txt_custom">Custom Input</label>
+                              <div class="custom-input"><i class="icon-account"></i><span>
+                                  <input type="text" name="guide_txt_custom" id="guide_txt_custom" required="required"/></span>
+                              </div>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_tarea">Text area</label>
+                              <textarea name="guide_tarea" id="guide_tarea" placeholder="Placeholder" required="required"></textarea>
+                            </div>
+                            <div class="fieldset">
+                              <div class="radio circle">
+                                <input type="radio" name="guide_sb" id="guide_sb" value="guide_sb" required="required"/>
+                                <label for="guide_sb">Radio Single</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                            <div class="fieldset">
+                              <div class="checkbox">
+                                <input type="checkbox" name="guide_cb" id="guide_cb" value="guide_cb" required="required"/>
+                                <label for="guide_cb">Checkbox</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_sb_01">Radio List</label>
+                              <ul class="radio-list">
+                                <li>
+                                  <div class="radio circle">
+                                    <input type="radio" name="guide_sb_group" id="guide_sb_01" value="guide_sb_01" required="required"/>
+                                    <label for="guide_sb_01">Radio List</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="radio circle">
+                                    <input type="radio" name="guide_sb_group" id="guide_sb_02" value="guide_sb_02" required="required"/>
+                                    <label for="guide_sb_02">Radio List</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_cb_01">Checkbox List</label>
+                              <ul class="checkbox-list">
+                                <li>
+                                  <div class="checkbox">
+                                    <input type="checkbox" name="guide_cb_group" id="guide_cb_01" value="guide_cb_01"/>
+                                    <label for="guide_cb_01">Choose at least One item</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="checkbox">
+                                    <input type="checkbox" name="guide_cb_group" id="guide_cb_02" value="guide_cb_02"/>
+                                    <label for="guide_cb_02">Choose at least One item</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="fieldset">
+                              <label class="label" for="guide_select">Custom Select Box</label>
+                              <div class="custom-select" data-select=""><span>Please select an option</span>
+                                <select name="guide_select" id="guide_select" required="required">
+                                  <option value="">Please select an option</option>
+                                  <option value="Option 1">Option 1</option>
+                                  <option value="Option 2">Option 2</option>
+                                </select><i class="icon-caret-down"></i>
+                              </div>
+                            </div><br>
+                            <div class="divider"><span>Horizontal Form</span></div><br>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_txt"><span>Input Text</span></label>
+                              <div class="col-sm-8">
+                                <input type="text" name="horizontal_guide_txt" id="horizontal_guide_txt" required="required" placeholder="Placeholder"/>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_date"><span>DOB</span></label>
+                              <div class="col-sm-8">
+                                <div class="custom-date" data-date=""><span>Click to Choose Date</span>
+                                  <input type="date" name="horizontal_guide_date" id="horizontal_guide_date" required="required" placeholder="Click to Choose Date"/><i class="icon-caret-down"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group" data-number="{&quot;maxLength&quot;: 2}">
+                              <label class="control-label col-sm-4" for="horizontal_guide_number"><span>Number</span></label>
+                              <div class="col-sm-8">
+                                <input type="number" name="horizontal_guide_number" id="horizontal_guide_number" required="required" placeholder="Number" data-input="" autocomplete="off"/>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="group_txt_01"><span>Group input</span></label>
+                              <div class="col-sm-8">
+                                <div class="row valid-wrap">
+                                  <div class="col-sm-4">
+                                    <input class="valid-group" type="text" name="horizontal_group_txt_01" id="horizontal_group_txt_01" required="required" placeholder="First Name"/>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <input class="valid-group" type="text" name="horizontal_group_txt_02" id="horizontal_group_txt_02" required="required" placeholder="Middle Name"/>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <input class="valid-group" type="text" name="horizontal_group_txt_03" id="horizontal_group_txt_03" required="required" placeholder="Last Name"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="group_txt_011"><span>Group input Number</span></label>
+                              <div class="col-sm-8">
+                                <div class="row valid-wrap">
+                                  <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
+                                    <input class="valid-group" type="number" name="horizontal_group_txt_011" id="horizontal_group_txt_011" required="required" placeholder="Day" data-input="" autocomplete="off"/>
+                                  </div>
+                                  <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 2}">
+                                    <input class="valid-group" type="number" name="horizontal_group_txt_012" id="horizontal_group_txt_012" required="required" placeholder="Month" data-input="" autocomplete="off"/>
+                                  </div>
+                                  <div class="col-sm-4" data-number="{&quot;maxLength&quot;: 4}">
+                                    <input class="valid-group" type="number" name="horizontal_group_txt_013" id="horizontal_group_txt_013" required="required" placeholder="Year" data-input="" autocomplete="off"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_txt_custom"><span>Custom Input</span></label>
+                              <div class="col-sm-8">
+                                <div class="custom-input"><i class="icon-account"></i><span>
+                                    <input type="text" name="horizontal_guide_txt_custom" id="horizontal_guide_txt_custom" required="required"/></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_tarea"><span>Text area</span></label>
+                              <div class="col-sm-8">
+                                <textarea name="horizontal_guide_tarea" id="horizontal_guide_tarea" placeholder="Placeholder" required="required"></textarea>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <div class="col-sm-8 col-sm-offset-4">
+                                <div class="radio circle">
+                                  <input type="radio" name="horizontal_guide_sb" id="horizontal_guide_sb" value="horizontal_guide_sb" required="required"/>
+                                  <label for="horizontal_guide_sb">Radio Single</label><i class="icon-check"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <div class="col-sm-8 col-sm-offset-4">
+                                <div class="checkbox">
+                                  <input type="checkbox" name="horizontal_guide_cb" id="horizontal_guide_cb" value="horizontal_guide_cb" required="required"/>
+                                  <label for="horizontal_guide_cb">Checkbox</label><i class="icon-check"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_sb_01"><span>Radio List</span></label>
+                              <div class="col-sm-8">
+                                <ul class="radio-list">
+                                  <li>
+                                    <div class="radio circle">
+                                      <input type="radio" name="horizontal_guide_sb_group" id="horizontal_guide_sb_01" value="horizontal_guide_sb_01" required="required"/>
+                                      <label for="horizontal_guide_sb_01">Radio List</label><i class="icon-check"></i>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="radio circle">
+                                      <input type="radio" name="horizontal_guide_sb_group" id="horizontal_guide_sb_02" value="horizontal_guide_sb_02" required="required"/>
+                                      <label for="horizontal_guide_sb_02">Radio List</label><i class="icon-check"></i>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_cb_01"><span>Checkbox List</span></label>
+                              <div class="col-sm-8">
+                                <ul class="checkbox-list">
+                                  <li>
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="horizontal_guide_cb_group" id="horizontal_guide_cb_01" value="horizontal_guide_cb_01"/>
+                                      <label for="horizontal_guide_cb_01">Choose at least One item</label><i class="icon-check"></i>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="horizontal_guide_cb_group" id="horizontal_guide_cb_02" value="horizontal_guide_cb_02"/>
+                                      <label for="horizontal_guide_cb_02">Choose at least One item</label><i class="icon-check"></i>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="fieldset form-group">
+                              <label class="control-label col-sm-4" for="horizontal_guide_select"><span>Custom Select Box</span></label>
+                              <div class="col-sm-8">
+                                <div class="custom-select" data-select=""><span>Please select an option</span>
+                                  <select name="horizontal_guide_select" id="horizontal_guide_select" required="required">
+                                    <option value="">Please select an option</option>
+                                    <option value="Option 1">Option 1</option>
+                                    <option value="Option 2">Option 2</option>
+                                  </select><i class="icon-caret-down"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fieldset text-center">
+                              <button class="button btn-primary" id="guide_btn_01" name="guide_btn_01" type="submit"><span><span>Click Me</span></span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 class="temp-h3 divider" id="form"><span>Form</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <td><strong>Mixin</strong></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code class="highlight" data-handler=""><span data-copy="">+form({id: 'form_id'})</span><br><br>Options:<br>- id<br>- name == id<br>- action: #<br>- method: post</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="label"><span>Label</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-handler="">
+                          <td><code class="highlight"><span data-copy="">+label('lbl_id', 'Label_No_Padding_Bottom')</span></code></td>
+                          <td>
+                            <label for="lbl_id">Label_No_Padding_Bottom</label>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight"><span data-copy="">+label('lbl_id2', 'Label_Has_Padding_Bottom').label</span></code></td>
+                          <td>
+                            <label class="label" for="lbl_id2">Label_Has_Padding_Bottom</label>
+                          </td>
+                        </tr>
+                        <tr data-handler="">
+                          <td><code class="highlight"><span data-copy="">+label-horizontal('lbl_id3', 'Use for Horizontal, .fieldset tag has class .form-group').label01</span></code></td>
+                          <td>
+                            <label class="label01" for="lbl_id3"><span>Label has class .label01 - Use for Horizontal, .fieldset tag has class .form-group</span></label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><code class="highlight">Values:<br>- for<br>- text</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="textarea"><span>Textarea</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code class="highlight" data-handler=""><span data-copy="">.fieldset: +textarea('area_id', 'Placeholder')</span><br><br>Values:<br>- id<br>- placeholder</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <label class="label" for="area_id">Normal State</label>
+                              <textarea name="area_id" id="area_id" placeholder="Placeholder"></textarea>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="input"><span>Input</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-handler=""><code class="highlight"><span data-copy="">.fieldset: +input({id: 'input_1', placeholder: 'Placeholder'})</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <label class="label" for="input_1">Normal State</label>
+                              <input type="text" name="input_1" id="input_1" placeholder="Placeholder"/>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><code class="highlight">Options:<br>- id<br>- name == id<br>- type: text<br>- value<br>- placeholder</code></td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight"><span data-copy="">.fieldset: +customDate({id: 'date', placeholder: "Input_Date"})</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="custom-date" data-date=""><span>Input_Date</span>
+                                <input type="date" name="date" id="date" placeholder="Input_Date"/><i class="icon-caret-down"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight"><span data-copy="">.fieldset: +customDate({id: 'date2', value: "1990-06-05", placeholder: 'Input_Date'})</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="custom-date" data-date=""><span>Input_Date</span>
+                                <input type="date" name="date2" id="date2" value="1990-06-05" placeholder="Input_Date"/><i class="icon-caret-down"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><code class="code"><span class="tab0">.fieldset(data-number='{"handle": "qty", "maxLength": 3}')</span><span class="tab1">+label('number_11', 'Quanty Desktop').label</span><span class="tab1">+input({id: 'number_11', placeholder: 'Placeholder', type: 'number'})(data-input="" autocomplete="off")</span><span class="tab1">+btn({})(data-decrease="")<span class="tab2">i.icon-minus</span></span><span class="tab1">+btn({})(data-increase="")<span class="tab2">i.icon-plus</span></span><span class="tab0">.fieldset(data-number='{"handle": "qty", "maxLength": 3}')</span><span class="tab1">+label('number_12', 'Quanty Mobile').label</span><span class="tab1">+input({id: 'number_12', placeholder: 'Placeholder', type: 'number'})(data-input="" autocomplete="off")</span><span class="tab1">+btn({})(data-decrease="")<span class="tab2">i.icon-minus</span></span><span class="tab1">+btn({})(data-increase="")<span class="tab2">i.icon-plus</span></span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <label class="label" for="number_11">Quanty Desktop</label>
+                              <div class="custom-number" data-number="{&quot;handle&quot;: &quot;qty&quot;, &quot;maxLength&quot;: 3}">
+                                <input type="number" name="number_11" id="number_11" placeholder="Placeholder" data-input="" autocomplete="off"/>
+                                <button type="button" data-decrease=""><i class="icon-minus"></i>
+                                </button>
+                                <button type="button" data-increase=""><i class="icon-plus"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="fieldset">
+                              <label class="label" for="number_12">Quanty Mobile</label>
+                              <div class="custom-number" data-number="{&quot;handle&quot;: &quot;qty&quot;, &quot;maxLength&quot;: 3}">
+                                <input type="number" name="number_12" id="number_12" placeholder="Placeholder" data-input="" autocomplete="off"/>
+                                <button type="button" data-decrease=""><i class="icon-minus"></i>
+                                </button>
+                                <button type="button" data-increase=""><i class="icon-plus"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-input"><span>Custom Input</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Custom Input</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-handler=""><code class="highlight">
+                              <h4 class="temp-h4">icon with input</h4><span data-copy="">.fieldset: +customInput({iconClass: 'icon-account'}, {id: "input_user"})</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="custom-input"><i class="icon-account"></i><span>
+                                  <input type="text" name="input_user" id="input_user"/></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight">
+                              <h4 class="temp-h4">Button icon with input</h4><span data-copy="">.fieldset: +customInput({id: 'search_btn_2', iconClass: 'icon-search'}, {id: "txt_search_2"})</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="custom-input">
+                                <button type="submit" name="search_btn_2" id="search_btn_2"><i class="icon-search"></i>
+                                </button><span>
+                                  <input type="text" name="txt_search_2" id="txt_search_2"/></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight">
+                              <h4 class="temp-h4">Button text with input</h4><span data-copy="">.fieldset: +customInput({id: 'search_btn_0', text: 'Submit', btnClass: 'button'}, {id: "txt_search"})</span><br><br>Note:<br>- Type of button default is <span class="red-text">submit</span>, Can change by option: <span class="red-text">type</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="custom-input">
+                                <button class="button" type="submit" name="search_btn_0" id="search_btn_0">Submit
+                                </button><span>
+                                  <input type="text" name="txt_search" id="txt_search"/></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight">
+                              <h4 class="temp-h4">Button text, icon with input</h4><span data-copy="">+customInput({id: 'search_btn_1', type: 'button', text: 'button', iconClass: 'icon-right'}, {id: "txt_search_1"})</span></code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="custom-input">
+                                <button type="button" name="search_btn_1" id="search_btn_1">button<i class="icon-right"></i>
+                                </button><span>
+                                  <input type="text" name="txt_search_1" id="txt_search_1"/></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-select"><span>Custom Select</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code class="highlight">.fieldset<br>&nbsp;&nbsp;+customSelect({id: 'select_id'}, [<br>&nbsp;&nbsp;&nbsp;&nbsp;{value: '', text: 'Please select an option'},<br>&nbsp;&nbsp;&nbsp;&nbsp;{value: 'Option 1'},<br>&nbsp;&nbsp;&nbsp;&nbsp;{value: 'Option 2'}<br>&nbsp;&nbsp;])</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <label class="label" for="select_id">Normal State</label>
+                              <div class="custom-select" data-select=""><span>Please select an option</span>
+                                <select name="select_id" id="select_id">
+                                  <option value="">Please select an option</option>
+                                  <option value="Option 1">Option 1</option>
+                                  <option value="Option 2">Option 2</option>
+                                </select><i class="icon-caret-down"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><code class="highlight">.fieldset<br>&nbsp;&nbsp;+customSelect({id: 'select_id_1'}, [<br>&nbsp;&nbsp;&nbsp;&nbsp;{value: '', text: 'Please select an option'},<br>&nbsp;&nbsp;&nbsp;&nbsp;{value: 'Option 1', selected: 'selected'},<br>&nbsp;&nbsp;&nbsp;&nbsp;{value: 'Option 2'}<br>&nbsp;&nbsp;])</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <label class="label" for="select_id_1">Selected Value</label>
+                              <div class="custom-select" data-select=""><span>Please select an option</span>
+                                <select name="select_id_1" id="select_id_1">
+                                  <option value="">Please select an option</option>
+                                  <option value="Option 1" selected="selected">Option 1</option>
+                                  <option value="Option 2">Option 2</option>
+                                </select><i class="icon-caret-down"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><code class="highlight">Options:<br>- id of &lt;select&gt; tag<br>- name of &lt;select&gt; tag == id<br>- value of &lt;option&gt; tag<br>- text of &lt;option&gt; tag</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-checkbox"><span>Custom Checkbox</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +checkbox({id: 'cb_01', text: 'Single_Checkbox', checked: 'checked'})</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox">
+                                <input type="checkbox" name="cb_01" id="cb_01" value="cb_01" checked="checked"/>
+                                <label for="cb_01">Single_Checkbox</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +checkbox({id: 'cb_02', text: 'Single_Checkbox'}).circle</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox circle">
+                                <input type="checkbox" name="cb_02" id="cb_02" value="cb_02"/>
+                                <label for="cb_02">Single_Checkbox</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +checkbox({id: 'cb_021', text: 'Single_Checkbox_Right'}).circle.right</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox circle right">
+                                <input type="checkbox" name="cb_021" id="cb_021" value="cb_021"/>
+                                <label for="cb_021">Single_Checkbox_Right</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +checkbox({id: 'cb_022', text: 'Single_Checkbox_Full_Width'}).right.expanded</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox right expanded">
+                                <input type="checkbox" name="cb_022" id="cb_022" value="cb_022"/>
+                                <label for="cb_022">Single_Checkbox_Full_Width</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +checkbox({id: 'cb_03', text: 'Single_Checkbox_At_Center', checked: 'checked'}).center-mode</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox center-mode">
+                                <input type="checkbox" name="cb_03" id="cb_03" value="cb_03" checked="checked"/>
+                                <label for="cb_03">Single_Checkbox_At_Center</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset.text-center: +checkbox({id: 'cb_031', text: 'Single_Checkbox_At_Center_Above', checked: 'checked'}).center-mode.above</code></td>
+                          <td>
+                            <div class="fieldset text-center">
+                              <div class="checkbox center-mode above">
+                                <input type="checkbox" name="cb_031" id="cb_031" value="cb_031" checked="checked"/>
+                                <label for="cb_031">Single_Checkbox_At_Center_Above</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset.text-center: +checkbox({id: 'cb_032', text: 'Single_Checkbox_At_Center_Below', checked: 'checked'}).center-mode.below</code></td>
+                          <td>
+                            <div class="fieldset text-center">
+                              <div class="checkbox center-mode below">
+                                <input type="checkbox" name="cb_032" id="cb_032" value="cb_032" checked="checked"/>
+                                <label for="cb_032">Single_Checkbox_At_Center_Below</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><code class="highlight">Options:<br>- type: "checkbox"<br>- id<br>- name == id<br>- value<br>- checked<br>- text (of Label)<br>- class (go with .custom-checkbox)</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-checkbox-list"><span>Custom Checkbox List</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code class="highlight">.fieldset<br>&nbsp;&nbsp;+checkboxList([<br>&nbsp;&nbsp;&nbsp;&nbsp;{name: 'gender', id: 'cb_04', text: 'checkbox', checked: 'checked', class: 'circle'},<br>&nbsp;&nbsp;&nbsp;&nbsp;{name: 'gender', id: 'cb_05', text: 'checkbox'}<br>&nbsp;&nbsp;])</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <ul class="checkbox-list">
+                                <li>
+                                  <div class="checkbox circle">
+                                    <input type="checkbox" name="gender" id="cb_04" value="cb_04" checked="checked"/>
+                                    <label for="cb_04">checkbox</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="checkbox">
+                                    <input type="checkbox" name="gender" id="cb_05" value="cb_05"/>
+                                    <label for="cb_05">checkbox</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-radio"><span>Custom Radio</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +radio({name: 'single', id: 'radio_1', text: 'Radio Single Circle'}).circle</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="radio circle">
+                                <input type="radio" name="single" id="radio_1" value="radio_1"/>
+                                <label for="radio_1">Radio Single</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +radio({name: 'single', id: 'radio_11', text: 'Radio_Right'}).circle.right</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="radio circle right">
+                                <input type="radio" name="single" id="radio_11" value="radio_11"/>
+                                <label for="radio_11">Radio_Right</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +radio({name: 'single', id: 'radio_12', text: 'Radio_Right_Full_Width'}).circle.right.expanded</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="radio circle right expanded">
+                                <input type="radio" name="single" id="radio_12" value="radio_12"/>
+                                <label for="radio_12">Radio_Right_Full_Width</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +radio({name: 'single', id: 'radio_2', text: 'Radio_Single_Square_At_Center'}).center-mode</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="radio center-mode">
+                                <input type="radio" name="single" id="radio_2" value="radio_2"/>
+                                <label for="radio_2">Radio_Single_Square_At_Center</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset.text-center: +radio({name: 'single', id: 'radio_21', text: 'Radio_Single_Square_At_Center_Above'}).center-mode.above</code></td>
+                          <td>
+                            <div class="fieldset text-center">
+                              <div class="radio center-mode above">
+                                <input type="radio" name="single" id="radio_21" value="radio_21"/>
+                                <label for="radio_21">Radio_Single_Square_At_Center_Above</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset.text-center: +radio({name: 'single', id: 'radio_22', text: 'Radio_Single_Square_At_Center_Below'}).center-mode.below</code></td>
+                          <td>
+                            <div class="fieldset text-center">
+                              <div class="radio center-mode below">
+                                <input type="radio" name="single" id="radio_22" value="radio_22"/>
+                                <label for="radio_22">Radio_Single_Square_At_Center_Below</label><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><code class="highlight">Options:<br>- type: "radio"<br>- id<br>- name<br>- value == id<br>- checked<br>- text (of Label)<br>- class (go with .custom-radio)</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-Radio-list"><span>Custom Radio List</span></h3>
+                    <table class="tb-temp" id="custom-radio-list">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code class="highlight">.fieldset<br>&nbsp;&nbsp;+radioList([<br>&nbsp;&nbsp;&nbsp;&nbsp;{name: 'gender', id: 'rb_02', text: 'radio', checked: 'checked', class: 'circle'},<br>&nbsp;&nbsp;&nbsp;&nbsp;{name: 'gender', id: 'rb_01', text: 'radio'}<br>&nbsp;&nbsp;])</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <ul class="radio-list">
+                                <li>
+                                  <div class="radio circle">
+                                    <input type="radio" name="gender" id="rb_01" value="rb_01" checked="checked"/>
+                                    <label for="rb_01">radio</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="radio">
+                                    <input type="radio" name="gender" id="rb_02" value="rb_02"/>
+                                    <label for="rb_02">radio</label><i class="icon-check"></i>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="custom-link-checkbox"><span>Custom Link Checkbox</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th><strong>Mixin</strong></th>
+                          <th><strong>View</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +linkCheckbox({id: 'link-cb', text: 'Link_Checkbox', checked: 'checked'})</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox">
+                                <input type="checkbox" name="link-cb" id="link-cb" value="link-cb" checked="checked"/><a href="#!" title="Link_Checkbox">Link_Checkbox</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +linkCheckbox({id: 'link-cb-2', text: 'Link_Checkbox'}).circle</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox circle">
+                                <input type="checkbox" name="link-cb-2" id="link-cb-2" value="link-cb-2"/><a href="#!" title="Link_Checkbox">Link_Checkbox</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +linkCheckbox({id: 'link-cb-21', text: 'Link_Checkbox_Right'}).circle.right</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox circle right">
+                                <input type="checkbox" name="link-cb-21" id="link-cb-21" value="link-cb-21"/><a href="#!" title="Link_Checkbox_Right">Link_Checkbox_Right</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +linkCheckbox({id: 'link-cb-22', text: 'Link_Checkbox_Full_Width'}).expanded.right</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox expanded right">
+                                <input type="checkbox" name="link-cb-22" id="link-cb-22" value="link-cb-22"/><a href="#!" title="Link_Checkbox_Full_Width">Link_Checkbox_Full_Width</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset: +linkCheckbox({id: 'link-cb-03', text: 'Link_Checkbox_At_Center', checked: 'checked'}).center-mode</code></td>
+                          <td>
+                            <div class="fieldset">
+                              <div class="checkbox center-mode">
+                                <input type="checkbox" name="link-cb-03" id="link-cb-03" value="link-cb-03" checked="checked"/><a href="#!" title="Link_Checkbox_At_Center">Link_Checkbox_At_Center</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset.text-center: +linkCheckbox({id: 'link-cb-031', text: 'Link_Checkbox_At_Center_Above', checked: 'checked'}).center-mode.above</code></td>
+                          <td>
+                            <div class="fieldset text-center">
+                              <div class="checkbox center-mode above">
+                                <input type="checkbox" name="link-cb-031" id="link-cb-031" value="link-cb-031" checked="checked"/><a href="#!" title="Link_Checkbox_At_Center_Above">Link_Checkbox_At_Center_Above</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-handler=""><code class="highlight" data-copy="">.fieldset.text-center: +linkCheckbox({id: 'link-cb-032', text: 'Link_Checkbox_At_Center_Below', checked: 'checked'}).center-mode.below</code></td>
+                          <td>
+                            <div class="fieldset text-center">
+                              <div class="checkbox center-mode below">
+                                <input type="checkbox" name="link-cb-032" id="link-cb-032" value="link-cb-032" checked="checked"/><a href="#!" title="Link_Checkbox_At_Center_Below">Link_Checkbox_At_Center_Below</a><i class="icon-check"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><code class="highlight">Options:<br>- type: "checkbox"<br>- id<br>- name == id<br>- value<br>- checked<br>- text (of link)<br>- class (go with .custom-checkbox)</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="temp-h3 divider" id="button"><span>Button</span></h3>
+                    <table class="tb-temp">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th><strong>Small Size</strong></th>
+                          <th><strong>Normal Size</strong></th>
+                          <th><strong>Expanded</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Primary Button</strong>
+                            <p>.button</p>
+                            <p>.btn-primary</p>
+                            <p>.expanded</p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button small btn-primary" id="small-1" name="small-1" type="button" data-copy="+button({id: 'small-1'}).button.small.btn-primary Text"><span><span>Small</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button small btn-primary" href="#!" title="Link" data-copy="+link('title', 'href').button.small.btn-primary"><span><span>Button</span></span></a>
+                            </p><br>
+                            <p data-handler="">
+                              <button class="button medium btn-primary" id="medium-1" name="medium-1" type="button" data-copy="+button({id: 'medium-1'}).button.medium.btn-primary Text"><span><span>Medium 40 Height</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button medium btn-primary" href="#!" title="Link" data-copy="+link('title', 'href').button.medium.btn-primary"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button btn-primary" id="primary-1" name="primary-1" type="button" data-copy="+button({id: 'primary-1'}).button.btn-primary Text"><span><span>Normal</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button btn-primary" href="#!" title="Link" data-copy="+link('title', 'href').button.btn-primary: span: span Link"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button btn-primary expanded" id="expanded-1" name="expanded-1" type="button" data-copy="+button({id: 'expanded-1'}).button.btn-primary.expanded Text"><span><span>Expanded</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button expanded btn-primary" href="#!" title="Link" data-copy="+link('title', 'href').button.expanded.btn-primary: span: span Link"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Secondary Button</strong>
+                            <p>.button</p>
+                            <p>.btn-secondary</p>
+                            <p>.expanded</p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button small btn-secondary" id="small-2" name="small-2" type="button" data-copy="+button({id: 'small-2'}).button.small.btn-secondary Text"><span><span>Small</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button small btn-secondary" href="#!" title="Link" data-copy="+link('title', 'href').button.small.btn-secondary: span: span Link"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button btn-secondary" id="secondary-1" name="secondary-1" type="button" data-copy="+button({id: 'secondary-1'}).button.btn-secondary Text"><span><span>Normal</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button btn-secondary" href="#!" title="Link" data-copy="+link('title', 'href').button.btn-secondary"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button btn-secondary expanded" id="expanded-2" name="expanded-2" type="button" data-copy="+button({id: 'expanded-2'}).button.btn-secondary.expanded Text"><span><span>Expanded</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button expanded btn-secondary" href="#!" title="Link" data-copy="+link('title', 'href').button.expanded.btn-secondary"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Tertiary Button</strong>
+                            <p>.button</p>
+                            <p>.btn-tertiary</p>
+                            <p>.expanded</p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button small btn-tertiary" id="small-3" name="small-3" type="button" data-copy="+button({id: 'small-3'}).button.small.btn-tertiary Text"><span><span>Small</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button small btn-tertiary" href="#!" title="Link" data-copy="+link('title', 'href').button.small.btn-tertiary: span: span Link"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button btn-tertiary" id="tertiary-1" name="tertiary-1" type="button" data-copy="+button({id: 'tertiary-1'}).button.btn-tertiary Text"><span><span>Normal</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button btn-tertiary" href="#!" title="Link" data-copy="+link('title', 'href').button.btn-tertiary: span: span Link"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                          <td>
+                            <p data-handler="">
+                              <button class="button btn-tertiary expanded" id="expanded-3" name="expanded-3" type="button" data-copy="+button({id: 'expanded-3'}).button.btn-tertiary.expanded Text"><span><span>Expanded</span></span></button>
+                            </p><br>
+                            <p data-handler=""><a class="button expanded btn-tertiary" href="#!" title="Link" data-copy="+link('title', 'href').button.expanded.btn-tertiary: span: span Link"><span><span>Link</span></span></a>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4"><code class="highlight">+button({id: 'larger-1'})<br>Options:<br>- id<br>- name == id<br>- type: button<br>- class: Class of button</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+              <div class="block" data-collapse="">
+                <h2 class="temp-h2 divider" id="CSS-Mixin" data-handle="CSS-Mixin"><span><a href="#!">10. CSS-Mixin <i class="icon-arrow-down"></i></a></span></h2>
+                <div class="content" data-content="CSS-Mixin">
+                  <h3 class="temp-h3 divider" id="position"><span>a. Mixin Position</span></h3>
+                  <table class="tb-temp" data-equal="">
+                    <thead>
+                      <tr>
+                        <th><strong>Mixin</strong></th>
+                        <th><strong>View</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position();</span></code></td>
+                        <td>position : absolute;<br>top : 0;<br>right : 0;<br>bottom : 0;<br>left : 0</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(1px);</span></code></td>
+                        <td>position : absolute;<br>top : 1px;<br>right : 1px;<br>bottom : 1px;<br>left : 1px;</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(static, 1px);</span></code></td>
+                        <td>position : static;<br>top : 1px;<br>right : 1px;<br>bottom : 1px;<br>left : 1px;</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(1px null 3px 4px);</span></code></td>
+                        <td>position : absolute;<br>top : 1px;<br>bottom : 3px;<br>left : 4px;</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(static, 1px null 3px 4px);</span></code></td>
+                        <td>position : static;<br>top : 1px;<br>bottom : 3px;<br>left : 4px</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(1px 2px);</span></code></td>
+                        <td>position : absolute;<br>top : 1px;<br>right : 2px;</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(static, 1px 2px);</span></code></td>
+                        <td>position : static;<br>top : 1px;<br>right : 2px;</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(1px null);</span></code></td>
+                        <td>position : absolute;<br>top : 1px;</td>
+                      </tr>
+                      <tr data-handler="">
+                        <td data-parent=""><code class="highlight" data-child="child"><span data-copy="">.position(static, 1px null);</span></code></td>
+                        <td>position : static;<br>top : 1px;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h3 class="temp-h3 divider" id="triangle"><span>b. Mixin Triangle</span></h3>
+                  <table class="tb-temp">
+                    <thead>
+                      <tr>
+                        <th><strong>Mixin</strong></th>
+                        <th><strong>View</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(up, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-up"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(right, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-right"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(down, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-down"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(left, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-left"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(upleft, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-upleft"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(upright, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-upright"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(downleft, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-downleft"></div>
+                        </td>
+                      </tr>
+                      <tr data-handler="">
+                        <td><code class="highlight" data-copy="">.triangle(downright, 30px, 40px, @color08);</code></td>
+                        <td>
+                          <div class="triangle-downright"></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><code class="highlight">Options:<br>- direction: up, down, right, left, upright, upleft, downright, downleft<br>- width<br>- height<br>- color</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <p class="copyright">@ 2016 Phan Chinh - Email: <a href="mailto:chinhphan099@gmail.com">chinhphan099@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="tmp-main-nav-wrap">
+          <div class="tmp-main-nav">
+            <ul>
+              <li><a href="#breakpoint" title="Breakpoint" data-scrollto="{&quot;handle&quot;: &quot;#breakpoint&quot;, &quot;initUnder&quot;: 3000}">Breakpoint</a>
+              </li>
+              <li><a href="#grid" title="Grid" data-scrollto="{&quot;handle&quot;: &quot;#grid&quot;, &quot;initUnder&quot;: 3000}">Grid</a>
+              </li>
+              <li><a href="#media" title="Media Queries" data-scrollto="{&quot;handle&quot;: &quot;#media&quot;}">Media Queries<i class="icon-arrow-up"></i></a>
+                <div class="tmp-sub-nav-1">
+                  <ul>
+                    <li><a href="#desktop-first" title="Dekstop First" data-scrollto="{&quot;handle&quot;: &quot;#desktop-first&quot;, &quot;initUnder&quot;: 3000}">Dekstop First</a>
+                    </li>
+                    <li><a href="#mobile-first" title="Mobile First" data-scrollto="{&quot;handle&quot;: &quot;#mobile-first&quot;, &quot;initUnder&quot;: 3000}">Mobile First</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a class="colors" href="#colors" title="Color" data-scrollto="{&quot;handle&quot;: &quot;#colors&quot;, &quot;initUnder&quot;: 3000}">Color</a>
+              </li>
+              <li><a class="backgrounds" href="#backgrounds" title="Background" data-scrollto="{&quot;handle&quot;: &quot;#backgrounds&quot;, &quot;initUnder&quot;: 3000}">Background</a>
+              </li>
+              <li><a href="#fonts" title="Fonts" data-scrollto="{&quot;handle&quot;: &quot;#fonts&quot;, &quot;initUnder&quot;: 3000}">Fonts</a>
+              </li>
+              <li><a href="#icons" title="Icons" data-scrollto="{&quot;handle&quot;: &quot;#icons&quot;, &quot;initUnder&quot;: 3000}">Icons<i class="icon-circle-filled"></i></a>
+              </li>
+              <li><a href="#utilities-class" title="Utilities Class" data-scrollto="{&quot;handle&quot;: &quot;#utilities-class&quot;, &quot;initUnder&quot;: 3000}">Utilities Class</a>
+              </li>
+              <li><a href="#form-element" title="Form Element" data-scrollto="{&quot;handle&quot;: &quot;#form-element&quot;}">Form Element<i class="icon-arrow-up"></i></a>
+                <div class="tmp-sub-nav-1">
+                  <ul>
+                    <li><a href="#guide_frm" title="Form" data-scrollto="{&quot;handle&quot;: &quot;#guide_frm&quot;, &quot;initUnder&quot;: 3000}">Form</a>
+                    </li>
+                    <li><a href="#label" title="Label" data-scrollto="{&quot;handle&quot;: &quot;#label&quot;, &quot;initUnder&quot;: 3000}">Label</a>
+                    </li>
+                    <li><a href="#textarea" title="Textarea" data-scrollto="{&quot;handle&quot;: &quot;#textarea&quot;, &quot;initUnder&quot;: 3000}">Textarea</a>
+                    </li>
+                    <li><a href="#input" title="Input" data-scrollto="{&quot;handle&quot;: &quot;#input&quot;, &quot;initUnder&quot;: 3000}">Input</a>
+                    </li>
+                    <li><a href="#custom-input" title="Custom Input" data-scrollto="{&quot;handle&quot;: &quot;#custom-input&quot;, &quot;initUnder&quot;: 3000}">Custom Input</a>
+                    </li>
+                    <li><a href="#custom-select" title="Custom Select" data-scrollto="{&quot;handle&quot;: &quot;#custom-select&quot;, &quot;initUnder&quot;: 3000}">Custom Select</a>
+                    </li>
+                    <li><a href="#custom-checkbox" title="Custom Checkbox" data-scrollto="{&quot;handle&quot;: &quot;#custom-checkbox&quot;, &quot;initUnder&quot;: 3000}">Custom Checkbox</a>
+                    </li>
+                    <li><a href="#custom-checkbox-list" title="Custom Checkbox List" data-scrollto="{&quot;handle&quot;: &quot;#custom-checkbox-list&quot;, &quot;initUnder&quot;: 3000}">Custom Checkbox List</a>
+                    </li>
+                    <li><a href="#custom-link-checkbox" title="Custom Link Checkbox" data-scrollto="{&quot;handle&quot;: &quot;#custom-link-checkbox&quot;, &quot;initUnder&quot;: 3000}">Custom Link Checkbox</a>
+                    </li>
+                    <li><a href="#custom-radio" title="Custom Radio" data-scrollto="{&quot;handle&quot;: &quot;#custom-radio&quot;, &quot;initUnder&quot;: 3000}">Custom Radio</a>
+                    </li>
+                    <li><a href="#custom-radio-list" title="Custom Radio List" data-scrollto="{&quot;handle&quot;: &quot;#custom-radio-list&quot;, &quot;initUnder&quot;: 3000}">Custom Radio List</a>
+                    </li>
+                    <li><a href="#button" title="Button" data-scrollto="{&quot;handle&quot;: &quot;#button&quot;, &quot;initUnder&quot;: 3000}">Button</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#CSS-Mixin" title="CSS Mixin" data-scrollto="{&quot;handle&quot;: &quot;#CSS-Mixin&quot;, &quot;initUnder&quot;: 3000}">CSS Mixin</a>
+              </li>
+              <li><a class="outlink" href="temp-sprite.html" title="Style sprite">Style sprite</a>
+              </li>
+              <li><a class="outlink" href="temp-js.html" title="Style js">Style js</a>
+              </li>
+              <li><a class="outlink" href="images.html" title="Images">Images</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div><strong class="copied">Copy Successful</strong><span class="gotop" data-scrollto="body"><i class="icon-up"></i></span>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jsguide.js"></script>
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>
