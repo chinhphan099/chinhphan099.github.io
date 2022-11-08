@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-// import { helper } from './helper'
+import myData from './data.json'
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -26,6 +25,10 @@ class Portfolio extends React.Component {
   render() {
     return (
       <div className="wrapper">
+        <header>
+          <h1>Hi, My name is {myData.name}</h1>
+          <p>{myData.position}</p>
+        </header>
       </div>
     );
   }
