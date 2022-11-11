@@ -9,7 +9,7 @@ export default function Portfolio() {
       <header>
         <h1>Hi, My name is {myData.name}</h1>
         <p>{myData.position}</p>
-        <img src={myData.avt} />
+        <img src={myData.avt} alt={myData.name} />
       </header>
     </div>
   );
