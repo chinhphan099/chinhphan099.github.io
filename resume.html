@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chinh Resume 2022</title>
+  <title>Chinh Resume 2023</title>
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <style>
     * {
@@ -13,7 +12,6 @@
       margin: 0;
       box-sizing: border-box;
     }
-
     @font-face {
       font-family: 'SVN-Nexa';
       src: url('fonts/SVN-NexaLight.woff2') format('woff2'),
@@ -22,7 +20,6 @@
       font-style: normal;
       font-display: swap;
     }
-
     @font-face {
       font-family: 'SVN-Nexa';
       src: url('fonts/SVN-NexaBold.woff2') format('woff2'),
@@ -31,60 +28,26 @@
       font-style: normal;
       font-display: swap;
     }
-
     html {
       font-size: 14px;
-    }
-
-    body {
       --color-orange: rgba(249, 160, 10, 1);
       --color-grey: #f4f4f4;
+    }
+    body {
       font-family: "SVN-Nexa", Talos;
       line-height: 1.231;
     }
-
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
       transition: color 125ms ease;
     }
-
     a:hover {
       color: var(--color-orange);
     }
-
-    .tech-skills .content p {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 4px;
-    }
-
-    .tech-skills .content p b {
-      width: 30%;
-      margin-right: 10px;
-    }
-
-    .tech-skills .content p>span {
-      flex: 1 0 auto;
-    }
-
-    .progress-bar {
-      display: flex;
-      height: 15px;
-      background-color: #fef5e6;
-      border-radius: 999px;
-    }
-
-    .progress-bar span {
-      background-color: var(--color-orange);
-      height: 100%;
-      border-radius: 999px;
-    }
-
     .color-orange {
       color: var(--color-orange);
     }
-
     .wrapper {
       position: relative;
       width: 100%;
@@ -92,7 +55,6 @@
       margin: 0 auto;
       overflow: hidden;
     }
-
     .circle {
       width: 300px;
       height: 300px;
@@ -102,21 +64,17 @@
       border: 40px solid #fef5e6;
       border-radius: 50%;
     }
-
     header {
       padding: 130px 10px 0;
     }
-
     .name-and-title {
       margin-bottom: 30px;
     }
-
     h1 {
       display: inline-block;
       position: relative;
       font-size: 33px;
     }
-
     h1:before {
       content: "";
       position: absolute;
@@ -127,22 +85,18 @@
       border-radius: 50%;
       background: linear-gradient(to bottom, rgba(249, 160, 10, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
     }
-
     h1 span {
       position: relative;
       z-index: 1;
     }
-
     .name-and-title p {
       font-size: 17px;
       font-weight: bold;
     }
-
     .underline {
       position: relative;
       padding-bottom: 5px;
     }
-
     .underline:before {
       content: "";
       position: absolute;
@@ -152,17 +106,14 @@
       height: 2px;
       background-color: #f9a00a;
     }
-
     .bubble.underline:before {
       left: 35px;
     }
-
     .contact {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -10px 40px;
     }
-
     .contact i {
       display: inline-flex;
       align-items: center;
@@ -176,12 +127,10 @@
       background-color: var(--color-orange);
       border-radius: 50%;
     }
-
     .contact p {
       width: calc(100% / 3 - 10px);
       margin: 5px;
     }
-
     .contact a {
       display: flex;
       align-items: center;
@@ -189,50 +138,36 @@
       background-color: var(--color-grey);
       border-radius: 999px;
     }
-
     .contact p:last-child {
       flex: 1 0 auto;
     }
-
-    .wrapper>.inner {
+    .wrapper > .inner {
       display: flex;
       flex-wrap: nowrap;
       min-height: calc(100vh - 94px);
     }
-
-    aside {
-      width: 40%;
-      padding: 0 10px 0 10px;
-    }
-
     main {
       flex: 1 0 0%;
       padding: 0 10px 0 10px;
     }
-
     section {
       margin-bottom: 40px;
     }
-
     section p {
       line-height: 1.5;
     }
-
     .block-1 {
       margin-bottom: 20px;
     }
-
     .block-1 small {
-      color: #848484;
+      color: #490000;
       font-weight: normal;
     }
-
     .bubble {
       position: relative;
       padding-left: 10px;
       margin-bottom: 20px;
     }
-
     .bubble::after {
       content: "";
       position: absolute;
@@ -244,7 +179,6 @@
       border-radius: 50%;
       background: linear-gradient(to right, rgba(249, 160, 10, 0.27) 10%, rgba(255, 255, 255, 0) 100%);
     }
-
     .bubble i {
       font-size: 20px;
       text-align: center;
@@ -258,38 +192,58 @@
       position: relative;
       z-index: 1;
     }
-
     .projects {
       list-style: none;
     }
-
     .projects li {
       margin-bottom: 10px;
     }
-
+    /* Aside */
+    aside {
+      width: 40%;
+      padding: 0 10px 0 10px;
+    }
+    .tech-skills .content p {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .tech-skills .content p b {
+      width: 25%;
+      margin-right: 10px;
+    }
+    .tech-skills .content p > span {
+      flex: 1 0 auto;
+    }
+    .progress-bar {
+      display: flex;
+      height: 15px;
+      background-color: #f7ebd6;
+      border-radius: 999px;
+    }
+    .progress-bar span {
+      background-color: rgba(249, 160, 10, 0.33);
+      height: 100%;
+      border-radius: 999px;
+    }
     @media only screen and (max-width: 767px) {
       .contact {
         margin-left: 0;
         margin-right: 0;
       }
-
       .contact p {
         width: auto;
         flex: 1 0 auto;
       }
-
-      .wrapper>.inner {
+      .wrapper > .inner {
         display: block;
       }
-
       aside {
         width: auto;
       }
     }
-
   </style>
 </head>
-
 <body>
   <div class="wrapper">
     <span class="circle"></span>
@@ -315,9 +269,9 @@
           <div class="content">
             <div class="block-1">
               <h3>Freelancer</h3>
-              <h4 class="color-orange">❖ At Home <small>| June 2022 - Current</small></h4>
-              <p>Impoving English</p>
-              <p>Practising ReactJS, NodeJs, ExpressJs, TypeScript by building a Ecommerce project</p>
+              <h4 class="color-orange">❖ Waltham, MA <small>| June 2022 - Current</small></h4>
+              <p>Impoving English.</p>
+              <p>Practising ReactJS, NodeJs, ExpressJs, TypeScript by building an Ecommerce project.</p>
             </div>
             <div class="block-1">
               <h3>Senior Front End Developer</h3>
@@ -326,7 +280,7 @@
               <p>+ Worked inside, supported team members, and created Widgets by HTML/SCSS/JS/GrapesJs in a ReactJS
                 project (<a href="https://www.ctrwow.com/" target="_blank">ctrwow.com</a>): Product list, Countdown,
                 Popup, Slider, Payment, Contact form, Video, Giftcard, Installment payment, Customer forms, Tracking...
-                - Used Pipelines to build and desploy</p>
+                - Used Pipelines to build and desploy.</p>
               <p>+ Worked independently to integrate sticky.io, konnektive.com, and 29next.com to ctrwow.com by getting
                 data from REST APIs.</p>
               <p>+ Integrated payment methods: Credit Card, Paypal, Google Pay, Apple Pay.</p>
@@ -339,19 +293,19 @@
               <h4 class="color-orange">❖ Studio 60 Group <small>| July 2015 — March 2018</small></h4>
               <p>+ Worked with Backend frameworks: Episerver, Kentico, Magento, Umbraco, Wordpress.</p>
               <p>+ Converted Photoshop, sketch files to HTML/CSS/JS by using HTML, LESS or SASS.</p>
-              <p>+ I can code and work with any jQuery plugin at this time.</p>
+              <p>+ I could code and work with any jQuery plugin at this time.</p>
               <p>+ Maintained some API.net projects: updated validation rules, and changed slider plugin...</p>
-              <p>+ Support team member code Email Template.</p>
+              <p>+ Supported team member code Email Template.</p>
             </div>
 
             <div class="block-1">
               <h3>Front End Developer</h3>
               <h4 class="color-orange">❖ Sutrix Group <small>| September 2013 — June 2015</small></h4>
-              <p>+ Converted Photoshop to HTML/CSS/JS by using HTML, LESS or SASS, Grunt, Gulp</p>
+              <p>+ Converted Photoshop to HTML/CSS/JS by using HTML, LESS or SASS, Grunt, Gulp.</p>
               <p>+ Wrote jQuery Plugin to apply to the projects: Tab/Accorditon, Validation, Popup...</p>
               <p>+ Compared quality of layout via Pixel Perfect add-on.</p>
               <p>+ Worked with the Java team to build drag and drop builder.</p>
-              <p>+ Coded Email Template</p>
+              <p>+ Coded Email Template.</p>
             </div>
           </div>
         </section>
@@ -362,12 +316,12 @@
               <li>
                 <b>QUEENBEE | </b><a href="https://www.queenbee.com.au/" class="color-orange"
                   target="_blank">queenbee.com.au</a>
-                <p>Ecommerce website</p>
+                <p>Introduce and sell products.</p>
               </li>
               <li>
                 <b>HUNTY ECOMM | </b><a href="https://chinhphan099.github.io/hunty-ecom/sitemap.html"
                   class="color-orange" target="_blank">HUNTY</a>
-                <p>Ecommerce website - product is under construction</p>
+                <p>Ecommerce website - product is under construction.</p>
               </li>
               <li>
                 <b>KOREHEALTH | </b><a href="https://korehealthofficial.com/" class="color-orange"
@@ -379,7 +333,7 @@
               <li>
                 <b>INFINITIKLOUD | </b><a href="https://infinitikloud.com/" class="color-orange"
                   target="_blank">infinitikloud.com</a>
-                <p>One-click backup device for your computer or phone that anyone can use</p>
+                <p>One-click backup device for your computer or phone that anyone can use.</p>
               </li>
               <li>
                 <b>NERLOS | </b><a href="https://nerlos.us/" class="color-orange" target="_blank">nerlos.us</a>
@@ -389,7 +343,7 @@
               <li>
                 <b>BLAUX | </b><a href="https://blaux.com/" class="color-orange" target="_blank">blaux.com</a>
                 <p>Regenerate air in your room. A high-tech electronic ionization air creation. No Ozone, no harmful
-                  air. For you and your room</p>
+                  air. For you and your room.</p>
               </li>
               <li>
                 <b>MYGREENFILLS | </b><a href="https://trulyfreehome.com/" class="color-orange"
@@ -438,9 +392,11 @@
         <section>
           <h2 class="underline color-orange bubble"><i class="ion-settings"></i><span>WORK TOOLS</span></h2>
           <div class="content">
-            <p>+ Maropost, Zendesk, Jenkin, AWS, Jira, Confluence, Gitlab, TortoiseGIT, TortoiseSVN, SourceTree<br>
-            + Postman, NPM, Gulp, Webpack<br>
-            + InVision, Photoshop, Illustrator, Sketch, Zeplin, Figma</p>
+            <p>
+              + Postman, NPM, Gulp, Webpack<br>
+              + InVision, Photoshop, Illustrator, Sketch, Zeplin, Figma<br>
+              + Maropost, Zendesk, Jenkin, AWS, Jira, Confluence, Gitlab, TortoiseGIT, TortoiseSVN, SourceTree
+          </p>
           </div>
         </section>
         <section>
@@ -454,5 +410,4 @@
     </div>
   </div>
 </body>
-
 </html>
