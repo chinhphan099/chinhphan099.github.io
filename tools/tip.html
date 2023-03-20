@@ -105,13 +105,12 @@
         const tongTienTip = Number(tongTienTipElm.value);
         const tienLam = Number(tienLamElm.value);
 
-        const percentTienLam = tienLam * 100 / tongTienLam;
-        const tienTip = percentTienLam * tongTienTip / 100
+        const tienTip = tienLam / tongTienLam * tongTienTip;
         document.querySelector('#tienTip').textContent = `Tiền tip của $${tienLam} là: $${tienTip.toFixed(1)}`;
       }
       function listener() {
         const tinhTienTipBtn = document.querySelector('#tinhTienTip');
-        tinhTienTipBtn.addEventListener('click', tinhTienFnc)
+        tinhTienTipBtn.addEventListener('click', tinhTienFnc);
       }
       listener();
     })();
