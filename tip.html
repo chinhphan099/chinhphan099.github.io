@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 20px;
+      margin: 0;
+    }
+
+    * {
+      outline: none;
+    }
+
+    input {
+      padding: 10px;
+      margin: 0 0 10px;
+      border: 1px solid #333;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      appearance: none;
+      color: #333;
+      font-size: 14px;
+      border-radius: 0;
+    }
+
+    .input::-ms-clear,
+    input[type="text"]::-ms-clear,
+    input[type="password"]::-ms-clear,
+    input[type="email"]::-ms-clear,
+    input[type="number"]::-ms-clear,
+    input[type="search"]::-ms-clear,
+    input[type="tel"]::-ms-clear,
+    input[type="url"]::-ms-clear,
+    input[type="week"]::-ms-clear,
+    input[type="month"]::-ms-clear,
+    input[type="date"]::-ms-clear {
+      display: none;
+      /* icon close within input on IE */
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0;
+      /* Removing spin buttons for Number input */
+    }
+
+    input:-webkit-autofill {
+      background: papayaWhip;
+      color: hotPink;
+    }
+
+    button {
+      padding: 10px;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1;
+      border: none;
+      background: black;
+      -webkit-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+      color: white;
+      box-shadow: 0 0 10px red;
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <input type="number" placeholder="Tổng tiền làm" id="tongTienLam">
+    <input type="number" placeholder="Tổng tiền tip" id="tongTienTip">
+    <br>
+    <input type="number" placeholder="Tiền làm" id="tienLam">
+    <br>
+    <button id="tinhTienTip">Tính tiền tip</button>
+    <br>
+    <br>
+    <div id="tienTip"></div>
+  </div>
+  <script>
+    (function () {
+      const tongTienLamElm = document.querySelector('#tongTienLam');
+      const tongTienTipElm = document.querySelector('#tongTienTip');
+      const tienLamElm = document.querySelector('#tienLam');
+
+      function tinhTienFnc() {
+        const tongTienLam = Number(tongTienLamElm.value);
+        const tongTienTip = Number(tongTienTipElm.value);
+        const tienLam = Number(tienLamElm.value);
+
+        const percentTienLam = tienLam * 100 / tongTienLam;
+        const tienTip = percentTienLam * tongTienTip / 100
+        document.querySelector('#tienTip').textContent = `Tiền tip của $${tienLam} là: $${tienTip.toFixed(1)}`;
+      }
+      function listener() {
+        const tinhTienTipBtn = document.querySelector('#tinhTienTip');
+        tinhTienTipBtn.addEventListener('click', tinhTienFnc)
+      }
+      listener();
+    })();
+  </script>
+</body>
+
+</html>
