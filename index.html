@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon", href="favicon.png", type="image/x-icon">
+  <link rel="shortcut icon" , href="favicon.png" , type="image/x-icon">
   <title>Chinh Resume 2023</title>
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <style>
@@ -13,6 +14,7 @@
       margin: 0;
       box-sizing: border-box;
     }
+
     @font-face {
       font-family: 'SVN-Nexa';
       src: url('fonts/SVN-NexaLight.woff2') format('woff2'),
@@ -21,6 +23,7 @@
       font-style: normal;
       font-display: swap;
     }
+
     @font-face {
       font-family: 'SVN-Nexa';
       src: url('fonts/SVN-NexaBold.woff2') format('woff2'),
@@ -29,26 +32,32 @@
       font-style: normal;
       font-display: swap;
     }
+
     html {
       font-size: 14px;
       --color-orange: rgba(249, 160, 10, 1);
       --color-grey: #f4f4f4;
     }
+
     body {
       font-family: "SVN-Nexa", Talos;
       line-height: 1.231;
     }
+
     a {
       color: inherit;
       text-decoration: none;
       transition: color 125ms ease;
     }
+
     a:hover {
       color: var(--color-orange);
     }
+
     .color-orange {
       color: var(--color-orange);
     }
+
     .wrapper {
       position: relative;
       width: 100%;
@@ -56,6 +65,7 @@
       margin: 0 auto;
       overflow: hidden;
     }
+
     .circle {
       width: 300px;
       height: 300px;
@@ -65,17 +75,21 @@
       border: 40px solid #fef5e6;
       border-radius: 50%;
     }
+
     header {
       padding: 130px 10px 0;
     }
+
     .name-and-title {
       margin-bottom: 30px;
     }
+
     h1 {
       display: inline-block;
       position: relative;
       font-size: 33px;
     }
+
     h1:before {
       content: "";
       position: absolute;
@@ -86,18 +100,27 @@
       border-radius: 50%;
       background: linear-gradient(to bottom, rgba(249, 160, 10, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
     }
+
     h1 span {
       position: relative;
       z-index: 1;
     }
+
     .name-and-title p {
       font-size: 17px;
       font-weight: bold;
     }
+
     .underline {
       position: relative;
       padding-bottom: 5px;
     }
+
+    .link {
+      color: #bd7600;
+      text-decoration: underline;
+    }
+
     .underline:before {
       content: "";
       position: absolute;
@@ -107,14 +130,17 @@
       height: 2px;
       background-color: #f9a00a;
     }
+
     .bubble.underline:before {
       left: 35px;
     }
+
     .contact {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -10px 40px;
     }
+
     .contact i {
       display: inline-flex;
       align-items: center;
@@ -128,10 +154,12 @@
       background-color: var(--color-orange);
       border-radius: 50%;
     }
+
     .contact p {
       width: calc(100% / 3 - 10px);
       margin: 5px;
     }
+
     .contact a {
       display: flex;
       align-items: center;
@@ -139,37 +167,46 @@
       background-color: var(--color-grey);
       border-radius: 999px;
     }
+
     .contact p:last-child {
       flex: 1 0 auto;
     }
-    .wrapper > .inner {
+
+    .wrapper>.inner {
       display: flex;
       flex-wrap: nowrap;
       min-height: calc(100vh - 94px);
     }
+
     main {
       flex: 1 0 0%;
       padding: 0 10px 0 10px;
     }
+
     section {
       padding-top: 5px;
       margin-bottom: 35px;
     }
+
     section p {
       line-height: 1.5;
     }
+
     .block-1 {
       margin-bottom: 20px;
     }
+
     .block-1 small {
       color: #490000;
       font-weight: normal;
     }
+
     .bubble {
       position: relative;
       padding-left: 10px;
       margin-bottom: 20px;
     }
+
     .bubble::after {
       content: "";
       position: absolute;
@@ -181,6 +218,7 @@
       border-radius: 50%;
       background: linear-gradient(to right, rgba(249, 160, 10, 0.27) 10%, rgba(255, 255, 255, 0) 100%);
     }
+
     .bubble i {
       font-size: 20px;
       text-align: center;
@@ -190,62 +228,85 @@
       position: relative;
       z-index: 1;
     }
+
     .bubble span {
       position: relative;
       z-index: 1;
     }
+
     .projects {
       list-style: none;
     }
+
     .projects li {
       margin-bottom: 10px;
     }
+
     /* Aside */
     aside {
       width: 40%;
       padding: 0 10px 0 10px;
     }
+
     .tech-skills .content p {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 4px;
     }
+
     .tech-skills .content p b {
       width: 25%;
       margin-right: 10px;
     }
-    .tech-skills .content p > span {
+
+    .tech-skills .content p>span {
       flex: 1 0 auto;
     }
+
     .progress-bar {
       display: flex;
       height: 15px;
       background-color: #f7ebd6;
       border-radius: 999px;
     }
+
     .progress-bar span {
       background-color: rgba(249, 160, 10, 0.33);
       height: 100%;
       border-radius: 999px;
     }
+
     @media only screen and (max-width: 767px) {
       .contact {
         margin-left: 0;
         margin-right: 0;
       }
+
       .contact p {
         width: auto;
         flex: 1 0 auto;
       }
-      .wrapper > .inner {
+
+      .wrapper>.inner {
         display: block;
       }
+
       aside {
         width: auto;
       }
     }
+
+    .pt {
+      padding-top: 50px;
+    }
+
+    .pt-aside {
+      padding-top: 45px;
+    }
+
   </style>
 </head>
+
 <body>
   <div class="wrapper">
     <span class="circle"></span>
@@ -255,12 +316,19 @@
         <p class="underline color-orange">FRONT-END DEVELOPER</p>
       </div>
       <div class="contact">
-        <p><a href="mailto:chinhphan099@gmail.com"><i class="ion-email color-orange"></i><span>chinhphan099@gmail.com</span></a></p>
+        <p><a href="mailto:chinhphan099@gmail.com"><i
+              class="ion-email color-orange"></i><span>chinhphan099@gmail.com</span></a></p>
+        <p><a href="skype:chinhphan099" target="_blank"><i
+              class="ion-social-skype color-orange"></i><span>chinhphan099</span></a></p>
         <p><a href="tel:+16175806682"><i class="ion-ios-telephone color-orange"></i><span>+1 (617) 580-6682</span></a>
         </p>
-        <p><a href="https://www.google.com/maps/place/Waltham,+MA+02452/@42.3970647,-71.2783912,16436m/data=!3m1!1e3!4m6!3m5!1s0x89e39d3929428acf:0x8e09aa54af26e7af!8m2!3d42.3944416!4d-71.2220832!16s%2Fm%2F01_km6x" target="_blank"><i class="ion-ios-location color-orange"></i><span>Waltham, MA 02452, USA</span></a></p>
-        <p><a href="https://www.linkedin.com/in/chinhphan099/" target="_blank"><i class="ion-social-linkedin color-orange"></i><span>@chinhphan099</span></a></p>
-        <p><a href="https://github.com/chinhphan099" target="_blank"><i class="ion-social-github color-orange"></i><span>@chinhphan099</span></a></p>
+        <p><a
+            href="https://www.google.com/maps/place/Waltham,+MA+02452/@42.3970647,-71.2783912,16436m/data=!3m1!1e3!4m6!3m5!1s0x89e39d3929428acf:0x8e09aa54af26e7af!8m2!3d42.3944416!4d-71.2220832!16s%2Fm%2F01_km6x"
+            target="_blank"><i class="ion-ios-location color-orange"></i><span>Waltham, MA 02452, USA</span></a></p>
+        <p><a href="https://www.linkedin.com/in/chinhphan099/" target="_blank"><i
+              class="ion-social-linkedin color-orange"></i><span>@chinhphan099</span></a></p>
+        <p><a href="https://github.com/chinhphan099" target="_blank"><i
+              class="ion-social-github color-orange"></i><span>@chinhphan099</span></a></p>
       </div>
     </header>
     <div class="inner">
@@ -270,16 +338,16 @@
           </h2>
           <div class="content">
             <div class="block-1">
-              <h3>Freelancer</h3>
-              <h4 class="color-orange">❖ Waltham, MA 02452, USA <small>| June 2022 - Current</small></h4>
-              <p>Impoving English.</p>
-              <p>Practising ReactJS, NodeJs, ExpressJs, TypeScript by building an Ecommerce project.</p>
+              <h4 class="color-orange">❖ Waltham, MA 02452, USA <small>| April 2023 - Current</small></h4>
+              <p>Practising ReactJs, TypeScript: <a class="link" href="https://github.com/chinhphan099/react-2023"
+                  target="_blank">github
+                  repository</a></p>
             </div>
             <div class="block-1">
               <h3>Senior Front End Developer</h3>
               <h4 class="color-orange">❖ Global Performance Commerce <small>| April 2018 — May 2022</small></h4>
               <p>+ Deployed the website to Test/Live environment by Jenkin.</p>
-              <p>+ Worked inside, supported team members, and created Widgets by HTML/SCSS/JS/GrapesJs in a ReactJS
+              <p>+ Worked inside, supported team members, and created Widgets by HTML/SCSS/JS/GrapesJs in a ReactJs
                 project (<a href="https://www.ctrwow.com/" target="_blank">ctrwow.com</a>): Product list, Countdown,
                 Popup, Slider, Payment, Contact form, Video, Giftcard, Installment payment, Customer forms, Tracking...
                 - Used Pipelines to build and desploy.</p>
@@ -300,7 +368,7 @@
               <p>+ Supported team member code Email Template.</p>
             </div>
 
-            <div class="block-1">
+            <div class="block-1 pt">
               <h3>Front End Developer</h3>
               <h4 class="color-orange">❖ Sutrix Group <small>| September 2013 — June 2015</small></h4>
               <p>+ Converted Photoshop to HTML/CSS/JS by using HTML, LESS or SASS, Grunt, Gulp.</p>
@@ -371,7 +439,8 @@
         <section class="tech-skills">
           <h2 class="underline color-orange bubble"><i class="ion-ios-lightbulb"></i><span>TECH SKILLS</span></h2>
           <div class="content">
-            <p style="display: none;"><b>ReactJS</b><span class="progress-bar"><span style="width: 65%"></span></span></p>
+            <p style="display: none;"><b>ReactJs</b><span class="progress-bar"><span style="width: 65%"></span></span>
+            </p>
             <p style="display: none;"><b>Redux</b><span class="progress-bar"><span style="width: 65%"></span></span></p>
             <p><b>Javascript</b><span class="progress-bar"><span style="width: 85%"></span></span></p>
             <p><b>TypeScript</b><span class="progress-bar"><span style="width: 85%"></span></span></p>
@@ -379,7 +448,8 @@
             <p><b>HTML</b><span class="progress-bar"><span style="width: 97%"></span></span></p>
             <p><b>CSS</b><span class="progress-bar"><span style="width: 97%"></span></span></p>
             <p><b>GIT</b><span class="progress-bar"><span style="width: 90%"></span></span></p>
-            <p><b>Other:</b>NodeJs, GrapesJs, ExpressJs, Babel, ES6, Pug, SASS, LESS, Stylus, Bootstrap, Foundation, Jira</p>
+            <p><b>Other:</b>NodeJs, GrapesJs, ExpressJs, Babel, ES6, Pug, SASS, LESS, Stylus, Bootstrap, Foundation,
+              Jira</p>
           </div>
         </section>
         <section style="margin-bottom: 40px;">
@@ -391,14 +461,14 @@
             <p>+ Good adaptability</p>
           </div>
         </section>
-        <section>
+        <section class="pt-aside">
           <h2 class="underline color-orange bubble"><i class="ion-settings"></i><span>WORK TOOLS</span></h2>
           <div class="content">
             <p>
               + Postman, NPM, Gulp, Webpack<br>
               + InVision, Photoshop, Illustrator, Sketch, Zeplin, Figma<br>
               + Maropost, Zendesk, Jenkin, AWS, Jira, Confluence, Gitlab, TortoiseGIT, TortoiseSVN, SourceTree
-          </p>
+            </p>
           </div>
         </section>
         <section>
@@ -412,4 +482,5 @@
     </div>
   </div>
 </body>
+
 </html>
