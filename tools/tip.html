@@ -16,6 +16,7 @@
 
     * {
       outline: none;
+      box-sizing: border-box;
     }
 
     input {
@@ -78,39 +79,118 @@
       padding: 0;
       border: 0;
     }
-
+    .block {
+      display: block;
+    }
+    .two-col {
+      display: flex;
+      justify-content: space-between;
+    }
+    .col-1 {
+      width: 48%;
+    }
+    .col-1 input {
+      width: 100%;
+    }
+    .tien-tip {
+      background-color: #f1f1f1;
+    }
   </style>
 </head>
 
 <body>
   <div class="wrapper">
-    <input type="number" placeholder="Tổng tiền làm" id="tongTienLam">
-    <input type="number" placeholder="Tổng tiền tip" id="tongTienTip">
-    <br>
-    <input type="number" placeholder="Tiền làm" id="tienLam">
-    <br>
-    <button id="tinhTienTip">Tính tiền tip</button>
-    <br>
-    <br>
+    <div class="two-col">
+      <div class="input-group col-1">
+        <label class="block" for="tongTienLam">Tổng tiền làm</label>
+        <input type="number" id="tongTienLam">
+      </div>
+      <div class="input-group col-1">
+        <label class="block" for="tongTienTip">Tổng tiền tip</label>
+        <input type="number" id="tongTienTip">
+      </div>
+    </div>
+    <div class="two-col tho-row">
+      <div class="input-group col-1">
+        <label class="block">Tiền làm</label>
+        <input type="number" class="tien-lam">
+      </div>
+      <div class="input-group col-1">
+        <label for="" class="block">Tiền tip</label>
+        <input type="text" readonly class="tien-tip">
+      </div>
+    </div>
+    <div class="btn-group">
+      <button id="tinhTienTip">Tính tiền tip</button>
+      <button id="themTho">Thêm thợ</button>
+      <button id="xoaTho" style="display: none;">Xoá thợ</button>
+    </div>
     <div id="tienTip"></div>
   </div>
   <script>
     (function () {
       const tongTienLamElm = document.querySelector('#tongTienLam');
       const tongTienTipElm = document.querySelector('#tongTienTip');
-      const tienLamElm = document.querySelector('#tienLam');
+      const tmp = `
+        <div class="two-col tho-row">
+          <div class="input-group col-1">
+            <label class="block">Tiền làm</label>
+            <input type="number" class="tien-lam">
+          </div>
+          <div class="input-group col-1">
+            <label for="" class="block">Tiền tip</label>
+            <input type="text" readonly class="tien-tip">
+          </div>
+        </div>
+      `;
 
-      function tinhTienFnc() {
+      function congThucTinhTienTip(tienLam) {
         const tongTienLam = Number(tongTienLamElm.value);
         const tongTienTip = Number(tongTienTipElm.value);
-        const tienLam = Number(tienLamElm.value);
 
-        const tienTip = tienLam / tongTienLam * tongTienTip;
-        document.querySelector('#tienTip').textContent = `Tiền tip của $${tienLam} là: $${tienTip.toFixed(1)}`;
+        return tienLam > 0 ? tienLam / tongTienLam * tongTienTip : '';
       }
+      function tinhTienFnc() {
+        const tienLamElms = document.querySelectorAll('.tien-lam');
+        tienLamElms.forEach(tienLamElm => {
+          const tienLam = Number(tienLamElm.value);
+          const tienTip = congThucTinhTienTip(tienLam);
+          const tienTipElm = tienLamElm.closest('.tho-row').querySelector('.tien-tip');
+          tienTipElm.value = tienTip;
+        })
+      }
+      function toggleXoaThoBtn() {
+        const thoRows = document.querySelectorAll('.tho-row');
+        if (thoRows.length > 1) {
+          document.querySelector('#xoaTho').style.display = 'inline-block';
+        } else {
+          document.querySelector('#xoaTho').style.display = 'none'
+        }
+      }
+      function xoaThoFnc() {
+        const thoRows = document.querySelectorAll('.tho-row');
+        const lastThoRow = thoRows[thoRows.length - 1];
+        lastThoRow.remove();
+        toggleXoaThoBtn();
+      }
+      function themThoFnc() {
+        const abc = tmp.replaceAll('inputID', 'abc');
+        const inputGroup = document.querySelector('.btn-group');
+        inputGroup.insertAdjacentHTML('beforebegin', abc);
+        toggleXoaThoBtn();
+      }
+      // function tinhTienTipFnc() {
+      //   const tienLamElms = document.querySelectorAll('.tien-lam');
+      // }
       function listener() {
         const tinhTienTipBtn = document.querySelector('#tinhTienTip');
         tinhTienTipBtn.addEventListener('click', tinhTienFnc);
+
+        const themThoBtn = document.querySelector('#themTho');
+        themThoBtn.addEventListener('click', themThoFnc);
+
+        const xoaThoBtn = document.querySelector('#xoaTho');
+        xoaThoBtn.addEventListener('click', xoaThoFnc);
       }
       listener();
     })();
