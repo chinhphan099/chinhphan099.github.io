@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" , href="favicon.png" , type="image/x-icon" />
     <title>
       Bling Nails & Spa | Acrylic Nails, Dip Powder & Nail Design in Bossier
       City
     </title>
+
+    <!-- Primary SEO -->
     <meta
       name="description"
       content="Relax and shine at Bling Nails & Spa in Bossier City, LA — experts in Acrylic Nails, Dip Powder, Nail Art, Pedicure, and Waxing. Walk-ins welcome!"
@@ -17,11 +17,11 @@
       name="keywords"
       content="Acrylic Nails, Dip Powder, Nail Design, Nail Salon Bossier City, Bling Nails and Spa, Waxing, Pedicure, Manicure"
     />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Bling Nails & Spa" />
+    <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://blingnailsandspa.com/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Open Graph -->
+
+    <!-- Social (Open Graph / Twitter) -->
+    <meta property="og:type" content="website" />
     <meta
       property="og:title"
       content="Bling Nails & Spa | Best Nail Salon in Bossier City, LA"
@@ -30,312 +30,39 @@
       property="og:description"
       content="Your go-to place for Acrylic Nails, Dip Powder, Nail Design, and relaxing Spa Pedicures. Walk-ins Welcome!"
     />
+    <meta property="og:url" content="https://blingnailsandspa.com/" />
     <meta
       property="og:image"
-      content="https://blingnailsandspa.com/images/cover.jpg"
+      content="https://blingnailsandspa.com/images/bling-nails-and-spa-cover-bossier-city.jpg"
     />
-    <meta property="og:url" content="https://blingnailsandspa.com" />
-    <meta property="og:type" content="website" />
-    <!-- Schema -->
-    <link
-      rel="stylesheet"
-      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Bling Nails & Spa | Best Nail Salon in Bossier City, LA"
     />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
+    <meta
+      name="twitter:description"
+      content="Acrylic Nails, Dip Powder, Nail Art, Pedicure & Waxing in Bossier City. Walk-ins Welcome!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://blingnailsandspa.com/images/bling-nails-and-spa-cover-bossier-city.jpg"
+    />
 
-      @font-face {
-        font-family: 'SVN-Nexa';
-        src: url('fonts/SVN-NexaLight.woff2') format('woff2'),
-          url('fonts/SVN-NexaLight.woff') format('woff');
-        font-weight: 300;
-        font-style: normal;
-        font-display: swap;
-      }
+    <!-- Essentials -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Bling Nails & Spa" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
 
-      @font-face {
-        font-family: 'SVN-Nexa';
-        src: url('fonts/SVN-NexaBold.woff2') format('woff2'),
-          url('fonts/SVN-NexaBold.woff') format('woff');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      html {
-        font-size: 15px;
-        --color-orange: rgba(249, 160, 10, 1);
-        --color-grey: #f4f4f4;
-      }
-
-      body {
-        font-family: 'SVN-Nexa', Talos;
-        line-height: 1.231;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        transition: color 125ms ease;
-      }
-
-      a:hover {
-        color: var(--color-orange);
-      }
-
-      .color-orange {
-        color: var(--color-orange);
-      }
-
-      .wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-
-      .circle {
-        width: 300px;
-        height: 300px;
-        position: absolute;
-        top: -120px;
-        right: 0;
-        border: 40px solid #fef5e6;
-        border-radius: 50%;
-      }
-
-      header {
-        padding: 50px 10px 0;
-      }
-
-      .name-and-title {
-        margin-bottom: 30px;
-      }
-
-      h1 {
-        display: inline-block;
-        position: relative;
-        font-size: 33px;
-      }
-
-      h1 span {
-        position: relative;
-        z-index: 1;
-      }
-
-      .name-and-title p {
-        font-size: 17px;
-        font-weight: bold;
-      }
-
-      .underline {
-        position: relative;
-        padding-bottom: 5px;
-      }
-
-      .link {
-        color: #bd7600;
-        text-decoration: underline;
-      }
-
-      .underline:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 105px;
-        height: 2px;
-        background-color: #f9a00a;
-      }
-
-      .bubble.underline:before {
-        left: 35px;
-      }
-
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -10px 40px;
-      }
-
-      .contact i {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        margin-right: 5px;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        color: white;
-        background-color: var(--color-orange);
-        border-radius: 50%;
-      }
-
-      .contact p {
-        width: calc(100% / 3 - 10px);
-        margin: 5px;
-      }
-
-      .contact a {
-        display: flex;
-        align-items: center;
-        padding: 5px 5px 5px 7px;
-        background-color: var(--color-grey);
-        border-radius: 999px;
-      }
-
-      .contact p:last-child {
-        flex: 1 0 auto;
-      }
-
-      .wrapper > .inner {
-        display: flex;
-        flex-wrap: nowrap;
-        min-height: calc(100vh - 94px);
-      }
-
-      main {
-        flex: 1 0 0%;
-        padding: 0 10px 0 10px;
-      }
-
-      section {
-        padding-top: 5px;
-        margin-bottom: 35px;
-      }
-
-      section p {
-        line-height: 1.5;
-      }
-
-      .block-1 {
-        margin-bottom: 20px;
-      }
-
-      .block-1 small {
-        color: #490000;
-        font-weight: normal;
-      }
-
-      .bubble {
-        position: relative;
-        padding-left: 10px;
-        margin-bottom: 20px;
-      }
-
-      .bubble::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 40px;
-        height: 40px;
-        margin-top: -22px;
-        border-radius: 50%;
-        background: linear-gradient(
-          to right,
-          rgba(249, 160, 10, 0.27) 10%,
-          rgba(255, 255, 255, 0) 100%
-        );
-      }
-
-      .bubble i {
-        font-size: 20px;
-        text-align: center;
-        margin-right: 5px;
-        width: 20px;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-      }
-
-      .bubble span {
-        position: relative;
-        z-index: 1;
-      }
-
-      .projects {
-        list-style: none;
-      }
-
-      .projects li {
-        margin-bottom: 10px;
-      }
-
-      /* Aside */
-      aside {
-        width: 40%;
-        padding: 0 10px 0 10px;
-      }
-
-      .tech-skills .content p {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 4px;
-      }
-
-      .tech-skills .content p b {
-        width: 25%;
-        margin-right: 10px;
-      }
-
-      .tech-skills .content p > span {
-        flex: 1 0 auto;
-      }
-
-      .progress-bar {
-        display: flex;
-        height: 15px;
-        background-color: #f7ebd6;
-        border-radius: 999px;
-      }
-
-      .progress-bar span {
-        background-color: rgba(249, 160, 10, 0.33);
-        height: 100%;
-        border-radius: 999px;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .contact {
-          margin-left: 0;
-          margin-right: 0;
-        }
-
-        .contact p {
-          width: auto;
-          flex: 1 0 auto;
-        }
-
-        .wrapper > .inner {
-          display: block;
-        }
-
-        aside {
-          width: auto;
-        }
-      }
-
-      .pt {
-        padding-top: 50px;
-      }
-
-      .pt-aside {
-        padding-top: 45px;
-      }
-    </style>
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "NailSalon",
         "name": "Bling Nails & Spa",
-        "image": "https://blingnailsandspa.com/images/cover.jpg",
+        "image": "https://blingnailsandspa.com/bling-nails-and-spa-cover-bossier-city.jpg",
+        "url": "https://blingnailsandspa.com/",
+        "telephone": "+1-318-840-6031",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "2159 Airline Dr",
@@ -344,35 +71,145 @@
           "postalCode": "71111",
           "addressCountry": "US"
         },
-        "telephone": "+3188406031",
-        "url": "https://blingnailsandspa.com",
-        "openingHours": "Mo-Sa 09:00-19:00",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
         "priceRange": "$$",
-        "description": "Professional Nail Salon in Bossier City, LA offering Acrylic Nails, Dip Powder, Nail Art, Pedicures, and Waxing. Walk-ins Welcome!"
+        "description": "Professional Nail Salon offering Acrylic Nails, Dip Powder, Nail Art, Pedicures, and Waxing. Walk-ins Welcome!"
       }
     </script>
+
+    <style>
+      :root {
+        --pink: #f7cfe0;
+        --brand: #e84ea7;
+        --text: #2b2b2b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
+          sans-serif;
+        color: var(--text);
+        background: #fff;
+      }
+      .hero {
+        position: relative;
+        min-height: 52vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        background: url('/images/bling-nails-and-spa-cover-bossier-city.jpg')
+          center/cover no-repeat;
+      }
+      .overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.55),
+          rgba(255, 255, 255, 0.85)
+        );
+        position: absolute;
+        inset: 0;
+      }
+      .hero-inner {
+        position: relative;
+        padding: 4rem 1.25rem;
+      }
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(32px, 5vw, 48px);
+        color: #c01778;
+      }
+      .sub {
+        font-size: clamp(16px, 2.5vw, 20px);
+        opacity: 0.9;
+      }
+      .bar {
+        background: var(--pink);
+        color: #7a2b54;
+        padding: 0.6rem 1rem;
+        text-align: center;
+        font-weight: 600;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 2rem auto;
+        padding: 0 1.25rem;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 1.25rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+      .info p {
+        margin: 0.25rem 0;
+        font-size: 1.05rem;
+      }
+      .walkins {
+        margin-top: 0.75rem;
+        display: inline-block;
+        background: #ffe8f3;
+        border-radius: 999px;
+        padding: 0.4rem 0.8rem;
+        font-weight: 600;
+      }
+      a.tel {
+        color: var(--brand);
+        text-decoration: none;
+      }
+      footer {
+        margin: 2.5rem 0 3.5rem;
+        text-align: center;
+        font-size: 0.95rem;
+        color: #666;
+      }
+    </style>
   </head>
-
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>BLING NAILS & SPA</h1>
-      </header>
-      <div class="inner">
-        <main>
-          <section>
-            <address>2159 AIRLINE DR #300, Bossier City, LA 71111</address>
-            <br />
-            <p>Website under maintenance</p>
-          </section>
-        </main>
+    <div class="bar">Website is being updated</div>
 
-        <!-- <aside>
-          <section>
-            <p>Under maintenance</p>
-          </section>
-        </aside> -->
+    <header class="hero" role="banner" aria-label="Bling Nails & Spa cover">
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <h1>Bling Nails & Spa</h1>
+        <p class="sub">
+          Acrylic Nails • Dip Powder • Builder Gel • Gel X • Nail Design •
+          Pedicure • Waxing
+        </p>
+        <span class="walkins">✨ Walk-ins Welcome ✨</span>
       </div>
-    </div>
+    </header>
+
+    <main class="wrap" role="main">
+      <section class="card info" aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>📍 2159 Airline Dr, Bossier City, LA 71111</p>
+        <p>📞 <a class="tel" href="tel:+13180000000">(318) 840-6031</a></p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Bling Nails & Spa. All rights reserved.
+    </footer>
+
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
