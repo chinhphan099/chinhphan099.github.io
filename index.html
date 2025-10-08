@@ -99,9 +99,6 @@
       html {
         scroll-behavior: smooth;
       }
-      .logo {
-        border-radius: 50%;
-      }
     </style>
   </head>
   <body
@@ -119,7 +116,7 @@
             class="w-9 h-9 rounded-full bg-gradient-to-br from-pink-300 to-rose-400 grid place-items-center shadow-inner"
           >
             <span class="font-black text-white"
-              ><img class="logo" src="logo.png" alt=""
+              ><img class="rounded-full" src="logo.png" alt=""
             /></span>
           </div>
           <div class="leading-tight">
@@ -150,6 +147,34 @@
         </div>
       </div>
     </div>
+
+    <!-- Announcement Bar (continuous scroll) -->
+    <div class="relative overflow-hidden bg-pink-100 border-y border-pink-300">
+      <div
+        class="whitespace-nowrap py-2 text-pink-800 font-semibold tracking-wide animate-scroll"
+      >
+        🎉 Enjoy 10% OFF during HAPPY HOURS — Monday to Thursday, 9:00 AM to
+        1:30 PM 🎉 &nbsp;&nbsp;&nbsp;&nbsp; 🎉 Enjoy 10% OFF during HAPPY HOURS
+        — Monday to Thursday, 9:00 AM to 1:30 PM 🎉 &nbsp;&nbsp;&nbsp;&nbsp; 🎉
+        Enjoy 10% OFF during HAPPY HOURS — Monday to Thursday, 9:00 AM to 1:30
+        PM 🎉
+      </div>
+    </div>
+
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-scroll {
+        display: inline-block;
+        animation: scroll 20s linear infinite;
+      }
+    </style>
 
     <!-- Hero with sparkles -->
     <header class="relative overflow-hidden">
@@ -214,7 +239,7 @@
             >
           </div>
           <div class="mt-4 text-sm text-slate-500">
-            Open Mon–Sat 9:00 AM – 7:00 PM • Sunday Closed
+            Open Mon–Sat 9:00 AM – 7:00 PM • Sunday 10:30 AM – 5:00 PM
           </div>
         </div>
 
@@ -259,118 +284,15 @@
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Card -->
-        <div
-          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
-        >
-          <div class="aspect-[4/3] bg-pink-50">
-            <img
-              src="/bling-img/img-1.png"
-              alt="Acrylic Set"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold text-lg">Acrylic</h3>
-              <span class="text-pink-700 font-bold">$55+</span>
-            </div>
-            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-              Long-lasting strength with crisp shapes and smooth finishes.
-            </p>
-            <a
-              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
-              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
-              >Book now →</a
-            >
-          </div>
-        </div>
 
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
-          <div class="aspect-[4/3] bg-pink-50">
-            <img
-              src="/bling-img/img-2.png"
-              alt="Dip Powder"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold text-lg">Dip Powder</h3>
-              <span class="text-pink-700 font-bold">$50+</span>
-            </div>
-            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-              Lightweight feel, strong wear — minimal odor and no curing.
-            </p>
-            <a
-              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
-              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
-              >Book now →</a
-            >
-          </div>
-        </div>
-
-        <div
-          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
-        >
-          <div class="aspect-[4/3] bg-pink-50">
-            <img
-              src="/bling-img/img-3.png"
-              alt="Gel X"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold text-lg">Gel X</h3>
-              <span class="text-pink-700 font-bold">$60+</span>
-            </div>
-            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-              Soft-gel extensions with natural look and quick removal.
-            </p>
-            <a
-              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
-              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
-              >Book now →</a
-            >
-          </div>
-        </div>
-
-        <div
-          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
-        >
-          <div class="aspect-[4/3] bg-pink-50">
-            <img
-              src="/bling-img/img-4.png"
-              alt="Builder Gel"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold text-lg">Builder Gel</h3>
-              <span class="text-pink-700 font-bold">$60+</span>
-            </div>
-            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
-              Adds structure and durability while keeping a glossy finish.
-            </p>
-            <a
-              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
-              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
-              >Book now →</a
-            >
-          </div>
-        </div>
-
-        <div
-          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
-        >
-          <div class="aspect-[4/3] bg-pink-50">
+          <div class="flex justify-center mt-3">
             <img
               src="/bling-img/img-5.png"
               alt="Spa Pedicure"
-              class="w-full h-full object-cover"
+              class="w-28 h-28 rounded-full object-cover ring-2 ring-pink-200 shadow-sm"
             />
           </div>
           <div class="p-5">
@@ -392,11 +314,114 @@
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
-          <div class="aspect-[4/3] bg-pink-50">
+          <div class="flex justify-center mt-3">
+            <img
+              src="/bling-img/img-1.png"
+              alt="Acrylic Set"
+              class="w-28 h-28 rounded-full object-cover ring-2 ring-pink-200 shadow-sm"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-lg">Acrylic</h3>
+              <span class="text-pink-700 font-bold">$55+</span>
+            </div>
+            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+              Long-lasting strength with crisp shapes and smooth finishes.
+            </p>
+            <a
+              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
+              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              >Book now →</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
+        >
+          <div class="flex justify-center mt-3">
+            <img
+              src="/bling-img/img-2.png"
+              alt="Dip Powder"
+              class="w-28 h-28 rounded-full object-cover ring-2 ring-pink-200 shadow-sm"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-lg">Dip Powder</h3>
+              <span class="text-pink-700 font-bold">$50+</span>
+            </div>
+            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+              Lightweight feel, strong wear — minimal odor and no curing.
+            </p>
+            <a
+              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
+              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              >Book now →</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
+        >
+          <div class="flex justify-center mt-3">
+            <img
+              src="/bling-img/img-3.png"
+              alt="Gel X"
+              class="w-28 h-28 rounded-full object-cover ring-2 ring-pink-200 shadow-sm"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-lg">Gel X</h3>
+              <span class="text-pink-700 font-bold">$60+</span>
+            </div>
+            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+              Soft-gel extensions with natural look and quick removal.
+            </p>
+            <a
+              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
+              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              >Book now →</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
+        >
+          <div class="flex justify-center mt-3">
+            <img
+              src="/bling-img/img-4.png"
+              alt="Builder Gel"
+              class="w-28 h-28 rounded-full object-cover ring-2 ring-pink-200 shadow-sm"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-lg">Builder Gel</h3>
+              <span class="text-pink-700 font-bold">$60+</span>
+            </div>
+            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+              Adds structure and durability while keeping a glossy finish.
+            </p>
+            <a
+              href="https://booking.gocheckin.net/v2/multiple-staff/18101"
+              class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              >Book now →</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
+        >
+          <div class="flex justify-center mt-3">
             <img
               src="/bling-img/img-6.png"
               alt="Custom Nails Design"
-              class="w-full h-full object-cover"
+              class="w-28 h-28 rounded-full object-cover ring-2 ring-pink-200 shadow-sm"
             />
           </div>
           <div class="p-5">
@@ -722,7 +747,7 @@
               <span>Saturday</span><span>9:00 AM – 7:00 PM</span>
             </li>
             <li class="flex justify-between">
-              <span>Sunday</span><span>Closed</span>
+              <span>Sunday</span><span>10:30 AM – 5:00 PM</span>
             </li>
           </ul>
         </div>
@@ -821,7 +846,8 @@
           <div>
             <div class="font-extrabold">Bling Nails &amp; Spa</div>
             <p class="text-slate-600 mt-2">
-              Acrylic Nail • Dip Powder • Nails Design in Bossier City, LA.
+              Acrylic Nail • Dip Powder • Builder Gel • Gel X • Nails Design in
+              Bossier City, LA.
             </p>
             <div class="mt-3">
               <span
