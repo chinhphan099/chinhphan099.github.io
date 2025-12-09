@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bling Nails & Spa - Apple Maps</title>
+
+    <!-- Prevent indexing -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- GA4 already loaded globally on site -->
+  </head>
+  <body>
+    <script>
+      // Track Apple Maps landing
+      if (typeof gtag === 'function') {
+        gtag('event', 'applemaps_landing', {
+          traffic_source: 'apple_maps',
+          destination: 'homepage'
+        });
+      }
+
+      // Small delay to ensure GA fires
+      setTimeout(function () {
+        window.location.href = '/';
+      }, 150);
+    </script>
+
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
+  </body>
+</html>
