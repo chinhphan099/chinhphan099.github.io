@@ -106,6 +106,21 @@
         scroll-behavior: smooth;
       }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8ELW8MKW78"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-8ELW8MKW78');
+    </script>
   </head>
   <body
     class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-pink-50 text-slate-900 antialiased"
@@ -129,11 +144,36 @@
         </div>
 
         <div class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#services" class="hover:text-pink-700">Services</a>
-          <a href="#pricing" class="hover:text-pink-700">Pricing</a>
-          <a href="#gallery" class="hover:text-pink-700">Gallery</a>
-          <a href="#hours" class="hover:text-pink-700">Hours</a>
-          <a href="#contact" class="hover:text-pink-700">Contact</a>
+          <a
+            href="#services"
+            class="hover:text-pink-700"
+            onclick="gtag('event', 'click_nav_services', { section: 'header_nav', link_url: this.href });"
+            >Services</a
+          >
+          <a
+            href="#pricing"
+            class="hover:text-pink-700"
+            onclick="gtag('event', 'click_nav_pricing', { section: 'header_nav', link_url: this.href });"
+            >Pricing</a
+          >
+          <a
+            href="#gallery"
+            class="hover:text-pink-700"
+            onclick="gtag('event', 'click_nav_gallery', { section: 'header_nav', link_url: this.href });"
+            >Gallery</a
+          >
+          <a
+            href="#hours"
+            class="hover:text-pink-700"
+            onclick="gtag('event', 'click_nav_hours', { section: 'header_nav', link_url: this.href });"
+            >Hours</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-pink-700"
+            onclick="gtag('event', 'click_nav_contact', { section: 'header_nav', link_url: this.href });"
+            >Contact</a
+          >
         </div>
 
         <div class="flex items-center gap-3">
@@ -144,6 +184,7 @@
           <a
             href="https://booking.gocheckin.net/v2/multiple-staff/18101"
             class="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-pink-600 text-white font-semibold shadow hover:bg-pink-700"
+            onclick="gtag('event', 'click_header_booking', { section: 'header', link_url: this.href });"
           >
             Booking
           </a>
@@ -151,35 +192,10 @@
       </div>
     </div>
 
-    <!-- Announcement Bar (continuous scroll) -->
-    <!-- <div class="relative overflow-hidden bg-pink-100 border-y border-pink-300">
-      <div
-        class="whitespace-nowrap py-2 text-pink-800 font-semibold tracking-wide animate-scroll"
-      >
-        🎉 Acrylic Full Set $50, Acrylic Fill-ins: 40$ 🎉 Acrylic Full Set $50,
-        Acrylic Fill-ins: 40$ 🎉 Acrylic Full Set $50, Acrylic Fill-ins: 40$ 🎉
-        Acrylic Full Set $50, Acrylic Fill-ins: 40$ 🎉
-      </div>
-    </div>
-    <style>
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-      .animate-scroll {
-        display: inline-block;
-        animation: scroll 20s linear infinite;
-      }
-    </style> -->
-
-    <!-- Hero with sparkles -->
+    <!-- Hero -->
     <header class="relative overflow-hidden">
       <div class="absolute inset-0 pointer-events-none">
-        <!-- Sparkle elements -->
+        <!-- Sparkles -->
         <svg
           class="absolute -top-16 -left-16 w-72 h-72 opacity-30"
           viewBox="0 0 200 200"
@@ -229,11 +245,13 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="rounded-xl px-5 py-3 bg-pink-600 text-white font-semibold shadow hover:bg-pink-700"
+              onclick="gtag('event', 'click_hero_book', { section: 'hero', link_url: this.href });"
               >Book an Appointment</a
             >
             <a
               href="#services"
               class="rounded-xl px-5 py-3 bg-white ring-1 ring-slate-200 font-semibold hover:ring-pink-300"
+              onclick="gtag('event', 'click_hero_services', { section: 'hero', link_url: this.href });"
               >Explore Services</a
             >
           </div>
@@ -288,8 +306,7 @@
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- Card -->
-
+        <!-- Pedicure -->
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
@@ -311,11 +328,13 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              onclick="gtag('event', 'click_service_book', { section: 'services', service: 'Pedicure', link_url: this.href });"
               >Book now →</a
             >
           </div>
         </div>
 
+        <!-- Acrylic -->
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
@@ -337,11 +356,13 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              onclick="gtag('event', 'click_service_book', { section: 'services', service: 'Acrylic', link_url: this.href });"
               >Book now →</a
             >
           </div>
         </div>
 
+        <!-- Dip Powder -->
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
@@ -363,11 +384,13 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              onclick="gtag('event', 'click_service_book', { section: 'services', service: 'Dip Powder', link_url: this.href });"
               >Book now →</a
             >
           </div>
         </div>
 
+        <!-- Gel X -->
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
@@ -389,11 +412,13 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              onclick="gtag('event', 'click_service_book', { section: 'services', service: 'Gel X', link_url: this.href });"
               >Book now →</a
             >
           </div>
         </div>
 
+        <!-- Builder Gel -->
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
@@ -415,10 +440,13 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              onclick="gtag('event', 'click_service_book', { section: 'services', service: 'Builder Gel', link_url: this.href });"
               >Book now →</a
             >
           </div>
         </div>
+
+        <!-- Custom Nails Design -->
         <div
           class="bg-white/70 backdrop-blur rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden hover:shadow-md transition"
         >
@@ -440,6 +468,7 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-4 items-center gap-2 text-pink-700 font-semibold hover:underline"
+              onclick="gtag('event', 'click_service_book', { section: 'services', service: 'Custom Nails Design', link_url: this.href });"
               >Book now →</a
             >
           </div>
@@ -450,6 +479,7 @@
         <a
           href="https://booking.gocheckin.net/v2/multiple-staff/18101"
           class="inline-flex items-center justify-center rounded-xl px-6 py-3 bg-pink-600 text-white font-semibold shadow hover:bg-pink-700"
+          onclick="gtag('event', 'click_services_see_availability', { section: 'services', link_url: this.href });"
           >See availability</a
         >
       </div>
@@ -548,6 +578,7 @@
             href="https://www.instagram.com/blingnailsandspa.bossier/"
             class="inline-flex items-center justify-center rounded-xl px-6 py-3 bg-pink-600 text-white font-semibold shadow hover:bg-pink-700"
             target="_blank"
+            onclick="gtag('event', 'click_gallery_instagram', { section: 'gallery', link_url: this.href });"
             >See More →</a
           >
         </div>
@@ -804,6 +835,7 @@
             <a
               class="block mt-2 text-pink-700 font-semibold"
               href="tel:+13185846031"
+              onclick="gtag('event', 'click_contact_phone', { section: 'contact', link_url: this.href });"
               >(318) 584-6031</a
             >
             <p class="text-xs text-slate-500 mt-1">
@@ -818,6 +850,7 @@
               target="_blank"
               rel="noreferrer"
               href="https://www.google.com/maps/place/Bling+Nails+%26+Spa/@32.5393362,-93.711021,582m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86313347f0f71bd1:0x8bbc8473bb6bd8b4!8m2!3d32.5393317!4d-93.7084461!16s%2Fg%2F11lv2gywnk?entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D"
+              onclick="gtag('event', 'click_contact_maps', { section: 'contact', link_url: this.href });"
               >Open in Maps →</a
             >
           </div>
@@ -826,6 +859,7 @@
             <a
               class="mt-2 inline-flex items-center gap-2 text-pink-700 font-semibold"
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
+              onclick="gtag('event', 'click_contact_booking', { section: 'contact', link_url: this.href });"
               >Book via GoCheckIn →</a
             >
             <p class="text-xs text-slate-500 mt-1">
@@ -852,6 +886,7 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex items-center justify-center rounded-xl px-6 py-3 bg-white text-pink-700 font-extrabold shadow hover:bg-pink-50"
+              onclick="gtag('event', 'click_cta_book', { section: 'cta', link_url: this.href });"
               >Book Now</a
             >
           </div>
@@ -859,7 +894,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <!-- Footer -->
     <footer class="px-4 py-10">
       <div class="max-w-6xl mx-auto">
@@ -887,6 +921,7 @@
                 rel="noreferrer"
                 aria-label="Facebook"
                 class="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-lg hover:bg-pink-600 transition"
+                onclick="gtag('event', 'click_footer_facebook', { section: 'footer_social', link_url: this.href });"
               >
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
@@ -898,6 +933,7 @@
                 rel="noreferrer"
                 aria-label="Google Maps"
                 class="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-lg hover:bg-pink-600 transition"
+                onclick="gtag('event', 'click_footer_google_maps', { section: 'footer_social', link_url: this.href });"
               >
                 <i class="fa-solid fa-location-dot"></i>
               </a>
@@ -909,6 +945,7 @@
                 rel="noreferrer"
                 aria-label="Yelp"
                 class="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-lg hover:bg-pink-600 transition"
+                onclick="gtag('event', 'click_footer_yelp', { section: 'footer_social', link_url: this.href });"
               >
                 <i class="fa-brands fa-yelp"></i>
               </a>
@@ -920,6 +957,7 @@
                 rel="noreferrer"
                 aria-label="Instagram"
                 class="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-lg hover:bg-pink-600 transition"
+                onclick="gtag('event', 'click_footer_instagram', { section: 'footer_social', link_url: this.href });"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>
@@ -931,17 +969,19 @@
                 rel="noreferrer"
                 aria-label="TikTok"
                 class="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-lg hover:bg-pink-600 transition"
+                onclick="gtag('event', 'click_footer_tiktok', { section: 'footer_social', link_url: this.href });"
               >
                 <i class="fa-brands fa-tiktok"></i>
               </a>
 
-              <!-- Lemon8 (using lemon icon as placeholder) -->
+              <!-- Lemon8 -->
               <a
                 href="https://www.lemon8-app.com/@blingnailsandspa.bossier?region=us"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Lemon8"
                 class="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-lg hover:bg-pink-600 transition"
+                onclick="gtag('event', 'click_footer_lemon8', { section: 'footer_social', link_url: this.href });"
               >
                 <i class="fa-solid fa-lemon"></i>
               </a>
@@ -952,13 +992,28 @@
             <div class="font-bold">Explore</div>
             <ul class="mt-2 space-y-2">
               <li>
-                <a href="#services" class="hover:text-pink-700">Services</a>
+                <a
+                  href="#services"
+                  class="hover:text-pink-700"
+                  onclick="gtag('event', 'click_footer_nav_services', { section: 'footer_nav', link_url: this.href });"
+                  >Services</a
+                >
               </li>
               <li>
-                <a href="#pricing" class="hover:text-pink-700">Pricing</a>
+                <a
+                  href="#pricing"
+                  class="hover:text-pink-700"
+                  onclick="gtag('event', 'click_footer_nav_pricing', { section: 'footer_nav', link_url: this.href });"
+                  >Pricing</a
+                >
               </li>
               <li>
-                <a href="#gallery" class="hover:text-pink-700">Gallery</a>
+                <a
+                  href="#gallery"
+                  class="hover:text-pink-700"
+                  onclick="gtag('event', 'click_footer_nav_gallery', { section: 'footer_nav', link_url: this.href });"
+                  >Gallery</a
+                >
               </li>
             </ul>
           </div>
@@ -973,12 +1028,16 @@
                   target="_blank"
                   rel="noreferrer"
                   href="https://www.google.com/maps/place/Bling+Nails+%26+Spa/@32.5393362,-93.711021,582m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86313347f0f71bd1:0x8bbc8473bb6bd8b4!8m2!3d32.5393317!4d-93.7084461!16s%2Fg%2F11lv2gywnk?entry=ttu"
+                  onclick="gtag('event', 'click_footer_maps', { section: 'footer_visit', link_url: this.href });"
                   >Open in Maps →</a
                 >
               </li>
               <li>Bossier City, LA</li>
               <li>
-                <a href="tel:+13185846031" class="text-pink-700 font-semibold"
+                <a
+                  href="tel:+13185846031"
+                  class="text-pink-700 font-semibold"
+                  onclick="gtag('event', 'click_footer_phone', { section: 'footer_visit', link_url: this.href });"
                   >(318) 584-6031</a
                 >
               </li>
@@ -990,6 +1049,7 @@
             <a
               href="https://booking.gocheckin.net/v2/multiple-staff/18101"
               class="inline-flex mt-2 items-center gap-2 text-pink-700 font-semibold"
+              onclick="gtag('event', 'click_footer_book_online', { section: 'footer_booking', link_url: this.href });"
               >Book Online →</a
             >
             <p class="text-xs text-slate-500 mt-2">Mon–Sat 9:00 AM – 7:30 PM</p>
