@@ -109,6 +109,28 @@
       html {
         scroll-behavior: smooth;
       }
+
+      /* Pretty popup scrollbar */
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar-thumb {
+        background: rgba(244, 114, 182, 0.5);
+        border-radius: 999px;
+      }
+
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+        background: rgba(236, 72, 153, 0.7);
+      }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -1284,7 +1306,7 @@
       aria-hidden="true"
     >
       <div
-        class="relative w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl ring-1 ring-pink-100"
+        class="relative flex w-full max-w-md max-h-[85vh] flex-col rounded-3xl bg-white p-6 shadow-2xl ring-1 ring-pink-100"
         role="dialog"
         aria-modal="true"
         aria-labelledby="bookingNoticeTitle"
@@ -1298,35 +1320,101 @@
           ×
         </button>
 
-        <h2
-          id="bookingNoticeTitle"
-          class="text-center text-2xl font-extrabold text-slate-900"
+        <div class="mt-4 flex-1 overflow-y-auto pr-2">
+          <h3
+            id="bookingNoticeTitle"
+            class="text-center text-xl font-extrabold text-slate-900"
+          >
+            Booking Notice
+          </h3>
+          <div class="text-center text-slate-600 leading-relaxed">
+            <p class="mt-4 font-semibold text-center">
+              Walk-ins are always welcome.
+            </p>
+            <p class="mt-4 text-center">
+              If all technicians are busy, please have a seat and wait.
+              Customers with appointments will be assisted as soon as possible.
+            </p>
+            <p class="mt-4 text-center">Thank you for your patience!</p>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 shrink-0 flex flex-col gap-3 sm:flex-row sm:justify-center"
         >
-          Booking Notice
-        </h2>
-
-        <p class="mt-4 text-center text-slate-600 leading-relaxed">
-          Walk-ins are always welcome. During
-          <span class="font-semibold">Fridays and Saturdays</span>, Pedicure
-          appointments can still be booked online. Acrylic, Builder Gel, Gel X,
-          and Polygel services are available for walk-ins only and may require
-          waiting in line.
-        </p>
-
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button
             type="button"
             id="continueBookingButton"
-            class="inline-flex items-center justify-center rounded-xl bg-pink-600 px-5 py-3 font-semibold text-white shadow hover:bg-pink-700"
+            class="inline-flex items-center justify-center rounded-xl bg-pink-600 px-4 py-2 text-sm sm:px-5 sm:py-2.5 font-semibold text-white shadow hover:bg-pink-700"
           >
             Continue Booking
           </button>
           <button
             type="button"
             id="walkInCloseButton"
-            class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-slate-700 ring-1 ring-slate-200 hover:ring-pink-300"
+            class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm sm:px-5 sm:py-2.5 font-semibold text-slate-700 ring-1 ring-slate-200 hover:ring-pink-300"
           >
             I’ll Walk In
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Same-Day Booking Notice Popup -->
+    <div
+      id="sameDayBookingModal"
+      class="fixed inset-0 z-[9999] hidden items-center justify-center bg-slate-900/60 px-4 backdrop-blur-sm"
+      aria-hidden="true"
+    >
+      <div
+        class="relative flex w-full max-w-md max-h-[85vh] flex-col rounded-3xl bg-white p-6 shadow-2xl ring-1 ring-pink-100"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sameDayBookingTitle"
+      >
+        <button
+          type="button"
+          id="closeSameDayBookingNotice"
+          class="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-700"
+          aria-label="Close same-day booking notice"
+        >
+          ×
+        </button>
+
+        <div class="mt-4 flex-1 overflow-y-auto pr-2">
+          <h3
+            id="sameDayBookingTitle"
+            class="text-center text-xl font-extrabold text-slate-900"
+          >
+            Booking Notice
+          </h3>
+          <div class="text-center text-slate-600 leading-relaxed">
+            <p class="mt-4 font-semibold text-center">
+              Same-day appointments are not accepted.
+            </p>
+            <p class="mt-4 text-center">
+              Walk-ins are always welcome for same-day services. Please choose a
+              future date if booking online.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 shrink-0 flex flex-col gap-3 sm:flex-row sm:justify-center"
+        >
+          <button
+            type="button"
+            id="finalContinueBookingButton"
+            class="inline-flex items-center justify-center rounded-xl bg-pink-600 px-4 py-2 text-sm sm:px-5 sm:py-2.5 font-semibold text-white shadow hover:bg-pink-700"
+          >
+            Continue Booking
+          </button>
+          <button
+            type="button"
+            id="sameDayCloseButton"
+            class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm sm:px-5 sm:py-2.5 font-semibold text-slate-700 ring-1 ring-slate-200 hover:ring-pink-300"
+          >
+            Close
           </button>
         </div>
       </div>
@@ -1343,6 +1431,16 @@
       const continueBookingButton = document.getElementById(
         'continueBookingButton',
       );
+      const sameDayBookingModal = document.getElementById(
+        'sameDayBookingModal',
+      );
+      const closeSameDayBookingNotice = document.getElementById(
+        'closeSameDayBookingNotice',
+      );
+      const sameDayCloseButton = document.getElementById('sameDayCloseButton');
+      const finalContinueBookingButton = document.getElementById(
+        'finalContinueBookingButton',
+      );
 
       function openBookingNotice() {
         bookingNoticeModal.classList.remove('hidden');
@@ -1356,7 +1454,28 @@
         bookingNoticeModal.classList.add('hidden');
         bookingNoticeModal.classList.remove('flex');
         bookingNoticeModal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('overflow-hidden');
+
+        if (sameDayBookingModal.classList.contains('hidden')) {
+          document.body.classList.remove('overflow-hidden');
+        }
+      }
+
+      function openSameDayBookingNotice() {
+        sameDayBookingModal.classList.remove('hidden');
+        sameDayBookingModal.classList.add('flex');
+        sameDayBookingModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('overflow-hidden');
+        finalContinueBookingButton.focus();
+      }
+
+      function closeSameDayBookingPopup() {
+        sameDayBookingModal.classList.add('hidden');
+        sameDayBookingModal.classList.remove('flex');
+        sameDayBookingModal.setAttribute('aria-hidden', 'true');
+
+        if (bookingNoticeModal.classList.contains('hidden')) {
+          document.body.classList.remove('overflow-hidden');
+        }
       }
 
       document.querySelectorAll(`a[href="${bookingUrl}"]`).forEach((link) => {
@@ -1368,8 +1487,19 @@
 
       continueBookingButton.addEventListener('click', function () {
         if (typeof gtag === 'function') {
-          gtag('event', 'click_continue_booking_popup', {
+          gtag('event', 'click_continue_booking_first_popup', {
             section: 'booking_popup',
+            link_url: bookingUrl,
+          });
+        }
+        closeBookingPopup();
+        openSameDayBookingNotice();
+      });
+
+      finalContinueBookingButton.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'click_continue_booking_second_popup', {
+            section: 'same_day_booking_popup',
             link_url: bookingUrl,
           });
         }
@@ -1378,6 +1508,11 @@
 
       closeBookingNotice.addEventListener('click', closeBookingPopup);
       walkInCloseButton.addEventListener('click', closeBookingPopup);
+      closeSameDayBookingNotice.addEventListener(
+        'click',
+        closeSameDayBookingPopup,
+      );
+      sameDayCloseButton.addEventListener('click', closeSameDayBookingPopup);
 
       bookingNoticeModal.addEventListener('click', function (event) {
         if (event.target === bookingNoticeModal) {
@@ -1385,11 +1520,21 @@
         }
       });
 
+      sameDayBookingModal.addEventListener('click', function (event) {
+        if (event.target === sameDayBookingModal) {
+          closeSameDayBookingPopup();
+        }
+      });
+
       document.addEventListener('keydown', function (event) {
-        if (
-          event.key === 'Escape' &&
-          !bookingNoticeModal.classList.contains('hidden')
-        ) {
+        if (event.key !== 'Escape') return;
+
+        if (!sameDayBookingModal.classList.contains('hidden')) {
+          closeSameDayBookingPopup();
+          return;
+        }
+
+        if (!bookingNoticeModal.classList.contains('hidden')) {
           closeBookingPopup();
         }
       });
