@@ -116,18 +116,18 @@
         width: 6px;
       }
 
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar-track,
       #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar-track {
         background: transparent;
       }
 
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar-thumb,
       #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar-thumb {
         background: rgba(244, 114, 182, 0.5);
         border-radius: 999px;
       }
 
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar,
+      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar-thumb,
       #sameDayBookingModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
         background: rgba(236, 72, 153, 0.7);
       }
@@ -184,6 +184,17 @@
             >Services</a
           >
           <a
+            href="#our-work"
+            class="hover:text-pink-700"
+            onclick="
+              gtag('event', 'click_nav_our_work', {
+                section: 'header_nav',
+                link_url: this.href,
+              })
+            "
+            >Our Work</a
+          >
+          <a
             href="#pricing"
             class="hover:text-pink-700"
             onclick="
@@ -193,17 +204,6 @@
               })
             "
             >Pricing</a
-          >
-          <a
-            href="#gallery"
-            class="hover:text-pink-700"
-            onclick="
-              gtag('event', 'click_nav_gallery', {
-                section: 'header_nav',
-                link_url: this.href,
-              })
-            "
-            >Gallery</a
           >
           <a
             href="#hours"
@@ -632,107 +632,141 @@
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="bg-white/60 border-y border-slate-200 py-16">
+    <!-- Our Work -->
+    <section id="our-work" class="bg-white/60 border-y border-slate-200 py-16">
       <div class="max-w-6xl mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center mb-10">
           <p
             class="uppercase tracking-widest text-xs text-pink-600 font-semibold"
           >
-            Gallery
+            Our Work
           </p>
-          <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Recent work</h2>
+          <h2 class="text-3xl md:text-4xl font-extrabold mt-2">
+            See Our Latest Work
+          </h2>
           <p class="text-slate-600 mt-3 leading-relaxed">
-            A glimpse of sets our clients adore.
+            Explore our latest nail designs, trends, salon updates, and beauty
+            inspiration.
           </p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-1.jpg"
-              alt="Nails 1"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-2.jpg"
-              alt="Nails 2"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-3.jpg"
-              alt="Nails 3"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-4.jpg"
-              alt="Nails 4"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-5.jpg"
-              alt="Nails 5"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-6.jpg"
-              alt="Nails 6"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-7.jpg"
-              alt="Nails 7"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-          <div
-            class="aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200"
-          >
-            <img
-              src="/bling-img/pro-8.jpg"
-              alt="Nails 8"
-              class="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </div>
-        </div>
-        <div class="text-center mt-8">
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Instagram -->
           <a
-            href="https://www.instagram.com/blingnailsandspa.bossier/"
-            class="inline-flex items-center justify-center rounded-xl px-6 py-3 bg-pink-600 text-white font-semibold shadow hover:bg-pink-700"
+            href="https://www.instagram.com/blingnailsandspa.bossier"
             target="_blank"
+            rel="noreferrer"
+            class="group bg-white rounded-3xl p-6 shadow-sm ring-1 ring-pink-100 hover:shadow-lg hover:-translate-y-1 transition"
             onclick="
-              gtag('event', 'click_gallery_instagram', {
-                section: 'gallery',
+              gtag('event', 'click_social_instagram_card', {
+                section: 'our_work',
                 link_url: this.href,
               })
             "
-            >See More →</a
           >
+            <div
+              class="mx-auto h-14 w-14 rounded-2xl bg-pink-50 text-pink-600 grid place-items-center text-3xl ring-1 ring-pink-100 group-hover:bg-pink-600 group-hover:text-white transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h3 class="mt-5 text-center text-lg font-extrabold">Instagram</h3>
+            <p class="mt-2 text-center text-sm text-slate-600 leading-relaxed">
+              Daily nail designs, cat eye, acrylic, Gel X &amp; trending looks.
+            </p>
+            <div class="mt-5 text-center text-sm font-semibold text-pink-700">
+              View on Instagram →
+            </div>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/blingnailsandspa"
+            target="_blank"
+            rel="noreferrer"
+            class="group bg-white rounded-3xl p-6 shadow-sm ring-1 ring-pink-100 hover:shadow-lg hover:-translate-y-1 transition"
+            onclick="
+              gtag('event', 'click_social_facebook_card', {
+                section: 'our_work',
+                link_url: this.href,
+              })
+            "
+          >
+            <div
+              class="mx-auto h-14 w-14 rounded-2xl bg-pink-50 text-pink-600 grid place-items-center text-3xl ring-1 ring-pink-100 group-hover:bg-pink-600 group-hover:text-white transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <h3 class="mt-5 text-center text-lg font-extrabold">Facebook</h3>
+            <p class="mt-2 text-center text-sm text-slate-600 leading-relaxed">
+              Salon updates, announcements, reviews, and special promotions.
+            </p>
+            <div class="mt-5 text-center text-sm font-semibold text-pink-700">
+              View on Facebook →
+            </div>
+          </a>
+
+          <!-- TikTok -->
+          <a
+            href="https://www.tiktok.com/@blingnailsandspa.bossier"
+            target="_blank"
+            rel="noreferrer"
+            class="group bg-white rounded-3xl p-6 shadow-sm ring-1 ring-pink-100 hover:shadow-lg hover:-translate-y-1 transition"
+            onclick="
+              gtag('event', 'click_social_tiktok_card', {
+                section: 'our_work',
+                link_url: this.href,
+              })
+            "
+          >
+            <div
+              class="mx-auto h-14 w-14 rounded-2xl bg-pink-50 text-pink-600 grid place-items-center text-3xl ring-1 ring-pink-100 group-hover:bg-pink-600 group-hover:text-white transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <h3 class="mt-5 text-center text-lg font-extrabold">TikTok</h3>
+            <p class="mt-2 text-center text-sm text-slate-600 leading-relaxed">
+              Quick nail videos, transformations, trends, and salon moments.
+            </p>
+            <div class="mt-5 text-center text-sm font-semibold text-pink-700">
+              Watch on TikTok →
+            </div>
+          </a>
+
+          <!-- Threads -->
+          <a
+            href="https://www.threads.net/@blingnailsandspa.bossier"
+            target="_blank"
+            rel="noreferrer"
+            class="group bg-white rounded-3xl p-6 shadow-sm ring-1 ring-pink-100 hover:shadow-lg hover:-translate-y-1 transition"
+            onclick="
+              gtag('event', 'click_social_threads_card', {
+                section: 'our_work',
+                link_url: this.href,
+              })
+            "
+          >
+            <div
+              class="mx-auto h-14 w-14 rounded-2xl bg-pink-50 text-pink-600 grid place-items-center text-3xl ring-1 ring-pink-100 group-hover:bg-pink-600 group-hover:text-white transition"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </div>
+            <h3 class="mt-5 text-center text-lg font-extrabold">Threads</h3>
+            <p class="mt-2 text-center text-sm text-slate-600 leading-relaxed">
+              Quick updates, beauty trends, nail ideas, and everyday salon news.
+            </p>
+            <div class="mt-5 text-center text-sm font-semibold text-pink-700">
+              View on Threads →
+            </div>
+          </a>
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="text-sm text-slate-500">
+            Tag us in your nail photos:
+            <span class="font-semibold text-pink-700"
+              >@blingnailsandspa.bossier</span
+            >
+          </p>
         </div>
       </div>
     </section>
@@ -1212,6 +1246,19 @@
               </li>
               <li>
                 <a
+                  href="#our-work"
+                  class="hover:text-pink-700"
+                  onclick="
+                    gtag('event', 'click_footer_nav_our_work', {
+                      section: 'footer_nav',
+                      link_url: this.href,
+                    })
+                  "
+                  >Our Work</a
+                >
+              </li>
+              <li>
+                <a
                   href="#pricing"
                   class="hover:text-pink-700"
                   onclick="
@@ -1221,19 +1268,6 @@
                     })
                   "
                   >Pricing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#gallery"
-                  class="hover:text-pink-700"
-                  onclick="
-                    gtag('event', 'click_footer_nav_gallery', {
-                      section: 'footer_nav',
-                      link_url: this.href,
-                    })
-                  "
-                  >Gallery</a
                 >
               </li>
             </ul>
