@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chia tiền tip cho nhân viên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+
+      .employee-name-wrap {
+        position: relative;
+      }
+
+      .clear-name-button {
+        position: absolute;
+        top: 50%;
+        right: 0.65rem;
+        display: none;
+        width: 1.35rem;
+        height: 1.35rem;
+        transform: translateY(-50%);
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 9999px;
+        background: #d1d5db;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1;
+        cursor: pointer;
+        transition:
+          background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .clear-name-button:hover {
+        background: #9ca3af;
+      }
+
+      .clear-name-button:active {
+        transform: translateY(-50%) scale(0.92);
+      }
+
+      .clear-name-button.is-visible {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50 text-slate-800"
+  >
+    <main class="mx-auto max-w-3xl px-4 py-10 sm:py-16">
+      <section
+        class="rounded-3xl bg-white p-5 shadow-xl ring-1 ring-pink-100 sm:p-8"
+      >
+        <div class="text-center">
+          <p
+            class="text-sm font-semibold uppercase tracking-widest text-pink-600"
+          >
+            Tip Calculator
+          </p>
+          <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">
+            Chia tiền tip cho nhân viên
+          </h1>
+          <p
+            class="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base"
+          >
+            Tiền tip được chia theo tỷ lệ tiền dịch vụ mà mỗi nhân viên đã làm.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold"
+              >Tổng tiền sử dụng dịch vụ
+              <span class="font-normal text-slate-500"
+                >(chưa gồm tip)</span
+              ></span
+            >
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-4 flex items-center text-slate-400"
+                >$</span
+              >
+              <input
+                id="serviceGrandTotal"
+                type="number"
+                min="0"
+                step="1"
+                inputmode="decimal"
+                class="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3 pl-9 pr-4 outline-none transition focus:border-pink-400 focus:bg-white focus:ring-4 focus:ring-pink-100"
+                placeholder="Ví dụ: 150"
+              />
+            </div>
+          </label>
+
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold">Tổng tiền tip</span>
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-4 flex items-center text-slate-400"
+                >$</span
+              >
+              <input
+                id="totalTip"
+                type="number"
+                min="0"
+                step="1"
+                inputmode="decimal"
+                class="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3 pl-9 pr-4 outline-none transition focus:border-pink-400 focus:bg-white focus:ring-4 focus:ring-pink-100"
+                placeholder="Ví dụ: 30"
+              />
+            </div>
+          </label>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-lg font-bold">Tiền dịch vụ của nhân viên</h2>
+          <p class="text-sm text-slate-500">Tối thiểu 2 nhân viên.</p>
+        </div>
+
+        <div id="employeeList" class="mt-4 space-y-3"></div>
+
+        <div class="mt-5 grid gap-3 sm:grid-cols-[0.8fr_1.2fr]">
+          <button
+            id="addEmployee"
+            type="button"
+            class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-pink-200 bg-pink-50 px-5 py-3.5 text-base font-bold text-pink-700 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-pink-300 hover:bg-pink-100 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-pink-100 active:translate-y-0"
+          >
+            <span
+              class="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xl leading-none shadow-sm transition group-hover:scale-110"
+              >+</span
+            >
+            Thêm nhân viên
+          </button>
+
+          <button
+            id="calculate"
+            type="button"
+            class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 px-5 py-3.5 text-base font-extrabold text-white shadow-lg shadow-pink-200 transition duration-200 hover:-translate-y-0.5 hover:from-pink-700 hover:to-rose-600 hover:shadow-xl hover:shadow-pink-200 focus:outline-none focus:ring-4 focus:ring-pink-200 active:translate-y-0"
+          >
+            <svg
+              class="h-5 w-5 transition group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <path
+                d="M8 6h8M8 10h2M14 10h2M8 14h2M14 14h2M8 18h2M14 18h2"
+              ></path>
+            </svg>
+            Tính tiền tip
+          </button>
+        </div>
+
+        <div
+          id="errorBox"
+          class="mt-4 hidden rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700"
+        ></div>
+
+        <section id="resultSection" class="mt-8 hidden">
+          <div
+            class="rounded-3xl border border-pink-100 bg-gradient-to-br from-pink-50 to-white p-5 sm:p-6"
+          >
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h2 class="text-xl font-extrabold">Kết quả chia tip</h2>
+              <span
+                id="summaryBadge"
+                class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-pink-700 ring-1 ring-pink-200"
+              ></span>
+            </div>
+            <div id="resultList" class="mt-4 space-y-3"></div>
+            <div
+              class="mt-5 grid gap-3 border-t border-pink-100 pt-5 sm:grid-cols-3"
+            >
+              <div class="rounded-2xl bg-white p-4 ring-1 ring-pink-100">
+                <div class="text-xs uppercase tracking-wide text-slate-400">
+                  Tổng dịch vụ
+                </div>
+                <div
+                  id="serviceTotalResult"
+                  class="mt-1 text-xl font-extrabold"
+                ></div>
+              </div>
+              <div class="rounded-2xl bg-white p-4 ring-1 ring-pink-100">
+                <div class="text-xs uppercase tracking-wide text-slate-400">
+                  Tổng tip
+                </div>
+                <div
+                  id="tipTotalResult"
+                  class="mt-1 text-xl font-extrabold"
+                ></div>
+              </div>
+              <div class="rounded-2xl bg-white p-4 ring-1 ring-pink-100">
+                <div class="text-xs uppercase tracking-wide text-slate-400">
+                  Tổng khách thanh toán
+                </div>
+                <div
+                  id="paidTotalResult"
+                  class="mt-1 text-xl font-extrabold"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="employeeTemplate">
+      <div
+        class="employee-row grid gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end"
+      >
+        <label class="block">
+          <span
+            class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500"
+            >Tên nhân viên</span
+          >
+          <div class="employee-name-wrap">
+            <input
+              type="text"
+              class="employee-name w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-3 pr-10 outline-none focus:border-pink-400 focus:ring-4 focus:ring-pink-100"
+            />
+            <button
+              type="button"
+              class="clear-name-button"
+              aria-label="Xóa tên nhân viên"
+              title="Xóa tên"
+            >
+              ×
+            </button>
+          </div>
+        </label>
+        <label class="block">
+          <span
+            class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500"
+            >Tiền dịch vụ</span
+          >
+          <div class="relative">
+            <span
+              class="absolute inset-y-0 left-3 flex items-center text-slate-400"
+              >$</span
+            >
+            <input
+              type="number"
+              min="0"
+              step="1"
+              inputmode="decimal"
+              class="employee-amount w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-8 pr-3 outline-none focus:border-pink-400 focus:ring-4 focus:ring-pink-100"
+              placeholder="0"
+            />
+          </div>
+        </label>
+        <button
+          type="button"
+          class="remove-employee rounded-xl border border-red-200 bg-white px-4 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          Xóa
+        </button>
+      </div>
+    </template>
+
+    <script>
+      const employeeList = document.getElementById('employeeList');
+      const employeeTemplate = document.getElementById('employeeTemplate');
+      const addEmployeeButton = document.getElementById('addEmployee');
+      const calculateButton = document.getElementById('calculate');
+      const errorBox = document.getElementById('errorBox');
+      const resultSection = document.getElementById('resultSection');
+      const resultList = document.getElementById('resultList');
+
+      const money = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      });
+
+      function getRows() {
+        return [...employeeList.querySelectorAll('.employee-row')];
+      }
+
+      function updateEmployeeLabels() {
+        getRows().forEach((row, index) => {
+          const nameInput = row.querySelector('.employee-name');
+          const clearNameButton = row.querySelector('.clear-name-button');
+          const defaultName = `Nhân viên ${index + 1}`;
+
+          // Chỉ đánh số lại những tên mặc định. Tên do người dùng nhập sẽ được giữ nguyên.
+          if (nameInput.dataset.autoName === 'true') {
+            nameInput.value = defaultName;
+          }
+
+          nameInput.placeholder = defaultName;
+          clearNameButton.classList.toggle(
+            'is-visible',
+            nameInput.value.trim() !== '',
+          );
+        });
+
+        const rows = getRows();
+        rows.forEach((row) => {
+          row.querySelector('.remove-employee').disabled = rows.length <= 2;
+        });
+      }
+
+      function addEmployee(name = '', useCustomName = false) {
+        const fragment = employeeTemplate.content.cloneNode(true);
+        const row = fragment.querySelector('.employee-row');
+        const nameInput = row.querySelector('.employee-name');
+        const clearNameButton = row.querySelector('.clear-name-button');
+        const removeButton = row.querySelector('.remove-employee');
+
+        function updateClearNameButton() {
+          clearNameButton.classList.toggle(
+            'is-visible',
+            nameInput.value.trim() !== '',
+          );
+        }
+
+        if (useCustomName && name) {
+          nameInput.value = name;
+          nameInput.dataset.autoName = 'false';
+        } else {
+          nameInput.dataset.autoName = 'true';
+        }
+
+        nameInput.addEventListener('input', () => {
+          // Sau khi người dùng tự sửa tên, không tự đánh số lại ô này nữa.
+          nameInput.dataset.autoName = 'false';
+          updateClearNameButton();
+        });
+
+        clearNameButton.addEventListener('click', () => {
+          nameInput.value = '';
+          nameInput.dataset.autoName = 'false';
+          updateClearNameButton();
+          nameInput.focus();
+          resultSection.classList.add('hidden');
+        });
+
+        removeButton.addEventListener('click', () => {
+          if (getRows().length <= 2) return;
+          row.remove();
+          updateEmployeeLabels();
+          resultSection.classList.add('hidden');
+        });
+
+        employeeList.appendChild(fragment);
+        updateEmployeeLabels();
+      }
+
+      function showError(message) {
+        errorBox.textContent = message;
+        errorBox.classList.remove('hidden');
+        resultSection.classList.add('hidden');
+      }
+
+      function clearError() {
+        errorBox.textContent = '';
+        errorBox.classList.add('hidden');
+      }
+
+      function calculateTip() {
+        clearError();
+
+        const serviceGrandTotalRaw = Number(
+          document.getElementById('serviceGrandTotal').value,
+        );
+        const totalTipRaw = Number(document.getElementById('totalTip').value);
+        const serviceGrandTotal = Math.ceil(serviceGrandTotalRaw);
+        const totalTip = Math.ceil(totalTipRaw);
+        const employees = getRows().map((row, index) => ({
+          name:
+            row.querySelector('.employee-name').value.trim() ||
+            `Nhân viên ${index + 1}`,
+          amount: Math.ceil(
+            Number(row.querySelector('.employee-amount').value),
+          ),
+        }));
+
+        if (
+          !Number.isFinite(serviceGrandTotalRaw) ||
+          serviceGrandTotalRaw < 0
+        ) {
+          showError('Vui lòng nhập tổng tiền sử dụng dịch vụ hợp lệ.');
+          return;
+        }
+
+        if (!Number.isFinite(totalTipRaw) || totalTipRaw < 0) {
+          showError('Vui lòng nhập tổng tiền tip hợp lệ.');
+          return;
+        }
+
+        if (
+          employees.some(
+            (employee) =>
+              !Number.isFinite(employee.amount) || employee.amount < 0,
+          )
+        ) {
+          showError('Vui lòng nhập tiền dịch vụ hợp lệ cho tất cả nhân viên.');
+          return;
+        }
+
+        const serviceTotal = employees.reduce(
+          (sum, employee) => sum + employee.amount,
+          0,
+        );
+
+        if (serviceTotal <= 0) {
+          showError('Tổng tiền dịch vụ của nhân viên phải lớn hơn $0.');
+          return;
+        }
+
+        if (
+          serviceGrandTotal > 0 &&
+          Math.abs(serviceGrandTotal - serviceTotal) > 0.01
+        ) {
+          showError(
+            `Tổng tiền dịch vụ của nhân viên hiện là ${money.format(serviceTotal)}, nhưng tổng tiền sử dụng dịch vụ là ${money.format(serviceGrandTotal)}. Vui lòng kiểm tra lại.`,
+          );
+          return;
+        }
+
+        const rawShares = employees.map(
+          (employee) => (employee.amount / serviceTotal) * totalTip,
+        );
+
+        // Làm tròn lên từng phần tip, sau đó điều chỉnh để tổng vẫn đúng bằng tổng tip.
+        const roundedShares = rawShares.map((share) => Math.ceil(share));
+        let excess =
+          roundedShares.reduce((sum, share) => sum + share, 0) - totalTip;
+
+        const adjustmentOrder = rawShares
+          .map((share, index) => ({
+            index,
+            fraction: share - Math.floor(share),
+            rounded: roundedShares[index],
+          }))
+          .sort((a, b) => a.fraction - b.fraction || b.rounded - a.rounded);
+
+        let orderIndex = 0;
+        while (excess > 0 && adjustmentOrder.length) {
+          const item = adjustmentOrder[orderIndex % adjustmentOrder.length];
+          if (roundedShares[item.index] > 0) {
+            roundedShares[item.index] -= 1;
+            excess -= 1;
+          }
+          orderIndex += 1;
+        }
+
+        const results = employees.map((employee, index) => {
+          const tipShare = roundedShares[index];
+          return {
+            ...employee,
+            tipShare,
+            percentage: (employee.amount / serviceTotal) * 100,
+            totalWithTip: employee.amount + tipShare,
+          };
+        });
+
+        resultList.innerHTML = '';
+        results.forEach((employee) => {
+          const card = document.createElement('div');
+          card.className = 'rounded-2xl bg-white p-4 ring-1 ring-pink-100';
+          card.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div class="font-extrabold text-slate-900">${escapeHtml(employee.name)}</div>
+              <div class="mt-1 text-sm text-slate-500">Dịch vụ: ${money.format(employee.amount)} · ${Math.round(employee.percentage)}%</div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs font-semibold uppercase tracking-wide text-pink-500">Tiền tip</div>
+              <div class="text-2xl font-extrabold text-pink-700">${money.format(employee.tipShare)}</div>
+              <div class="text-xs text-slate-400">Tổng nhận: ${money.format(employee.totalWithTip)}</div>
+            </div>
+          </div>
+        `;
+          resultList.appendChild(card);
+        });
+
+        document.getElementById('summaryBadge').textContent =
+          `${employees.length} nhân viên`;
+        document.getElementById('serviceTotalResult').textContent =
+          money.format(serviceTotal);
+        document.getElementById('tipTotalResult').textContent =
+          money.format(totalTip);
+        document.getElementById('paidTotalResult').textContent = money.format(
+          serviceGrandTotal + totalTip,
+        );
+        resultSection.classList.remove('hidden');
+        resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function escapeHtml(value) {
+        return value
+          .replaceAll('&', '&amp;')
+          .replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;')
+          .replaceAll('"', '&quot;')
+          .replaceAll("'", '&#039;');
+      }
+
+      addEmployeeButton.addEventListener('click', () => {
+        addEmployee();
+        getRows().at(-1).querySelector('.employee-name').focus();
+      });
+
+      calculateButton.addEventListener('click', calculateTip);
+
+      addEmployee();
+      addEmployee();
+    </script>
+  </body>
+</html>
