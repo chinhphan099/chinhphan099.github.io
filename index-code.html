@@ -353,7 +353,7 @@
             <div class="text-xs uppercase tracking-wide text-slate-500">
               Rating
             </div>
-            <div class="text-2xl font-extrabold">4.9</div>
+            <div class="text-2xl font-extrabold">5.0</div>
             <div class="text-xs text-slate-500">on Google Reviews</div>
           </div>
         </div>
@@ -1347,12 +1347,6 @@
         </button>
 
         <div class="mt-4 flex-1 overflow-y-auto pr-2">
-          <h3
-            id="bookingNoticeTitle"
-            class="text-center text-xl font-extrabold text-slate-900"
-          >
-            Booking Notice
-          </h3>
           <div class="text-center text-slate-600 leading-relaxed">
             <p class="mt-4 font-semibold text-center">
               Walk-ins are always welcome.
@@ -1408,12 +1402,6 @@
         </button>
 
         <div class="mt-4 flex-1 overflow-y-auto pr-2">
-          <h3
-            id="sameDayBookingTitle"
-            class="text-center text-xl font-extrabold text-slate-900"
-          >
-            Booking Notice
-          </h3>
           <div class="text-center text-slate-600 leading-relaxed">
             <p class="mt-4 font-semibold text-center">
               Same-day appointments are welcome but may require a longer wait.
@@ -1521,7 +1509,19 @@
             link_url: bookingUrl,
           });
         }
+
         closeBookingPopup();
+
+        // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+        const day = new Date().getDay();
+
+        // Monday (1) -> Thursday (4): bỏ qua Popup 2
+        if (day >= 1 && day <= 4) {
+          window.location.href = bookingUrl;
+          return;
+        }
+
+        // Friday, Saturday, Sunday: vẫn hiện Popup 2
         openSameDayBookingNotice();
       });
 
