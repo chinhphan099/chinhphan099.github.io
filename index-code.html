@@ -109,24 +109,6 @@
       html {
         scroll-behavior: smooth;
       }
-
-      /* Pretty popup scrollbar */
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar {
-        width: 6px;
-      }
-
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar-thumb {
-        background: rgba(244, 114, 182, 0.5);
-        border-radius: 999px;
-      }
-
-      #bookingNoticeModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-        background: rgba(236, 72, 153, 0.7);
-      }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -1321,125 +1303,8 @@
       </div>
     </footer>
 
-    <!-- Booking Notice Popup -->
-    <div
-      id="bookingNoticeModal"
-      class="fixed inset-0 z-[9999] hidden items-center justify-center bg-slate-900/60 px-4 backdrop-blur-sm"
-      aria-hidden="true"
-    >
-      <div
-        class="relative flex w-full max-w-md max-h-[85vh] flex-col rounded-3xl bg-white p-6 shadow-2xl ring-1 ring-pink-100"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="bookingNoticeTitle"
-      >
-        <button
-          type="button"
-          id="closeBookingNotice"
-          class="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-700"
-          aria-label="Close booking notice"
-        >
-          ×
-        </button>
-
-        <div class="mt-4 flex-1 overflow-y-auto pr-2">
-          <div class="text-center text-slate-600 leading-relaxed">
-            <p class="mt-4 text-center">
-              Customers with appointments will be assisted as soon as possible.
-              If all technicians are busy, please have a seat and wait.
-            </p>
-            <p class="mt-4 font-semibold text-center">
-              Walk-ins are always welcome.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="mt-6 shrink-0 flex flex-col gap-3 sm:flex-row sm:justify-center"
-        >
-          <button
-            type="button"
-            id="continueBookingButton"
-            class="inline-flex items-center justify-center rounded-xl bg-pink-600 px-4 py-2 text-sm sm:px-5 sm:py-2.5 font-semibold text-white shadow hover:bg-pink-700"
-          >
-            Continue Booking
-          </button>
-          <button
-            type="button"
-            id="walkInCloseButton"
-            class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm sm:px-5 sm:py-2.5 font-semibold text-slate-700 ring-1 ring-slate-200 hover:ring-pink-300"
-          >
-            I’ll Walk In
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      const bookingUrl =
-        'https://booking.gocheckin.net/v2/multiple-staff/18101';
-      const bookingNoticeModal = document.getElementById('bookingNoticeModal');
-      const closeBookingNotice = document.getElementById('closeBookingNotice');
-      const walkInCloseButton = document.getElementById('walkInCloseButton');
-      const continueBookingButton = document.getElementById(
-        'continueBookingButton',
-      );
-
-      function openBookingNotice() {
-        bookingNoticeModal.classList.remove('hidden');
-        bookingNoticeModal.classList.add('flex');
-        bookingNoticeModal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('overflow-hidden');
-        continueBookingButton.focus();
-      }
-
-      function closeBookingPopup() {
-        bookingNoticeModal.classList.add('hidden');
-        bookingNoticeModal.classList.remove('flex');
-        bookingNoticeModal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('overflow-hidden');
-      }
-
-      document.querySelectorAll(`a[href="${bookingUrl}"]`).forEach((link) => {
-        link.addEventListener('click', function (event) {
-          event.preventDefault();
-          openBookingNotice();
-        });
-      });
-
-      continueBookingButton.addEventListener('click', function () {
-        if (typeof gtag === 'function') {
-          gtag('event', 'click_continue_booking_popup', {
-            section: 'booking_popup',
-            link_url: bookingUrl,
-          });
-        }
-        window.location.href = bookingUrl;
-      });
-
-      closeBookingNotice.addEventListener('click', closeBookingPopup);
-      walkInCloseButton.addEventListener('click', closeBookingPopup);
-
-      bookingNoticeModal.addEventListener('click', function (event) {
-        if (event.target === bookingNoticeModal) {
-          closeBookingPopup();
-        }
-      });
-
-      document.addEventListener('keydown', function (event) {
-        if (
-          event.key === 'Escape' &&
-          !bookingNoticeModal.classList.contains('hidden')
-        ) {
-          closeBookingPopup();
-        }
-      });
-
-      if (window.location.hash === '#booking') {
-        window.addEventListener('load', openBookingNotice);
-      }
     </script>
   </body>
 </html>
